@@ -1,0 +1,56 @@
+[
+    {
+        "classes": [
+            {
+                "className": "ASIOThread",
+                "lineNumber": 8,
+                "object": true,
+                "qualifiedClassName": "ASIOThread",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "signalConnectDriver",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QThread"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "asiothread.h",
+        "outputRevision": 69
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "auto"
+                    },
+                    {
+                        "name": "QML.Singleton",
+                        "value": "true"
+                    }
+                ],
+                "className": "MainController",
+                "lineNumber": 8,
+                "object": true,
+                "qualifiedClassName": "MainController",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "maincontroller.h",
+        "outputRevision": 69
+    }
+]

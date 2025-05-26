@@ -1,0 +1,26 @@
+{
+    "classes": [
+        {
+            "className": "ASIOThread",
+            "lineNumber": 8,
+            "object": true,
+            "qualifiedClassName": "ASIOThread",
+            "signals": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "signalConnectDriver",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QThread"
+                }
+            ]
+        }
+    ],
+    "inputFile": "asiothread.h",
+    "outputRevision": 69
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 12,
+                        "durationMicroseconds": 2475,
+                        "errorMessage": "",
+                        "functionName": "color",
+                        "line": 10
+                    }
+                ],
+                "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/MainWindow.qml"
+            }
+        ],
+        "moduleId": "MyuPrototype(appMyuPrototype)"
+    }
+]
