@@ -64,10 +64,8 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     // Beware that this is normally in a seperate thread, hence be sure that you take care
     // about thread synchronization. This is omitted here for simplicity.
     static long processedSamples = 0;
-
     // store the timeInfo for later use
     asioDriverInfo.tInfo = *timeInfo;
-
     // get the time stamp of the buffer, not necessary if no
     // synchronization to other media is required
     if (timeInfo->timeInfo.flags & kSystemTimeValid)
@@ -91,66 +89,43 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     // buffer size in samples
     long buffSize = asioDriverInfo.preferredSize;
 
+
     // perform the processing
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
     {
-        // qDebug() << asioDriverInfo.channelInfos[i].type;
-        if (asioDriverInfo.bufferInfos[i].isInput == false)
+
+
+
+        if (asioDriverInfo.bufferInfos[i].isInput == true)
         {
             // OK do processing for the outputs only
             switch (asioDriverInfo.channelInfos[i].type)
+
             {
-            case ASIOSTInt16LSB:
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 2);
-                break;
-            case ASIOSTInt24LSB:		// used for 20 bits as well
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 3);
-                break;
             case ASIOSTInt32LSB:
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
-                break;
-            case ASIOSTFloat32LSB:		// IEEE 754 32 bit float, as found on Intel x86 architecture
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
-                break;
-            case ASIOSTFloat64LSB: 		// IEEE 754 64 bit double float, as found on Intel x86 architecture
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 8);
-                break;
-
-                // these are used for 32 bit data buffer, with different alignment of the data inside
-                // 32 bit PCI bus systems can more easily used with these
-            case ASIOSTInt32LSB16:		// 32 bit data with 18 bit alignment
-            case ASIOSTInt32LSB18:		// 32 bit data with 18 bit alignment
-            case ASIOSTInt32LSB20:		// 32 bit data with 20 bit alignment
-            case ASIOSTInt32LSB24:		// 32 bit data with 24 bit alignment
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
-                break;
-
-            case ASIOSTInt16MSB:
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 2);
-                break;
-            case ASIOSTInt24MSB:		// used for 20 bits as well
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 3);
-                break;
-            case ASIOSTInt32MSB:
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
-                break;
-            case ASIOSTFloat32MSB:		// IEEE 754 32 bit float, as found on Intel x86 architecture
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
-                break;
-            case ASIOSTFloat64MSB: 		// IEEE 754 64 bit double float, as found on Intel x86 architecture
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 8);
-                break;
-
-                // these are used for 32 bit data buffer, with different alignment of the data inside
-                // 32 bit PCI bus systems can more easily used with these
-            case ASIOSTInt32MSB16:		// 32 bit data with 18 bit alignment
-            case ASIOSTInt32MSB18:		// 32 bit data with 18 bit alignment
-            case ASIOSTInt32MSB20:		// 32 bit data with 20 bit alignment
-            case ASIOSTInt32MSB24:		// 32 bit data with 24 bit alignment
-                memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
+                double data[buffSize];
+                for(int j = 0; j < buffSize; ++j) {
+                    data[j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (double)0x7fffffff;
+                }
+                qDebug() << data[0] << data[1];
                 break;
             }
         }
+
+
+        // if (asioDriverInfo.bufferInfos[i].isInput == false)
+        // {
+        //     // OK do processing for the outputs only
+        //     switch (asioDriverInfo.channelInfos[i].type)
+        //     {
+        //     case ASIOSTInt32LSB:
+        //         memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
+        //         break;
+        //     }
+        // }
+
+
+
     }
 
     // finally if the driver supports the ASIOOutputReady() optimization, do it here, all data are in place
@@ -158,7 +133,6 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
         ASIOOutputReady();
 
     if (processedSamples >= asioDriverInfo.sampleRate * TEST_RUN_TIME) {
-        processedSamples = 0;
         asioDriverInfo.stopped = true;
     } else {
         processedSamples += buffSize;
@@ -220,7 +194,7 @@ long asioMessages(long selector, long value, void* message, double* opt)
         // You cannot reset the driver right now, as this code is called from the driver.
         // Reset the driver is done by completely destruct is. I.e. ASIOStop(), ASIODisposeBuffers(), Destruction
         // Afterwards you initialize the driver again.
-        asioDriverInfo.stopped;  // In this sample the processing will just stop
+        asioDriverInfo.stopped = true;  // In this sample the processing will just stop
         ret = 1L;
         break;
     case kAsioResyncRequest:
@@ -330,7 +304,8 @@ unsigned long get_sys_reference_time()
     return now.msecsSinceStartOfDay();
 }
 
-void setupASIO(char* asioDriverName) {
+
+void setupASIO(char* asioDriverName, bool* running) {
     asioDriverInfo = {0};
     // load the driver, this will setup all the necessary internal data structures
     if (loadAsioDriver (asioDriverName))
@@ -355,10 +330,9 @@ void setupASIO(char* asioDriverName) {
                     if (ASIOStart() == ASE_OK)
                     {
                         // Now all is up and running
-                        qDebug() << "ASIO driver started successfully";
-                        while (!asioDriverInfo.stopped)
+                        while (!asioDriverInfo.stopped && *running)
                         {
-                            Sleep(100);
+                            Sleep(2000);
                         }
                         ASIOStop();
                     }
@@ -368,7 +342,6 @@ void setupASIO(char* asioDriverName) {
             ASIOExit();
         }
         asioDrivers->removeCurrentDriver();
-        qDebug() << "ASIO driver exited";
         qDebug();
     }
 }

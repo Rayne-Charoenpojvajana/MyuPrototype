@@ -15,6 +15,9 @@ public:
     bool isASIORunning() {
         return asioRunning;
     }
+    void setASIORunning(bool running) {
+        asioRunning = running;
+    }
 private:
     Q_OBJECT
     bool asioRunning = false;
@@ -26,7 +29,7 @@ private:
             emit requestSelectedDriver(&selectedDriver, &await);
             while(await);
             asioRunning = true;
-            setupASIO(selectedDriver);
+            setupASIO(selectedDriver, &asioRunning);
             asioRunning = false;
         }
     }

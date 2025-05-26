@@ -38,8 +38,7 @@ public:
     Q_INVOKABLE void setSelectedDriver(QString driver) {
         this->selectedDriver = driver;
         if (asioThread->isASIORunning()) {
-            qDebug() << "trying";
-
+            asioThread->setASIORunning(false);
         }
     }
 public slots:

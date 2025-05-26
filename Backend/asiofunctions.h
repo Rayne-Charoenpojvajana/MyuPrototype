@@ -12,7 +12,7 @@
 
 #define MAX_DRIVER_LENGTH 32
 
-#define TEST_RUN_TIME  5.0	// run for 20 seconds
+#define TEST_RUN_TIME  10.0	// run for 20 seconds
 
 enum {
     // number of input and outputs supported by the host application
@@ -82,7 +82,7 @@ extern AsioDrivers* asioDrivers;
 bool loadAsioDriver(char *name);
 
 // internal prototypes (required for the Metrowerks CodeWarrior compiler)
-void setupASIO(char*);
+void setupASIO(char*, bool*);
 long init_asio_static_data (DriverInfo *asioDriverInfo);
 ASIOError create_asio_buffers (DriverInfo *asioDriverInfo);
 unsigned long get_sys_reference_time();
