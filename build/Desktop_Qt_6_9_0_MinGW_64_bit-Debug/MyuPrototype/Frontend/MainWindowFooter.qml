@@ -26,8 +26,5 @@ ToolBar {
         SettingsWindow {
             id: settingsWindow
         }
-
-
-
     }
 }

@@ -15,5 +15,16 @@ Module {
         isCreatable: false
         isSingleton: true
         exportMetaObjectRevisions: [256]
+        Method { name: "qmlInit" }
+        Method {
+            name: "sendSelectedDriver"
+            Parameter { name: "selectedDriver"; type: "char*"; isPointer: true }
+            Parameter { name: "await"; type: "bool"; isPointer: true }
+        }
+        Method { name: "getDriversList"; type: "QStringList" }
+        Method {
+            name: "setSelectedDriver"
+            Parameter { name: "driver"; type: "QString" }
+        }
     }
 }

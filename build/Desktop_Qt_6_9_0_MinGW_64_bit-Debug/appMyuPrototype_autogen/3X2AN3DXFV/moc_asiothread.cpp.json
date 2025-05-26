@@ -8,8 +8,16 @@
             "signals": [
                 {
                     "access": "public",
+                    "arguments": [
+                        {
+                            "type": "char**"
+                        },
+                        {
+                            "type": "bool*"
+                        }
+                    ],
                     "index": 0,
-                    "name": "signalConnectDriver",
+                    "name": "requestSelectedDriver",
                     "returnType": "void"
                 }
             ],

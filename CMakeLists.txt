@@ -22,7 +22,7 @@ qt_add_qml_module(appMyuPrototype
     VERSION 1.0
     QML_FILES
         Frontend/MainWindow.qml
-        SOURCES Backend/asiothread.h
+        SOURCES
         SOURCES Backend/asiofunctions.h
         SOURCES Backend/asiofunctions.cpp
         SOURCES Backend/maincontroller.h Backend/maincontroller.cpp
@@ -31,6 +31,8 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES Frontend/ToolBarButton.qml
         QML_FILES Frontend/SettingsWindow.qml
         RESOURCES resources.qrc
+        QML_FILES
+        SOURCES Backend/asiothread.h Backend/asiothread.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

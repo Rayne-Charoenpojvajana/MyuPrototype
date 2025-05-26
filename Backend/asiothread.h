@@ -12,15 +12,26 @@ public:
         : QThread(parent)
     {
     }
-
+    bool isASIORunning() {
+        return asioRunning;
+    }
 private:
     Q_OBJECT
+    bool asioRunning = false;
     void run() override {
-        test();
+        while(1) {
+            msleep(2000);
+            char* selectedDriver = (char*) "";
+            bool await = true;
+            emit requestSelectedDriver(&selectedDriver, &await);
+            while(await);
+            asioRunning = true;
+            setupASIO(selectedDriver);
+            asioRunning = false;
+        }
     }
-
 signals:
-    void signalConnectDriver();
+    void requestSelectedDriver(char**, bool*);
 };
 
 #endif // ASIOTHREAD_H

@@ -39,13 +39,17 @@ template <> constexpr inline auto ASIOThread::qt_create_metaobjectdata<qt_meta_t
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "ASIOThread",
-        "signalConnectDriver",
-        ""
+        "requestSelectedDriver",
+        "",
+        "char**",
+        "bool*"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'signalConnectDriver'
-        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'requestSelectedDriver'
+        QtMocHelpers::SignalData<void(char * *, bool *)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 3, 2 }, { 0x80000000 | 4, 2 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -69,12 +73,12 @@ void ASIOThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<ASIOThread *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->signalConnectDriver(); break;
+        case 0: _t->requestSelectedDriver((*reinterpret_cast< std::add_pointer_t<char**>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool*>>(_a[2]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (ASIOThread::*)()>(_a, &ASIOThread::signalConnectDriver, 0))
+        if (QtMocHelpers::indexOfMethod<void (ASIOThread::*)(char * * , bool * )>(_a, &ASIOThread::requestSelectedDriver, 0))
             return;
     }
 }
@@ -111,8 +115,8 @@ int ASIOThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void ASIOThread::signalConnectDriver()
+void ASIOThread::requestSelectedDriver(char * * _t1, bool * _t2)
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1, _t2);
 }
 QT_WARNING_POP

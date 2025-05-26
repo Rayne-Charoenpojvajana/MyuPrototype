@@ -20,7 +20,7 @@ ApplicationWindow {
                 id: cbox
                 model: ListModel {
                     id: listModel
-                    ListElement {text: "None"}
+                    ListElement {text: ""}
                 }
                 displayText: currentText
                 textRole: "text"
@@ -39,22 +39,23 @@ ApplicationWindow {
                     border.color: "#282828"
                     opacity: parent.hovered ? 0.7 : 1
                 }
-            }
-            Button {
-                palette.buttonText: "#FFFFFF"
-                Layout.preferredWidth: 75
-                Layout.preferredHeight: 30
-                contentItem: Text {
-                    verticalAlignment: Text.AlignVCenter
-                    text: qsTr("Scan")
-                    color: "#FFFFFF"
-                    leftPadding: 8
+                onActivated: {
+                    MainController.setSelectedDriver(currentText);
                 }
-                background: Rectangle {
-                    color: "#969696"
-                    radius: 3
-                    border.color: "#282828"
-                    opacity: parent.hovered ? 0.7 : 1
+            }
+            Timer {
+                repeat: true; interval: 1000; running: true
+                onTriggered: {
+                    let drivers = MainController.getDriversList();
+                    if (drivers.length === 0) {
+                        return
+                    }
+                    if (listModel.count > 1) {
+                        listModel.remove(1, listModel.count - 1)
+                    }
+                    for (const driver of drivers) {
+                        listModel.append({text: driver})
+                    }
                 }
             }
         }

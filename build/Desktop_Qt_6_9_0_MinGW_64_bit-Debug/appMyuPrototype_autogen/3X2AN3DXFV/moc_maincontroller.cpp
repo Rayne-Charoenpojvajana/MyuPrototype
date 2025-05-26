@@ -42,10 +42,32 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "QML.Element",
         "auto",
         "QML.Singleton",
-        "true"
+        "true",
+        "qmlInit",
+        "",
+        "sendSelectedDriver",
+        "char**",
+        "selectedDriver",
+        "bool*",
+        "await",
+        "getDriversList",
+        "setSelectedDriver",
+        "driver"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Slot 'qmlInit'
+        QtMocHelpers::SlotData<void()>(5, 6, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'sendSelectedDriver'
+        QtMocHelpers::SlotData<void(char * *, bool *)>(7, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 8, 9 }, { 0x80000000 | 10, 11 },
+        }}),
+        // Method 'getDriversList'
+        QtMocHelpers::MethodData<QStringList()>(12, 6, QMC::AccessPublic, QMetaType::QStringList),
+        // Method 'setSelectedDriver'
+        QtMocHelpers::MethodData<void(QString)>(13, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 14 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -72,10 +94,16 @@ Q_CONSTINIT const QMetaObject MainController::staticMetaObject = { {
 void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<MainController *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->qmlInit(); break;
+        case 1: _t->sendSelectedDriver((*reinterpret_cast< std::add_pointer_t<char**>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool*>>(_a[2]))); break;
+        case 2: { QStringList _r = _t->getDriversList();
+            if (_a[0]) *reinterpret_cast< QStringList*>(_a[0]) = std::move(_r); }  break;
+        case 3: _t->setSelectedDriver((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObject *MainController::metaObject() const
@@ -94,6 +122,18 @@ void *MainController::qt_metacast(const char *_clname)
 int MainController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QObject::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 4)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 4;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 4)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 4;
+    }
     return _id;
 }
 QT_WARNING_POP

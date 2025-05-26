@@ -53,8 +53,16 @@
                     },
                     {
                         "codegenSuccessfull": false,
+                        "column": 30,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"activated\".",
+                        "functionName": "onActivated",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 476,
+                        "durationMicroseconds": 529,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
                         "line": 30
@@ -62,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 77,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
                         "line": 32
@@ -70,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 21,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
                         "line": 34
@@ -78,26 +86,18 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 38,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
                         "line": 40
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 298,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "verticalAlignment",
-                        "line": 48
-                    },
-                    {
-                        "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 39,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
-                        "line": 57
+                        "durationMicroseconds": 3949,
+                        "errorMessage": "Cannot access value for name listModel",
+                        "functionName": "onTriggered",
+                        "line": 48
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/SettingsWindow.qml"

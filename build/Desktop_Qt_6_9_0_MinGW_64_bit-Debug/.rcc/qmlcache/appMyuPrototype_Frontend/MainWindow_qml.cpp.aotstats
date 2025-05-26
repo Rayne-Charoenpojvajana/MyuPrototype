@@ -6,10 +6,18 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 2475,
+                        "durationMicroseconds": 2738,
                         "errorMessage": "",
                         "functionName": "color",
-                        "line": 10
+                        "line": 11
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 190,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 13
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/MainWindow.qml"

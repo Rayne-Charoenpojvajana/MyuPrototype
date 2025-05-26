@@ -7,17 +7,12 @@
 #include "asiosys.h"
 #include "asio.h"
 #include "asiodrivers.h"
+#include <QTime>
 
-// name of the ASIO device to be used
-#if WINDOWS
-//	#define ASIO_DRIVER_NAME    "ASIO Multimedia Driver"
-#define ASIO_DRIVER_NAME    "Focusrite USB ASIO"
-#elif MAC
-//	#define ASIO_DRIVER_NAME   	"Apple Sound Manager"
-#define ASIO_DRIVER_NAME   	"Focusrite USB ASIO"
-#endif
 
-#define TEST_RUN_TIME  20.0	// run for 20 seconds
+#define MAX_DRIVER_LENGTH 32
+
+#define TEST_RUN_TIME  5.0	// run for 20 seconds
 
 enum {
     // number of input and outputs supported by the host application
@@ -77,6 +72,8 @@ typedef struct DriverInfo
 } DriverInfo;
 
 
+static DriverInfo asioDriverInfo = {0};
+static ASIOCallbacks asioCallbacks;
 
 
 //----------------------------------------------------------------------------------
@@ -85,7 +82,7 @@ extern AsioDrivers* asioDrivers;
 bool loadAsioDriver(char *name);
 
 // internal prototypes (required for the Metrowerks CodeWarrior compiler)
-void test();
+void setupASIO(char*);
 long init_asio_static_data (DriverInfo *asioDriverInfo);
 ASIOError create_asio_buffers (DriverInfo *asioDriverInfo);
 unsigned long get_sys_reference_time();
@@ -96,7 +93,6 @@ void bufferSwitch(long index, ASIOBool processNow);
 ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processNow);
 void sampleRateChanged(ASIOSampleRate sRate);
 long asioMessages(long selector, long value, void* message, double* opt);
-
 
 
 

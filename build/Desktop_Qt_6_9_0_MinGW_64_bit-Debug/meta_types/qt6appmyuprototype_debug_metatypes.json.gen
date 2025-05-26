@@ -9,8 +9,16 @@
                 "signals": [
                     {
                         "access": "public",
+                        "arguments": [
+                            {
+                                "type": "char**"
+                            },
+                            {
+                                "type": "bool*"
+                            }
+                        ],
                         "index": 0,
-                        "name": "signalConnectDriver",
+                        "name": "requestSelectedDriver",
                         "returnType": "void"
                     }
                 ],
@@ -39,9 +47,53 @@
                     }
                 ],
                 "className": "MainController",
-                "lineNumber": 8,
+                "lineNumber": 10,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "name": "getDriversList",
+                        "returnType": "QStringList"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "driver",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 3,
+                        "name": "setSelectedDriver",
+                        "returnType": "void"
+                    }
+                ],
                 "object": true,
                 "qualifiedClassName": "MainController",
+                "slots": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "qmlInit",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "selectedDriver",
+                                "type": "char**"
+                            },
+                            {
+                                "name": "await",
+                                "type": "bool*"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "sendSelectedDriver",
+                        "returnType": "void"
+                    }
+                ],
                 "superClasses": [
                     {
                         "access": "public",

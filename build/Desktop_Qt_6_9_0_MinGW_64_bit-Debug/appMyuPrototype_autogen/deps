@@ -6,6 +6,7 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/ginclude.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiothread.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiothread.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.h \
@@ -22,6 +23,7 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QObject \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QStringListModel \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QThread \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QTime \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20memory.h \
@@ -43,6 +45,7 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qbytearraylist.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qbytearrayview.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcalendar.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qchar.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcompare.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcompare_impl.h \
@@ -56,6 +59,7 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcontiguouscache.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdarwinhelpers.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdatastream.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdatetime.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdeadlinetimer.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qelapsedtimer.h \
@@ -75,6 +79,7 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qiterator.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlatin1stringview.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlist.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlocale.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlogging.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmalloc.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmap.h \

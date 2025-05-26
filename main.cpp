@@ -1,7 +1,8 @@
+#include "asiothread.h"
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QIcon>
-#include "Backend/asiothread.h"
+
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
     app.setWindowIcon(QIcon(":/logo.png"));
@@ -13,7 +14,5 @@ int main(int argc, char *argv[]) {
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
     engine.loadFromModule("MyuPrototype", "MainWindow");
-    ASIOThread* thread = new ASIOThread();
-    thread->start();
     return app.exec();
 }

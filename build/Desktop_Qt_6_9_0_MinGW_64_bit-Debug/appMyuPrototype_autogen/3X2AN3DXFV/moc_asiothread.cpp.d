@@ -8,10 +8,13 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QDebug \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QThread \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QTime \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20memory.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20type_traits.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20utility.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q23utility.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qalgorithms.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qanystringview.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qarraydata.h \
@@ -26,6 +29,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcalendar.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qchar.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcompare.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcompare_impl.h \
@@ -39,6 +43,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdatastream.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdatetime.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qelapsedtimer.h \
@@ -58,6 +63,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qiterator.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlist.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlocale.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlogging.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmalloc.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmap.h \
@@ -121,6 +127,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypes.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qutf8stringview.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvariant.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h \
