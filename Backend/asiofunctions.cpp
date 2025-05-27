@@ -16,35 +16,24 @@ long init_asio_static_data (DriverInfo *asioDriverInfo)
         if(ASIOGetBufferSize(&asioDriverInfo->minSize, &asioDriverInfo->maxSize, &asioDriverInfo->preferredSize, &asioDriverInfo->granularity) == ASE_OK)
         {
 
-            // get the currently selected sample rate
-            if(ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK)
-            {
-                if (asioDriverInfo->sampleRate <= 0.0 || asioDriverInfo->sampleRate > 96000.0)
-                {
-                    // Driver does not store it's internal sample rate, so set it to a know one.
-                    // Usually you should check beforehand, that the selected sample rate is valid
-                    // with ASIOCanSampleRate().
-                    if(ASIOSetSampleRate(44100.0) == ASE_OK)
-                    {
-                        if(ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK) {
-
+            if (ASIOCanSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
+                if (ASIOSetSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
+                    if (ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK) {
+                        if(ASIOOutputReady() == ASE_OK) {
+                            asioDriverInfo->postOutput = true;
+                        } else {
+                            asioDriverInfo->postOutput = false;
                         }
-                        else
-                            return -6;
-                    }
-                    else
+                        return 0;
+                    } else {
                         return -5;
+                    }
+                } else {
+                    return -4;
                 }
-
-                // check wether the driver requires the ASIOOutputReady() optimization
-                // (can be used by the driver to reduce output latency by one block)
-                if(ASIOOutputReady() == ASE_OK)
-                    asioDriverInfo->postOutput = true;
-                else
-                    asioDriverInfo->postOutput = false;
-                return 0;
+            } else {
+                return -3;
             }
-            return -3;
         }
         return -2;
     }
@@ -130,12 +119,6 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     if (asioDriverInfo.postOutput)
         ASIOOutputReady();
 
-    // if (processedSamples >= asioDriverInfo.sampleRate * TEST_RUN_TIME) {
-    //     asioDriverInfo.stopped = true;
-    //     processedSamples = 0;
-    // } else {
-    //     processedSamples += buffSize;
-    // }
     return 0L;
 }
 
@@ -314,9 +297,11 @@ void setupASIO(char* asioDriverName) {
         if (ASIOInit (&asioDriverInfo.driverInfo) == ASE_OK)
         {
 
-
-            if (ASIOCanSampleRate(sampleRate) == 0 && init_asio_static_data (&asioDriverInfo) == 0)
+            asioDriverInfo.selectedSampleRate = selectedSampleRate;
+            if (init_asio_static_data (&asioDriverInfo) == 0)
             {
+
+
 
                 if (selectedBufferSize < asioDriverInfo.minSize) {
                     asioDriverInfo.selectedBufferSize = std::max({softwareMinBuffer, asioDriverInfo.minSize});

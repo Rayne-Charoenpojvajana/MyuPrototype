@@ -17,7 +17,7 @@
                 {
                     "access": "public",
                     "index": 2,
-                    "name": "getDriversList",
+                    "name": "getDriverList",
                     "returnType": "QStringList"
                 },
                 {
@@ -49,11 +49,29 @@
                     "arguments": [
                         {
                             "name": "size",
-                            "type": "int"
+                            "type": "long"
                         }
                     ],
                     "index": 6,
                     "name": "setBufferSize",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 7,
+                    "name": "getSampleRates",
+                    "returnType": "QList<long>"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "sampleRate",
+                            "type": "long"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "setSampleRate",
                     "returnType": "void"
                 }
             ],

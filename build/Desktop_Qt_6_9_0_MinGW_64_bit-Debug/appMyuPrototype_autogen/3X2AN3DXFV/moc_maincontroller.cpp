@@ -50,7 +50,7 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "selectedDriver",
         "bool*",
         "await",
-        "getDriversList",
+        "getDriverList",
         "setSelectedDriver",
         "driver",
         "getMonitor",
@@ -58,7 +58,10 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "getBufferSizes",
         "QList<long>",
         "setBufferSize",
-        "size"
+        "size",
+        "getSampleRates",
+        "setSampleRate",
+        "sampleRate"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -68,7 +71,7 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         QtMocHelpers::SlotData<void(char * *, bool *)>(7, 6, QMC::AccessPublic, QMetaType::Void, {{
             { 0x80000000 | 8, 9 }, { 0x80000000 | 10, 11 },
         }}),
-        // Method 'getDriversList'
+        // Method 'getDriverList'
         QtMocHelpers::MethodData<QStringList()>(12, 6, QMC::AccessPublic, QMetaType::QStringList),
         // Method 'setSelectedDriver'
         QtMocHelpers::MethodData<void(QString)>(13, 6, QMC::AccessPublic, QMetaType::Void, {{
@@ -79,8 +82,14 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         // Method 'getBufferSizes'
         QtMocHelpers::MethodData<QList<long>()>(17, 6, QMC::AccessPublic, 0x80000000 | 18),
         // Method 'setBufferSize'
-        QtMocHelpers::MethodData<void(int)>(19, 6, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Int, 20 },
+        QtMocHelpers::MethodData<void(long)>(19, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Long, 20 },
+        }}),
+        // Method 'getSampleRates'
+        QtMocHelpers::MethodData<QList<long>()>(21, 6, QMC::AccessPublic, 0x80000000 | 18),
+        // Method 'setSampleRate'
+        QtMocHelpers::MethodData<void(long)>(22, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Long, 23 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -112,14 +121,17 @@ void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         switch (_id) {
         case 0: _t->qmlInit(); break;
         case 1: _t->sendSelectedDriver((*reinterpret_cast< std::add_pointer_t<char**>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool*>>(_a[2]))); break;
-        case 2: { QStringList _r = _t->getDriversList();
+        case 2: { QStringList _r = _t->getDriverList();
             if (_a[0]) *reinterpret_cast< QStringList*>(_a[0]) = std::move(_r); }  break;
         case 3: _t->setSelectedDriver((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 4: { QList<double> _r = _t->getMonitor();
             if (_a[0]) *reinterpret_cast< QList<double>*>(_a[0]) = std::move(_r); }  break;
         case 5: { QList<long> _r = _t->getBufferSizes();
             if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
-        case 6: _t->setBufferSize((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 6: _t->setBufferSize((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
+        case 7: { QList<long> _r = _t->getSampleRates();
+            if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
+        case 8: _t->setSampleRate((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
         default: ;
         }
     }
@@ -144,14 +156,14 @@ int MainController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 9;
     }
     return _id;
 }

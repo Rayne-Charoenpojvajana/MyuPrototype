@@ -48,7 +48,7 @@ ApplicationWindow {
                 Timer {
                     repeat: true; interval: 1000; running: true
                     onTriggered: {
-                        let drivers = MainController.getDriversList();
+                        let drivers = MainController.getDriverList();
                         if (drivers.length === 0) {
                             return
                         }
@@ -84,6 +84,9 @@ ApplicationWindow {
         RowLayout {
             Layout.leftMargin: 10
             ComboBox {
+                model: ListModel {
+                    id: sModel
+                }
                 Layout.preferredHeight: 30
                 Layout.preferredWidth: cbox.width
                 background: Rectangle {
@@ -102,8 +105,17 @@ ApplicationWindow {
                     color: "#FFFFFF"
                     text: parent.displayText
                 }
+                onActivated: {
+                    MainController.setSampleRate(currentText)
+                }
+
                 Component.onCompleted: {
-                    console.log("hey");
+                    const sampleRates = MainController.getSampleRates()
+                    for (const rate of sampleRates) {
+                        sModel.append({text: rate})
+                    }
+                    currentIndex = 0
+                    MainController.setSampleRate(currentText)
                 }
             }
             ComboBox {

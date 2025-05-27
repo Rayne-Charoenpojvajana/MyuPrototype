@@ -17,10 +17,6 @@ ToolBar {
         }
         ToolBarButton {
             Layout.preferredWidth: Style.toolBarButtonWidth
-            text: qsTr("Tuner")
-        }
-        ToolBarButton {
-            Layout.preferredWidth: Style.toolBarButtonWidth
             text: qsTr("Metronome")
         }
         SettingsWindow {

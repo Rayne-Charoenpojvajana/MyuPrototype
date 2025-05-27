@@ -19,7 +19,7 @@ public:
     void setStreaming(bool stream) {
         streaming = stream;
     }
-    QStringList getDriversList() {
+    QStringList getDriverList() {
         QStringList list;
         if (getStreaming()) {
             return list;

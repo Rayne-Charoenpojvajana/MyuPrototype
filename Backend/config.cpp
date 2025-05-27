@@ -18,6 +18,8 @@ int maxDriverLength = 32;
 long softwareMinBuffer = MIN_BUFFER;
 const long softwareMaxBuffer = MAX_BUFFER;
 
+long numSampleRates = 2;
 long softwareSampleRates[] = {44100, 48000};
-long sampleRate = softwareSampleRates[0];
+long selectedSampleRate = softwareSampleRates[0];
+
 

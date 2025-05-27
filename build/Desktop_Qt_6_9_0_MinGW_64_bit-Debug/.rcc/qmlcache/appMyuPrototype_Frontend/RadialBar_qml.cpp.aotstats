@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 89,
+                        "durationMicroseconds": 71,
                         "errorMessage": "Cannot access value for name implicitWidth",
                         "functionName": "implicitHeight",
                         "line": 34
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 25,
-                        "durationMicroseconds": 309,
+                        "durationMicroseconds": 208,
                         "errorMessage": "Cannot access value for name Math",
                         "functionName": "radius",
                         "line": 40
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 39
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 25,
-                        "durationMicroseconds": 48,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name outerRing",
                         "functionName": "radius",
                         "line": 51
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 12,
+                        "durationMicroseconds": 8,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 49
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 34,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name outerRing",
                         "functionName": "margins",
                         "line": 50
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 29,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name innerRing",
                         "functionName": "source",
                         "line": 58
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 35,
-                        "durationMicroseconds": 11,
+                        "durationMicroseconds": 7,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 59
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 63,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name main_progress_bar",
                         "functionName": "color",
                         "line": 62
@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 50,
-                        "durationMicroseconds": 42,
+                        "durationMicroseconds": 26,
                         "errorMessage": "Cannot access value for name main_progress_bar",
                         "functionName": "position",
                         "line": 63
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 86,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 20,
                         "errorMessage": "Cannot access value for name main_progress_bar",
                         "functionName": "color",
                         "line": 63
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 50,
-                        "durationMicroseconds": 77,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name main_progress_bar",
                         "functionName": "position",
                         "line": 64

@@ -17,8 +17,8 @@ private:
     QString selectedDriver = "";
 public:
     MainController();
-    Q_INVOKABLE QStringList getDriversList() {
-        return asioThread->getDriversList();
+    Q_INVOKABLE QStringList getDriverList() {
+        return asioThread->getDriverList();
     }
     Q_INVOKABLE void setSelectedDriver(QString driver) {
         this->selectedDriver = driver;
@@ -42,8 +42,21 @@ public:
         }
         return list;
     }
-    Q_INVOKABLE void setBufferSize(int size) {
+    Q_INVOKABLE void setBufferSize(long size) {
         selectedBufferSize = size;
+        if (asioThread->getStreaming()) {
+            asioThread->setStreaming(false);
+        }
+    }
+    Q_INVOKABLE QList<long> getSampleRates() {
+        QList<long> list;
+        for(int i = 0; i < numSampleRates; i++) {
+            list.append(softwareSampleRates[i]);
+        }
+        return list;
+    }
+    Q_INVOKABLE void setSampleRate(long sampleRate) {
+        selectedSampleRate = sampleRate;
         if (asioThread->getStreaming()) {
             asioThread->setStreaming(false);
         }

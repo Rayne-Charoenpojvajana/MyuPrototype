@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 387,
+                        "durationMicroseconds": 323,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 17,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 6
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 18,
-                        "durationMicroseconds": 2291,
+                        "durationMicroseconds": 2187,
                         "errorMessage": "",
                         "functionName": "spacing",
                         "line": 10
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 139,
+                        "durationMicroseconds": 172,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 12
@@ -46,18 +46,10 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 125,
+                        "durationMicroseconds": 169,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 19
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 36,
-                        "durationMicroseconds": 119,
-                        "errorMessage": "",
-                        "functionName": "preferredWidth",
-                        "line": 23
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/MainWindowFooter.qml"

@@ -21,7 +21,7 @@ Module {
             Parameter { name: "selectedDriver"; type: "char*"; isPointer: true }
             Parameter { name: "await"; type: "bool"; isPointer: true }
         }
-        Method { name: "getDriversList"; type: "QStringList" }
+        Method { name: "getDriverList"; type: "QStringList" }
         Method {
             name: "setSelectedDriver"
             Parameter { name: "driver"; type: "QString" }
@@ -31,6 +31,11 @@ Module {
         Method {
             name: "setBufferSize"
             Parameter { name: "size"; type: "int" }
+        }
+        Method { name: "getSampleRates"; type: "int"; isList: true }
+        Method {
+            name: "setSampleRate"
+            Parameter { name: "sampleRate"; type: "int" }
         }
     }
 }

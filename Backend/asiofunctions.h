@@ -38,6 +38,7 @@ typedef struct DriverInfo
     // ASIOGetSampleRate()
     ASIOSampleRate sampleRate;
 
+    long selectedSampleRate;
     // ASIOOutputReady()
     bool           postOutput;
 
@@ -81,7 +82,9 @@ extern int maxDriverLength;
 extern long selectedBufferSize;
 extern long softwareMinBuffer;
 extern const long softwareMaxBuffer;
-extern long sampleRate;
+extern long selectedSampleRate;
+extern long softwareSampleRates[];
+extern long numSampleRates;
 //----------------------------------------------------------------------------------
 // some external references
 extern AsioDrivers* asioDrivers;
