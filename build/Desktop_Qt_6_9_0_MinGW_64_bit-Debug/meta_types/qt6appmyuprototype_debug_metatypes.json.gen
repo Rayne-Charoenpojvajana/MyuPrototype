@@ -71,7 +71,25 @@
                         "access": "public",
                         "index": 4,
                         "name": "getMonitor",
-                        "returnType": "double"
+                        "returnType": "QList<double>"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "getBufferSizes",
+                        "returnType": "QList<long>"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "size",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "setBufferSize",
+                        "returnType": "void"
                     }
                 ],
                 "object": true,

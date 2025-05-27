@@ -5,6 +5,7 @@
     <file alias="Frontend/MainWindowFooter.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/MainWindowFooter.qml</file>
     <file alias="Frontend/ToolBarButton.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/ToolBarButton.qml</file>
     <file alias="Frontend/SettingsWindow.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/SettingsWindow.qml</file>
+    <file alias="Frontend/RadialBar.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/RadialBar.qml</file>
     <file alias="resources.qrc">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/resources.qrc</file>
   </qresource>
 </RCC>

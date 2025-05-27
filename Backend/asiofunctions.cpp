@@ -8,12 +8,14 @@
 long init_asio_static_data (DriverInfo *asioDriverInfo)
 {	// collect the informational data of the driver
     // get the number of available channels
+
     if(ASIOGetChannels(&asioDriverInfo->inputChannels, &asioDriverInfo->outputChannels) == ASE_OK)
     {
 
         // get the usable buffer sizes
         if(ASIOGetBufferSize(&asioDriverInfo->minSize, &asioDriverInfo->maxSize, &asioDriverInfo->preferredSize, &asioDriverInfo->granularity) == ASE_OK)
         {
+
             // get the currently selected sample rate
             if(ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK)
             {
@@ -87,28 +89,24 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     asioDriverInfo.sysRefTime = get_sys_reference_time();
 
     // buffer size in samples
-    long buffSize = asioDriverInfo.preferredSize;
+    long buffSize = asioDriverInfo.selectedBufferSize;
 
 
     // perform the processing
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
     {
 
-        double data[buffSize];
-
-        int32_t intData[buffSize];
-
+        int32_t intData[asioDriverInfo.selectedBufferSize];
         if (asioDriverInfo.bufferInfos[i].isInput == true && i == 1)
         {
             // OK do processing for the outputs only
             switch (asioDriverInfo.channelInfos[i].type)
-
             {
             case ASIOSTInt32LSB:
-                for(int j = 0; j < buffSize; ++j) {
-                    data[j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (double)0x7fffffff;
-                }
                 memcpy(intData, asioDriverInfo.bufferInfos[i].buffers[index], buffSize);
+                for(int j = 0; j < buffSize; ++j) {
+                    inputMonitors.input1[j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (double)0x7fffffff;
+                }
                 break;
             }
         }
@@ -120,7 +118,6 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
             {
             case ASIOSTInt32LSB:
                 memcpy(asioDriverInfo.bufferInfos[i].buffers[index], intData, buffSize);
-                memcpy(monitor, data, buffSize);
                 break;
             }
         }
@@ -275,7 +272,7 @@ ASIOError create_asio_buffers (DriverInfo *asioDriverInfo)
     // create and activate buffers
     result = ASIOCreateBuffers(asioDriverInfo->bufferInfos,
                                asioDriverInfo->inputBuffers + asioDriverInfo->outputBuffers,
-                               asioDriverInfo->preferredSize, &asioCallbacks);
+                               asioDriverInfo->selectedBufferSize, &asioCallbacks);
     if (result == ASE_OK)
     {
         // now get all the buffer details, sample word length, name, word clock group and activation
@@ -296,6 +293,7 @@ ASIOError create_asio_buffers (DriverInfo *asioDriverInfo)
             // (output latency is the time the first sample in the currently returned audio block requires to get to the output)
             result = ASIOGetLatencies(&asioDriverInfo->inputLatency, &asioDriverInfo->outputLatency);
         }
+
     }
     return result;
 }
@@ -315,9 +313,18 @@ void setupASIO(char* asioDriverName) {
         // initialize the driver
         if (ASIOInit (&asioDriverInfo.driverInfo) == ASE_OK)
         {
-            if (init_asio_static_data (&asioDriverInfo) == 0)
+
+
+            if (ASIOCanSampleRate(sampleRate) == 0 && init_asio_static_data (&asioDriverInfo) == 0)
             {
 
+                if (selectedBufferSize < asioDriverInfo.minSize) {
+                    asioDriverInfo.selectedBufferSize = std::max({softwareMinBuffer, asioDriverInfo.minSize});
+                } else if (selectedBufferSize > asioDriverInfo.maxSize) {
+                    asioDriverInfo.selectedBufferSize = std::min({softwareMinBuffer, asioDriverInfo.minSize});
+                } else {
+                    asioDriverInfo.selectedBufferSize = selectedBufferSize;
+                }
                 // ASIOControlPanel(); you might want to check wether the ASIOControlPanel() can open
 
                 // set up the asioCallback structure and create the ASIO data buffer
@@ -334,7 +341,6 @@ void setupASIO(char* asioDriverName) {
                         while (!asioDriverInfo.stopped && streaming)
                         {
                             Sleep(17);
-                            memcpy(test, monitor, 192);
                         }
                         ASIOStop();
                     }

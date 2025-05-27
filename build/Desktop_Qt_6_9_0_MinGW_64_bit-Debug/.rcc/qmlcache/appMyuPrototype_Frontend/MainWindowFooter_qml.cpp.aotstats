@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 415,
+                        "durationMicroseconds": 387,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 7
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 15,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 6
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 18,
-                        "durationMicroseconds": 2531,
+                        "durationMicroseconds": 2291,
                         "errorMessage": "",
                         "functionName": "spacing",
                         "line": 10
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 203,
+                        "durationMicroseconds": 139,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 12
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 154,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 19
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 151,
+                        "durationMicroseconds": 119,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 23

@@ -28,7 +28,7 @@ public:
         long numDev = helperDrivers.asioGetNumDev();
         char* drivers[numDev];
         for (int i = 0; i < numDev; i++) {
-            drivers[i] = new char[MAX_DRIVER_LENGTH];
+            drivers[i] = new char[maxDriverLength];
         }
         helperDrivers.getDriverNames(drivers, numDev);
         for (int i = 0; i < numDev; i++) {

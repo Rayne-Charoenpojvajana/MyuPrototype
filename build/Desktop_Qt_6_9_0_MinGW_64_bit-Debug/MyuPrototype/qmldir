@@ -6,4 +6,5 @@ singleton Style 1.0 Frontend/Style.qml
 MainWindowFooter 1.0 Frontend/MainWindowFooter.qml
 ToolBarButton 1.0 Frontend/ToolBarButton.qml
 SettingsWindow 1.0 Frontend/SettingsWindow.qml
+RadialBar 1.0 Frontend/RadialBar.qml
 

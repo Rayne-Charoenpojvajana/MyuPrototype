@@ -7,9 +7,8 @@
 #include <QTime>
 
 
-#define MAX_DRIVER_LENGTH 32
 
-#define TEST_RUN_TIME  2.0	// run for 20 seconds
+
 
 enum {
     // number of input and outputs supported by the host application
@@ -34,6 +33,7 @@ typedef struct DriverInfo
     long           maxSize;
     long           preferredSize;
     long           granularity;
+    long           selectedBufferSize;
 
     // ASIOGetSampleRate()
     ASIOSampleRate sampleRate;
@@ -68,13 +68,20 @@ typedef struct DriverInfo
     bool           stopped;
 } DriverInfo;
 
+typedef struct {
+    double* input0;
+    double* input1;
+} InputMonitors;
+extern InputMonitors inputMonitors;
 
 extern DriverInfo asioDriverInfo;
 extern ASIOCallbacks asioCallbacks;
 extern bool streaming;
-extern double monitor[];
-extern double test[];
-
+extern int maxDriverLength;
+extern long selectedBufferSize;
+extern long softwareMinBuffer;
+extern const long softwareMaxBuffer;
+extern long sampleRate;
 //----------------------------------------------------------------------------------
 // some external references
 extern AsioDrivers* asioDrivers;

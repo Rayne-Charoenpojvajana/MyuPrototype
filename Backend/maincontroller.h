@@ -14,7 +14,7 @@ private:
     QML_ELEMENT
     QML_SINGLETON
     ASIOThread* asioThread = new ASIOThread();
-    QString selectedDriver = "testing";
+    QString selectedDriver = "";
 public:
     MainController();
     Q_INVOKABLE QStringList getDriversList() {
@@ -26,8 +26,27 @@ public:
             asioThread->setStreaming(false);
         }
     }
-    Q_INVOKABLE double getMonitor() {
-        return test[0];
+    Q_INVOKABLE QList<double> getMonitor() {
+        if (!asioThread->getStreaming()) {
+            return {0,0};
+        }
+        QList<double> list;
+        list.append(inputMonitors.input0[0]);
+        list.append(inputMonitors.input1[0]);
+        return list;
+    }
+    Q_INVOKABLE QList<long> getBufferSizes() {
+        QList<long> list;
+        for(long i = softwareMinBuffer; i <= softwareMaxBuffer; i*=2) {
+            list.append(i);
+        }
+        return list;
+    }
+    Q_INVOKABLE void setBufferSize(int size) {
+        selectedBufferSize = size;
+        if (asioThread->getStreaming()) {
+            asioThread->setStreaming(false);
+        }
     }
 public slots:
     void qmlInit() {

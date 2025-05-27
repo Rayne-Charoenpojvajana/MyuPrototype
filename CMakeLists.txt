@@ -35,6 +35,7 @@ qt_add_qml_module(appMyuPrototype
         SOURCES Backend/asiothread.h Backend/asiothread.cpp
         SOURCES Backend/config.cpp
         SOURCES
+        QML_FILES Frontend/RadialBar.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -74,3 +75,6 @@ set(QML_INCLUDES
 target_include_directories(appMyuPrototype PRIVATE
     ${QML_INCLUDES}
 )
+
+find_package(Qt6 REQUIRED COMPONENTS Core5Compat)
+target_link_libraries(appMyuPrototype PRIVATE Qt6::Core5Compat)

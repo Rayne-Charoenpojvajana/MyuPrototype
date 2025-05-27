@@ -53,7 +53,12 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "getDriversList",
         "setSelectedDriver",
         "driver",
-        "getMonitor"
+        "getMonitor",
+        "QList<double>",
+        "getBufferSizes",
+        "QList<long>",
+        "setBufferSize",
+        "size"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -70,7 +75,13 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
             { QMetaType::QString, 14 },
         }}),
         // Method 'getMonitor'
-        QtMocHelpers::MethodData<double()>(15, 6, QMC::AccessPublic, QMetaType::Double),
+        QtMocHelpers::MethodData<QList<double>()>(15, 6, QMC::AccessPublic, 0x80000000 | 16),
+        // Method 'getBufferSizes'
+        QtMocHelpers::MethodData<QList<long>()>(17, 6, QMC::AccessPublic, 0x80000000 | 18),
+        // Method 'setBufferSize'
+        QtMocHelpers::MethodData<void(int)>(19, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 20 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -104,8 +115,11 @@ void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 2: { QStringList _r = _t->getDriversList();
             if (_a[0]) *reinterpret_cast< QStringList*>(_a[0]) = std::move(_r); }  break;
         case 3: _t->setSelectedDriver((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: { double _r = _t->getMonitor();
-            if (_a[0]) *reinterpret_cast< double*>(_a[0]) = std::move(_r); }  break;
+        case 4: { QList<double> _r = _t->getMonitor();
+            if (_a[0]) *reinterpret_cast< QList<double>*>(_a[0]) = std::move(_r); }  break;
+        case 5: { QList<long> _r = _t->getBufferSizes();
+            if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
+        case 6: _t->setBufferSize((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -130,14 +144,14 @@ int MainController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }
