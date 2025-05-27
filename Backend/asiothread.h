@@ -5,6 +5,7 @@
 #include <QDebug>
 #include "asiofunctions.h"
 
+
 class ASIOThread : public QThread
 {
 public:
@@ -12,15 +13,32 @@ public:
         : QThread(parent)
     {
     }
-    bool isASIORunning() {
-        return asioRunning;
+    bool getStreaming() {
+        return streaming;
     }
-    void setASIORunning(bool running) {
-        asioRunning = running;
+    void setStreaming(bool stream) {
+        streaming = stream;
+    }
+    QStringList getDriversList() {
+        QStringList list;
+        if (getStreaming()) {
+            return list;
+        }
+        extern AsioDrivers helperDrivers;
+        long numDev = helperDrivers.asioGetNumDev();
+        char* drivers[numDev];
+        for (int i = 0; i < numDev; i++) {
+            drivers[i] = new char[MAX_DRIVER_LENGTH];
+        }
+        helperDrivers.getDriverNames(drivers, numDev);
+        for (int i = 0; i < numDev; i++) {
+            list.append(drivers[i]);
+            delete drivers[i];
+        }
+        return list;
     }
 private:
     Q_OBJECT
-    bool asioRunning = false;
     void run() override {
         while(1) {
             msleep(2000);
@@ -28,9 +46,9 @@ private:
             bool await = true;
             emit requestSelectedDriver(&selectedDriver, &await);
             while(await);
-            asioRunning = true;
-            setupASIO(selectedDriver, &asioRunning);
-            asioRunning = false;
+            streaming = true;
+            setupASIO(selectedDriver);
+            streaming = false;
         }
     }
 signals:

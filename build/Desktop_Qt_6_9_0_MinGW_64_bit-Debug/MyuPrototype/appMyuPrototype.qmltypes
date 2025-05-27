@@ -26,5 +26,6 @@ Module {
             name: "setSelectedDriver"
             Parameter { name: "driver"; type: "QString" }
         }
+        Method { name: "getMonitor"; type: "double" }
     }
 }

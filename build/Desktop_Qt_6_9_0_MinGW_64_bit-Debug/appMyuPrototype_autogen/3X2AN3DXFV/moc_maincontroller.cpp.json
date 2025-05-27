@@ -31,6 +31,12 @@
                     "index": 3,
                     "name": "setSelectedDriver",
                     "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 4,
+                    "name": "getMonitor",
+                    "returnType": "double"
                 }
             ],
             "object": true,

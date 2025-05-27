@@ -9,7 +9,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"color\".",
                         "functionName": "color",
-                        "line": 7
+                        "line": 9
                     },
                     {
                         "codegenSuccessfull": false,
@@ -17,7 +17,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"minimumWidth\".",
                         "functionName": "minimumWidth",
-                        "line": 10
+                        "line": 12
                     },
                     {
                         "codegenSuccessfull": false,
@@ -25,7 +25,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"minimumHeight\".",
                         "functionName": "minimumHeight",
-                        "line": 11
+                        "line": 13
                     },
                     {
                         "codegenSuccessfull": false,
@@ -33,7 +33,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"maximumWidth\".",
                         "functionName": "maximumWidth",
-                        "line": 12
+                        "line": 14
                     },
                     {
                         "codegenSuccessfull": false,
@@ -41,7 +41,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"maximumHeight\".",
                         "functionName": "maximumHeight",
-                        "line": 13
+                        "line": 15
                     },
                     {
                         "codegenSuccessfull": false,
@@ -49,7 +49,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"displayText\".",
                         "functionName": "displayText",
-                        "line": 25
+                        "line": 27
                     },
                     {
                         "codegenSuccessfull": false,
@@ -57,47 +57,55 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"activated\".",
                         "functionName": "onActivated",
-                        "line": 42
+                        "line": 44
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 529,
+                        "durationMicroseconds": 411,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
-                        "line": 30
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 30,
-                        "durationMicroseconds": 77,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
                         "line": 32
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 27,
-                        "durationMicroseconds": 21,
+                        "column": 30,
+                        "durationMicroseconds": 48,
                         "errorMessage": "Cannot access value for name parent",
-                        "functionName": "text",
+                        "functionName": "opacity",
                         "line": 34
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 30,
-                        "durationMicroseconds": 38,
+                        "column": 27,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
-                        "line": 40
+                        "functionName": "text",
+                        "line": 36
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 3949,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "opacity",
+                        "line": 42
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 30,
+                        "durationMicroseconds": 1846,
                         "errorMessage": "Cannot access value for name listModel",
                         "functionName": "onTriggered",
-                        "line": 48
+                        "line": 50
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 30,
+                        "durationMicroseconds": 355,
+                        "errorMessage": "",
+                        "functionName": "onTriggered",
+                        "line": 66
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/SettingsWindow.qml"

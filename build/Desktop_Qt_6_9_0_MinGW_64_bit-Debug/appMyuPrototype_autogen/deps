@@ -2,12 +2,12 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asio.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiodrivers.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiolist.h \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiosys.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/ginclude.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiothread.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiothread.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/config.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/CMakeLists.txt \

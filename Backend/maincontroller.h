@@ -18,32 +18,21 @@ private:
 public:
     MainController();
     Q_INVOKABLE QStringList getDriversList() {
-        QStringList list;
-        if (asioThread->isASIORunning()) {
-            return list;
-        }
-        AsioDrivers tempDrivers;
-        long numDev = tempDrivers.asioGetNumDev();
-        char* drivers[numDev];
-        for (int i = 0; i < numDev; i++) {
-            drivers[i] = new char[MAX_DRIVER_LENGTH];
-        }
-        tempDrivers.getDriverNames(drivers, numDev);
-        for (int i = 0; i < numDev; i++) {
-            list.append(drivers[i]);
-            delete drivers[i];
-        }
-        return list;
+        return asioThread->getDriversList();
     }
     Q_INVOKABLE void setSelectedDriver(QString driver) {
         this->selectedDriver = driver;
-        if (asioThread->isASIORunning()) {
-            asioThread->setASIORunning(false);
+        if (asioThread->getStreaming()) {
+            asioThread->setStreaming(false);
         }
+    }
+    Q_INVOKABLE double getMonitor() {
+        return test[0];
     }
 public slots:
     void qmlInit() {
-
+        connect(asioThread, &ASIOThread::requestSelectedDriver, this, &MainController::sendSelectedDriver);
+        asioThread->start();
     }
     void sendSelectedDriver(char** selectedDriver, bool* await) {
         *selectedDriver = this->selectedDriver.toUtf8().data();

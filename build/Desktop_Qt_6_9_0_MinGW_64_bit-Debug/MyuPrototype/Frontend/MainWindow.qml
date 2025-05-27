@@ -2,7 +2,7 @@ import QtQuick.Controls.Fusion
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-
+import MyuPrototype
 ApplicationWindow {
     title: "Myu"
     width: 800

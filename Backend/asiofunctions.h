@@ -2,9 +2,6 @@
 #define ASIOFUNCTIONS_H
 
 #include <windows.h>
-#include <stdio.h>
-#include <string.h>
-#include "asiosys.h"
 #include "asio.h"
 #include "asiodrivers.h"
 #include <QTime>
@@ -12,7 +9,7 @@
 
 #define MAX_DRIVER_LENGTH 32
 
-#define TEST_RUN_TIME  10.0	// run for 20 seconds
+#define TEST_RUN_TIME  2.0	// run for 20 seconds
 
 enum {
     // number of input and outputs supported by the host application
@@ -72,9 +69,11 @@ typedef struct DriverInfo
 } DriverInfo;
 
 
-static DriverInfo asioDriverInfo = {0};
-static ASIOCallbacks asioCallbacks;
-
+extern DriverInfo asioDriverInfo;
+extern ASIOCallbacks asioCallbacks;
+extern bool streaming;
+extern double monitor[];
+extern double test[];
 
 //----------------------------------------------------------------------------------
 // some external references
@@ -82,7 +81,7 @@ extern AsioDrivers* asioDrivers;
 bool loadAsioDriver(char *name);
 
 // internal prototypes (required for the Metrowerks CodeWarrior compiler)
-void setupASIO(char*, bool*);
+void setupASIO(char*);
 long init_asio_static_data (DriverInfo *asioDriverInfo);
 ASIOError create_asio_buffers (DriverInfo *asioDriverInfo);
 unsigned long get_sys_reference_time();

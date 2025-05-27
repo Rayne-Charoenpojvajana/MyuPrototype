@@ -1,8 +1,10 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import MyuPrototype
 
 ApplicationWindow {
+
     title: "Settings"
     color: Style.mainWindowBackgroundColor
     width: 400
@@ -58,11 +60,19 @@ ApplicationWindow {
                     }
                 }
             }
+
+            Timer {
+                repeat: true; interval: 17; running: true
+                onTriggered: {
+                    console.log(MainController.getMonitor());
+                }
+            }
+
+
+
+
+
         }
     }
-
-
-
-
-
 }
+

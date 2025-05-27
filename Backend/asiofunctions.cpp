@@ -94,35 +94,36 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
     {
 
+        double data[buffSize];
 
+        int32_t intData[buffSize];
 
-        if (asioDriverInfo.bufferInfos[i].isInput == true)
+        if (asioDriverInfo.bufferInfos[i].isInput == true && i == 1)
         {
             // OK do processing for the outputs only
             switch (asioDriverInfo.channelInfos[i].type)
 
             {
             case ASIOSTInt32LSB:
-                double data[buffSize];
                 for(int j = 0; j < buffSize; ++j) {
                     data[j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (double)0x7fffffff;
                 }
-                qDebug() << data[0] << data[1];
+                memcpy(intData, asioDriverInfo.bufferInfos[i].buffers[index], buffSize);
                 break;
             }
         }
 
-
-        // if (asioDriverInfo.bufferInfos[i].isInput == false)
-        // {
-        //     // OK do processing for the outputs only
-        //     switch (asioDriverInfo.channelInfos[i].type)
-        //     {
-        //     case ASIOSTInt32LSB:
-        //         memset (asioDriverInfo.bufferInfos[i].buffers[index], 0, buffSize * 4);
-        //         break;
-        //     }
-        // }
+        if (asioDriverInfo.bufferInfos[i].isInput == false)
+        {
+            // OK do processing for the outputs only
+            switch (asioDriverInfo.channelInfos[i].type)
+            {
+            case ASIOSTInt32LSB:
+                memcpy(asioDriverInfo.bufferInfos[i].buffers[index], intData, buffSize);
+                memcpy(monitor, data, buffSize);
+                break;
+            }
+        }
 
 
 
@@ -132,11 +133,12 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     if (asioDriverInfo.postOutput)
         ASIOOutputReady();
 
-    if (processedSamples >= asioDriverInfo.sampleRate * TEST_RUN_TIME) {
-        asioDriverInfo.stopped = true;
-    } else {
-        processedSamples += buffSize;
-    }
+    // if (processedSamples >= asioDriverInfo.sampleRate * TEST_RUN_TIME) {
+    //     asioDriverInfo.stopped = true;
+    //     processedSamples = 0;
+    // } else {
+    //     processedSamples += buffSize;
+    // }
     return 0L;
 }
 
@@ -194,7 +196,7 @@ long asioMessages(long selector, long value, void* message, double* opt)
         // You cannot reset the driver right now, as this code is called from the driver.
         // Reset the driver is done by completely destruct is. I.e. ASIOStop(), ASIODisposeBuffers(), Destruction
         // Afterwards you initialize the driver again.
-        asioDriverInfo.stopped = true;  // In this sample the processing will just stop
+        // asioDriverInfo.stopped = true;  // In this sample the processing will just stop
         ret = 1L;
         break;
     case kAsioResyncRequest:
@@ -304,8 +306,7 @@ unsigned long get_sys_reference_time()
     return now.msecsSinceStartOfDay();
 }
 
-
-void setupASIO(char* asioDriverName, bool* running) {
+void setupASIO(char* asioDriverName) {
     asioDriverInfo = {0};
     // load the driver, this will setup all the necessary internal data structures
     if (loadAsioDriver (asioDriverName))
@@ -330,9 +331,10 @@ void setupASIO(char* asioDriverName, bool* running) {
                     if (ASIOStart() == ASE_OK)
                     {
                         // Now all is up and running
-                        while (!asioDriverInfo.stopped && *running)
+                        while (!asioDriverInfo.stopped && streaming)
                         {
-                            Sleep(2000);
+                            Sleep(17);
+                            memcpy(test, monitor, 192);
                         }
                         ASIOStop();
                     }
@@ -342,7 +344,6 @@ void setupASIO(char* asioDriverName, bool* running) {
             ASIOExit();
         }
         asioDrivers->removeCurrentDriver();
-        qDebug();
     }
 }
 

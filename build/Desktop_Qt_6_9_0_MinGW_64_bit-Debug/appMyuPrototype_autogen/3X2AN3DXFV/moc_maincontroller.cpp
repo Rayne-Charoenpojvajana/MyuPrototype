@@ -52,7 +52,8 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "await",
         "getDriversList",
         "setSelectedDriver",
-        "driver"
+        "driver",
+        "getMonitor"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -68,6 +69,8 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         QtMocHelpers::MethodData<void(QString)>(13, 6, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 14 },
         }}),
+        // Method 'getMonitor'
+        QtMocHelpers::MethodData<double()>(15, 6, QMC::AccessPublic, QMetaType::Double),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -101,6 +104,8 @@ void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 2: { QStringList _r = _t->getDriversList();
             if (_a[0]) *reinterpret_cast< QStringList*>(_a[0]) = std::move(_r); }  break;
         case 3: _t->setSelectedDriver((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 4: { double _r = _t->getMonitor();
+            if (_a[0]) *reinterpret_cast< double*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
@@ -125,14 +130,14 @@ int MainController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

@@ -3,7 +3,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asio.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiodrivers.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiolist.h \
-  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiosys.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/ginclude.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiothread.h \
