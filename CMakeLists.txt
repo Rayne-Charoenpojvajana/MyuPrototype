@@ -28,14 +28,23 @@ qt_add_qml_module(appMyuPrototype
         SOURCES Backend/maincontroller.h Backend/maincontroller.cpp
         QML_FILES Frontend/Style.qml
         QML_FILES Frontend/MainWindowFooter.qml
-        QML_FILES Frontend/ToolBarButton.qml
+        QML_FILES
         QML_FILES Frontend/SettingsWindow.qml
         RESOURCES resources.qrc
         QML_FILES
         SOURCES Backend/asiothread.h Backend/asiothread.cpp
         SOURCES Backend/config.cpp
         SOURCES
-        QML_FILES Frontend/RadialBar.qml
+        QML_FILES
+        QML_FILES Frontend/MainWindowHeader.qml
+        QML_FILES
+        QML_FILES
+        QML_FILES Frontend/Components/Metronome.qml
+        QML_FILES
+        QML_FILES Frontend/Pages/FreePlay.qml
+        QML_FILES Frontend/Components/ToolBarButton.qml
+        QML_FILES
+        QML_FILES Frontend/Windows/MainWindow.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -71,6 +80,7 @@ target_include_directories(appMyuPrototype PUBLIC
 set(QML_INCLUDES
     ${CMAKE_CURRENT_SOURCE_DIR}/Backend
 )
+
 # Add includepaths
 target_include_directories(appMyuPrototype PRIVATE
     ${QML_INCLUDES}

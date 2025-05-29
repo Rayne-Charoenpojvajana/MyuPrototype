@@ -31,8 +31,8 @@ public:
             return {0,0};
         }
         QList<double> list;
-        list.append(inputMonitors.input0[0]);
-        list.append(inputMonitors.input1[0]);
+        list.append(inputs[0][0]);
+        list.append(inputs[1][0]);
         return list;
     }
     Q_INVOKABLE QList<long> getBufferSizes() {

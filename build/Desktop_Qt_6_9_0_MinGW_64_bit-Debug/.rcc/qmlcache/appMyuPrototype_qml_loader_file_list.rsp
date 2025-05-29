@@ -7,6 +7,9 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
 /qt/qml/MyuPrototype/Frontend/MainWindow.qml
 /qt/qml/MyuPrototype/Frontend/Style.qml
 /qt/qml/MyuPrototype/Frontend/MainWindowFooter.qml
-/qt/qml/MyuPrototype/Frontend/ToolBarButton.qml
 /qt/qml/MyuPrototype/Frontend/SettingsWindow.qml
-/qt/qml/MyuPrototype/Frontend/RadialBar.qml
+/qt/qml/MyuPrototype/Frontend/MainWindowHeader.qml
+/qt/qml/MyuPrototype/Frontend/Components/Metronome.qml
+/qt/qml/MyuPrototype/Frontend/Pages/FreePlay.qml
+/qt/qml/MyuPrototype/Frontend/Components/ToolBarButton.qml
+/qt/qml/MyuPrototype/Frontend/Windows/MainWindow.qml

@@ -6,26 +6,26 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 323,
+                        "durationMicroseconds": 1011,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
-                        "line": 7
+                        "line": 8
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
-                        "line": 6
+                        "line": 7
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 18,
-                        "durationMicroseconds": 2187,
+                        "durationMicroseconds": 2972,
                         "errorMessage": "",
                         "functionName": "spacing",
-                        "line": 10
+                        "line": 11
                     },
                     {
                         "codegenSuccessfull": false,
@@ -33,23 +33,23 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"clicked\".",
                         "functionName": "onClicked",
-                        "line": 14
+                        "line": 15
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 172,
+                        "durationMicroseconds": 133,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
-                        "line": 12
+                        "line": 13
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 169,
+                        "durationMicroseconds": 120,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
-                        "line": 19
+                        "line": 20
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/MainWindowFooter.qml"

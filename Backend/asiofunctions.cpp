@@ -15,7 +15,6 @@ long init_asio_static_data (DriverInfo *asioDriverInfo)
         // get the usable buffer sizes
         if(ASIOGetBufferSize(&asioDriverInfo->minSize, &asioDriverInfo->maxSize, &asioDriverInfo->preferredSize, &asioDriverInfo->granularity) == ASE_OK)
         {
-
             if (ASIOCanSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
                 if (ASIOSetSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
                     if (ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK) {
@@ -74,6 +73,7 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     else
         asioDriverInfo.tcSamples = 0;
 
+    // qDebug() << ASIO64toDouble(timeInfo->timeInfo.samplePosition);
     // get the system reference time
     asioDriverInfo.sysRefTime = get_sys_reference_time();
 
@@ -85,28 +85,38 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
     {
 
-        int32_t intData[asioDriverInfo.selectedBufferSize];
-        if (asioDriverInfo.bufferInfos[i].isInput == true && i == 1)
+
+        if (asioDriverInfo.bufferInfos[i].isInput == true)
         {
             // OK do processing for the outputs only
             switch (asioDriverInfo.channelInfos[i].type)
             {
             case ASIOSTInt32LSB:
-                memcpy(intData, asioDriverInfo.bufferInfos[i].buffers[index], buffSize);
                 for(int j = 0; j < buffSize; ++j) {
-                    inputMonitors.input1[j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (double)0x7fffffff;
+                    inputs[i][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (double)0x7fffffff;
                 }
                 break;
             }
         }
 
+        int limit = std::min({asioDriverInfo.inputBuffers, asioDriverInfo.outputBuffers});
+        for(int j = 0; j < limit; ++j) {
+            memcpy(outputs[j], inputs[j], buffSize);
+        }
+
+
+
+
+        int offset = asioDriverInfo.inputBuffers;
         if (asioDriverInfo.bufferInfos[i].isInput == false)
         {
             // OK do processing for the outputs only
             switch (asioDriverInfo.channelInfos[i].type)
             {
             case ASIOSTInt32LSB:
-                memcpy(asioDriverInfo.bufferInfos[i].buffers[index], intData, buffSize);
+                for(int j = 0; j < buffSize; ++j) {
+                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = outputs[i-offset][j] * 0x7fffffff;
+                }
                 break;
             }
         }

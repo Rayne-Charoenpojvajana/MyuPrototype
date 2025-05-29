@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import "./Components"
 ToolBar {
     background: Rectangle {
         anchors.fill: parent
@@ -17,7 +18,7 @@ ToolBar {
         }
         ToolBarButton {
             Layout.preferredWidth: Style.toolBarButtonWidth
-            text: qsTr("Metronome")
+            text: qsTr("Free Play")
         }
         SettingsWindow {
             id: settingsWindow

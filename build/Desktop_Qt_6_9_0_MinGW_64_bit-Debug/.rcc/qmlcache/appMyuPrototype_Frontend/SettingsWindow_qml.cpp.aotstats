@@ -49,7 +49,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"displayText\".",
                         "functionName": "displayText",
-                        "line": 27
+                        "line": 38
                     },
                     {
                         "codegenSuccessfull": false,
@@ -57,55 +57,47 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"activated\".",
                         "functionName": "onActivated",
-                        "line": 45
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 316,
-                        "errorMessage": "Cannot access value for name Text",
-                        "functionName": "verticalAlignment",
-                        "line": 32
+                        "line": 46
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 162,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
                         "line": 34
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 27,
-                        "durationMicroseconds": 10,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "text",
-                        "line": 36
+                        "column": 40,
+                        "durationMicroseconds": 427,
+                        "errorMessage": "Cannot access value for name Text",
+                        "functionName": "verticalAlignment",
+                        "line": 40
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
-                        "line": 43
+                        "line": 42
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 34,
-                        "durationMicroseconds": 1921,
-                        "errorMessage": "Cannot access value for name listModel",
-                        "functionName": "onTriggered",
+                        "column": 27,
+                        "durationMicroseconds": 16,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "text",
+                        "line": 44
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 40,
+                        "durationMicroseconds": 1276,
+                        "errorMessage": "Cannot access value for name sModel",
+                        "functionName": "onCompleted",
                         "line": 50
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 34,
-                        "durationMicroseconds": 120,
-                        "errorMessage": "Cannot retrieve a non-object type by ID: p0",
-                        "functionName": "onTriggered",
-                        "line": 76
                     },
                     {
                         "codegenSuccessfull": false,
@@ -113,7 +105,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"displayText\".",
                         "functionName": "displayText",
-                        "line": 100
+                        "line": 73
                     },
                     {
                         "codegenSuccessfull": false,
@@ -121,119 +113,111 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"activated\".",
                         "functionName": "onActivated",
-                        "line": 108
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 22,
-                        "errorMessage": "Cannot retrieve a non-object type by ID: cbox",
-                        "functionName": "preferredWidth",
-                        "line": 91
+                        "line": 81
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 37,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
-                        "line": 96
+                        "line": 71
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 211,
+                        "durationMicroseconds": 337,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
+                        "line": 75
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 30,
+                        "durationMicroseconds": 31,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "opacity",
+                        "line": 77
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 27,
+                        "durationMicroseconds": 14,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "text",
+                        "line": 79
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 40,
+                        "durationMicroseconds": 1068,
+                        "errorMessage": "Cannot access value for name model",
+                        "functionName": "onCompleted",
+                        "line": 84
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 30,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find property \"displayText\".",
+                        "functionName": "displayText",
                         "line": 102
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"activated\".",
+                        "functionName": "onActivated",
+                        "line": 120
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 40,
+                        "durationMicroseconds": 351,
+                        "errorMessage": "",
+                        "functionName": "preferredWidth",
                         "line": 104
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 27,
-                        "durationMicroseconds": 9,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "text",
-                        "line": 106
-                    },
-                    {
-                        "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 650,
-                        "errorMessage": "Cannot access value for name sModel",
-                        "functionName": "onCompleted",
-                        "line": 112
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 30,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find property \"displayText\".",
-                        "functionName": "displayText",
-                        "line": 135
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 30,
-                        "durationMicroseconds": 0,
-                        "errorMessage": "Could not find signal \"activated\".",
-                        "functionName": "onActivated",
-                        "line": 143
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 24,
-                        "errorMessage": "Cannot retrieve a non-object type by ID: p0",
-                        "functionName": "preferredWidth",
-                        "line": 128
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 30,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot access value for name parent",
-                        "functionName": "opacity",
-                        "line": 133
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 200,
+                        "durationMicroseconds": 395,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "verticalAlignment",
-                        "line": 137
+                        "line": 107
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 35,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
-                        "line": 139
+                        "line": 109
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 9,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "text",
-                        "line": 141
+                        "line": 111
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 40,
-                        "durationMicroseconds": 558,
-                        "errorMessage": "Cannot access value for name model",
-                        "functionName": "onCompleted",
-                        "line": 146
+                        "column": 30,
+                        "durationMicroseconds": 40,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "opacity",
+                        "line": 118
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 34,
+                        "durationMicroseconds": 6066,
+                        "errorMessage": "Cannot access value for name listModel",
+                        "functionName": "onTriggered",
+                        "line": 125
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/SettingsWindow.qml"

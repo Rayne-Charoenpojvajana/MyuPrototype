@@ -9,4 +9,5 @@ QtObject {
     property int toolBarButtonFontSize: 11
     property string toolBarButtonColor: "#FFFFFF"
     property int toolBarSpacing: 0
+    property string inputBarColor: "#2d2d2d"
 }

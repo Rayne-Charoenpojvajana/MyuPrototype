@@ -7,14 +7,17 @@
 #include <QTime>
 
 
-
+#define MAX_BUFFERS 512
+#define MIN_BUFFERS 64
+#define MAX_OUTPUTS 32
+#define MAX_INPUTS 32
 
 
 enum {
     // number of input and outputs supported by the host application
     // you can change these to higher or lower values
-    kMaxInputChannels = 32,
-    kMaxOutputChannels = 32
+    kMaxInputChannels = MAX_INPUTS,
+    kMaxOutputChannels = MAX_OUTPUTS
 };
 
 
@@ -69,11 +72,7 @@ typedef struct DriverInfo
     bool           stopped;
 } DriverInfo;
 
-typedef struct {
-    double* input0;
-    double* input1;
-} InputMonitors;
-extern InputMonitors inputMonitors;
+
 
 extern DriverInfo asioDriverInfo;
 extern ASIOCallbacks asioCallbacks;
@@ -85,6 +84,8 @@ extern const long softwareMaxBuffer;
 extern long selectedSampleRate;
 extern long softwareSampleRates[];
 extern long numSampleRates;
+extern double inputs[MAX_INPUTS][MAX_BUFFERS];
+extern double outputs[MAX_OUTPUTS][MAX_BUFFERS];
 //----------------------------------------------------------------------------------
 // some external references
 extern AsioDrivers* asioDrivers;

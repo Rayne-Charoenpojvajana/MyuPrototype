@@ -4,7 +4,10 @@ prefer :/qt/qml/MyuPrototype/
 MainWindow 1.0 Frontend/MainWindow.qml
 singleton Style 1.0 Frontend/Style.qml
 MainWindowFooter 1.0 Frontend/MainWindowFooter.qml
-ToolBarButton 1.0 Frontend/ToolBarButton.qml
 SettingsWindow 1.0 Frontend/SettingsWindow.qml
-RadialBar 1.0 Frontend/RadialBar.qml
+MainWindowHeader 1.0 Frontend/MainWindowHeader.qml
+Metronome 1.0 Frontend/Components/Metronome.qml
+FreePlay 1.0 Frontend/Pages/FreePlay.qml
+ToolBarButton 1.0 Frontend/Components/ToolBarButton.qml
+MainWindow 1.0 Frontend/Windows/MainWindow.qml
 

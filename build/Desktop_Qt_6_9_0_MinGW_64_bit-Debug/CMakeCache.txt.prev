@@ -325,8 +325,11 @@ Qt6ConcurrentPrivate_DIR:PATH=C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_6
 //The directory containing a CMake configuration file for Qt6Concurrent.
 Qt6Concurrent_DIR:PATH=C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Concurrent
 
+//The directory containing a CMake configuration file for Qt6Core5CompatPrivate.
+Qt6Core5CompatPrivate_DIR:PATH=C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate
+
 //The directory containing a CMake configuration file for Qt6Core5Compat.
-Qt6Core5Compat_DIR:PATH=Qt6Core5Compat_DIR-NOTFOUND
+Qt6Core5Compat_DIR:PATH=C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat
 
 //The directory containing a CMake configuration file for Qt6CorePrivate.
 Qt6CorePrivate_DIR:PATH=C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6CorePrivate
@@ -663,6 +666,8 @@ QT_FEATURE_avx512vbmi2:INTERNAL=ON
 QT_FEATURE_avx512vl:INTERNAL=ON
 //Qt feature: backtrace (from target Qt6::Core)
 QT_FEATURE_backtrace:INTERNAL=OFF
+//Qt feature: big_codecs (from target Qt6::Core5Compat)
+QT_FEATURE_big_codecs:INTERNAL=ON
 //Qt feature: broken_threadlocal_dtors (from target Qt6::Core)
 QT_FEATURE_broken_threadlocal_dtors:INTERNAL=ON
 //Qt feature: brotli (from target Qt6::Network)
@@ -677,6 +682,8 @@ QT_FEATURE_clipboard:INTERNAL=ON
 QT_FEATURE_clock_gettime:INTERNAL=OFF
 //Qt feature: clock_monotonic (from target Qt6::Core)
 QT_FEATURE_clock_monotonic:INTERNAL=OFF
+//Qt feature: codecs (from target Qt6::Core5Compat)
+QT_FEATURE_codecs:INTERNAL=ON
 //Qt feature: colornames (from target Qt6::Gui)
 QT_FEATURE_colornames:INTERNAL=ON
 //Qt feature: commandlineparser (from target Qt6::Core)
@@ -849,6 +856,8 @@ QT_FEATURE_hijricalendar:INTERNAL=ON
 QT_FEATURE_http:INTERNAL=ON
 //Qt feature: ico (from target Qt6::Gui)
 QT_FEATURE_ico:INTERNAL=ON
+//Qt feature: iconv (from target Qt6::Core5Compat)
+QT_FEATURE_iconv:INTERNAL=OFF
 //Qt feature: icu (from target Qt6::Core)
 QT_FEATURE_icu:INTERNAL=OFF
 //Qt feature: identityproxymodel (from target Qt6::Core)
@@ -1254,6 +1263,8 @@ QT_FEATURE_temporaryfile:INTERNAL=ON
 QT_FEATURE_test_gui:INTERNAL=ON
 //Qt feature: testlib (from target Qt6::Core)
 QT_FEATURE_testlib:INTERNAL=ON
+//Qt feature: textcodec (from target Qt6::Core5Compat)
+QT_FEATURE_textcodec:INTERNAL=ON
 //Qt feature: textdate (from target Qt6::Core)
 QT_FEATURE_textdate:INTERNAL=ON
 //Qt feature: texthtmlparser (from target Qt6::Gui)

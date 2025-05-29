@@ -91,10 +91,10 @@ ASIOError ASIOOutputReady(void);
 #if NATIVE_INT64
 	typedef long long int ASIOSamples;
 #else
-	typedef struct ASIOSamples {
-		unsigned long hi;
-		unsigned long lo;
-	} ASIOSamples;
+    typedef struct ASIOSamples {
+        unsigned long hi;
+        unsigned long lo;
+    } ASIOSamples;
 #endif
 
 // Timestamp data type is 64 bit integer,
