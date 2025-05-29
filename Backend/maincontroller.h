@@ -6,7 +6,6 @@
 #include <QtQml/qqmlregistration.h>
 #include <QStringListModel>
 #include <synchapi.h>
-
 class MainController : public QObject
 {
 private:
@@ -15,6 +14,7 @@ private:
     QML_SINGLETON
     ASIOThread* asioThread = new ASIOThread();
     QString selectedDriver = "";
+    QThread thread;
 public:
     MainController();
     Q_INVOKABLE QStringList getDriverList() {
@@ -60,6 +60,17 @@ public:
         if (asioThread->getStreaming()) {
             asioThread->setStreaming(false);
         }
+    }
+    Q_INVOKABLE void activateMetronome(double bpm) {
+        if (!effect) {
+            effect = new QSoundEffect();
+            effect->moveToThread(&thread);
+            thread.start();
+        }
+        QUrl url = QUrl::fromLocalFile(":/Click_1.wav");
+        effect->setSource(url);
+        qDebug() << effect->thread();
+        effect->play();
     }
 public slots:
     void qmlInit() {

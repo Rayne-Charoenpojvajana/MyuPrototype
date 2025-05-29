@@ -1,0 +1,60 @@
+[
+    {
+        "moduleFiles": [
+            {
+                "entries": [
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 17,
+                        "durationMicroseconds": 454,
+                        "errorMessage": "Cannot access value for name Style",
+                        "functionName": "color",
+                        "line": 8
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 17,
+                        "errorMessage": "Cannot access value for name parent",
+                        "functionName": "fill",
+                        "line": 7
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 18,
+                        "durationMicroseconds": 4890,
+                        "errorMessage": "",
+                        "functionName": "spacing",
+                        "line": 11
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 24,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 15
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 36,
+                        "durationMicroseconds": 136,
+                        "errorMessage": "",
+                        "functionName": "preferredWidth",
+                        "line": 13
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 36,
+                        "durationMicroseconds": 146,
+                        "errorMessage": "",
+                        "functionName": "preferredWidth",
+                        "line": 20
+                    }
+                ],
+                "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/MainWindowFooter.qml"
+            }
+        ],
+        "moduleId": "MyuPrototype(appMyuPrototype)"
+    }
+]

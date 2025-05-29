@@ -130,12 +130,22 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiothread.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtversionchecks.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypeinfo.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypes.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qurl.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qutf8stringview.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtgui-config.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/QSoundEffect
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qsoundeffect.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h
@@ -726,12 +736,22 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroll
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtversionchecks.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypeinfo.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypes.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qurl.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qutf8stringview.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvariant.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtgui-config.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/QSoundEffect
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qaudio.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qsoundeffect.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h
+ mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmlregistration.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQmlIntegration/qqmlintegration.h
  mdp:C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h
@@ -1190,3 +1210,5 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroll
  mdp:C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wtypesbase.h
 C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.cpp
 C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/config.cpp
+C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/soundthread.h
+C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/soundthread.cpp

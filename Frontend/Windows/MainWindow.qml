@@ -24,6 +24,12 @@ ApplicationWindow {
         id: freePlay
     }
 
+    MouseArea {
+        anchors.fill: parent
+        onClicked: forceActiveFocus()
+        z: -999
+    }
+
 
 
 }

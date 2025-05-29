@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Quick Multimedia)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -21,22 +21,22 @@ qt_add_qml_module(appMyuPrototype
     URI MyuPrototype
     VERSION 1.0
     QML_FILES
-        Frontend/MainWindow.qml
+
         SOURCES
         SOURCES Backend/asiofunctions.h
         SOURCES Backend/asiofunctions.cpp
         SOURCES Backend/maincontroller.h Backend/maincontroller.cpp
         QML_FILES Frontend/Style.qml
-        QML_FILES Frontend/MainWindowFooter.qml
         QML_FILES
-        QML_FILES Frontend/SettingsWindow.qml
+        QML_FILES
+        QML_FILES
         RESOURCES resources.qrc
         QML_FILES
         SOURCES Backend/asiothread.h Backend/asiothread.cpp
         SOURCES Backend/config.cpp
         SOURCES
         QML_FILES
-        QML_FILES Frontend/MainWindowHeader.qml
+        QML_FILES
         QML_FILES
         QML_FILES
         QML_FILES Frontend/Components/Metronome.qml
@@ -45,6 +45,10 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES Frontend/Components/ToolBarButton.qml
         QML_FILES
         QML_FILES Frontend/Windows/MainWindow.qml
+        QML_FILES Frontend/Windows/MainWindowFooter.qml
+        QML_FILES Frontend/Windows/MainWindowHeader.qml
+        QML_FILES Frontend/Windows/SettingsWindow.qml
+        SOURCES Backend/soundthread.h Backend/soundthread.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -86,5 +90,4 @@ target_include_directories(appMyuPrototype PRIVATE
     ${QML_INCLUDES}
 )
 
-find_package(Qt6 REQUIRED COMPONENTS Core5Compat)
-target_link_libraries(appMyuPrototype PRIVATE Qt6::Core5Compat)
+target_link_libraries(appMyuPrototype PRIVATE Qt6::Multimedia)

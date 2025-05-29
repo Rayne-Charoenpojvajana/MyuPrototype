@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 379,
+                        "durationMicroseconds": 357,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 8
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 15,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 7
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 30,
-                        "durationMicroseconds": 250,
+                        "durationMicroseconds": 3066,
                         "errorMessage": "Cannot retrieve a non-object type by ID: p0",
                         "functionName": "onTriggered",
                         "line": 26

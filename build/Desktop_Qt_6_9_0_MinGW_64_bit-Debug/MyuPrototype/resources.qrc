@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>logo.png</file>
+        <file>Click_1.wav</file>
     </qresource>
 </RCC>

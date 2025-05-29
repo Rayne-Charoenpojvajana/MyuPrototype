@@ -47,7 +47,7 @@
                     }
                 ],
                 "className": "MainController",
-                "lineNumber": 10,
+                "lineNumber": 9,
                 "methods": [
                     {
                         "access": "public",
@@ -107,6 +107,18 @@
                         ],
                         "index": 8,
                         "name": "setSampleRate",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "bpm",
+                                "type": "double"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "activateMetronome",
                         "returnType": "void"
                     }
                 ],

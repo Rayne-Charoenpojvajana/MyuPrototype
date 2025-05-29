@@ -4,12 +4,11 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
 C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/appMyuPrototype_raw_qml_0.qrc
 --resource
 C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/appMyuPrototype_raw_qml_0_extra_qmldirs.qrc
-/qt/qml/MyuPrototype/Frontend/MainWindow.qml
 /qt/qml/MyuPrototype/Frontend/Style.qml
-/qt/qml/MyuPrototype/Frontend/MainWindowFooter.qml
-/qt/qml/MyuPrototype/Frontend/SettingsWindow.qml
-/qt/qml/MyuPrototype/Frontend/MainWindowHeader.qml
 /qt/qml/MyuPrototype/Frontend/Components/Metronome.qml
 /qt/qml/MyuPrototype/Frontend/Pages/FreePlay.qml
 /qt/qml/MyuPrototype/Frontend/Components/ToolBarButton.qml
 /qt/qml/MyuPrototype/Frontend/Windows/MainWindow.qml
+/qt/qml/MyuPrototype/Frontend/Windows/MainWindowFooter.qml
+/qt/qml/MyuPrototype/Frontend/Windows/MainWindowHeader.qml
+/qt/qml/MyuPrototype/Frontend/Windows/SettingsWindow.qml

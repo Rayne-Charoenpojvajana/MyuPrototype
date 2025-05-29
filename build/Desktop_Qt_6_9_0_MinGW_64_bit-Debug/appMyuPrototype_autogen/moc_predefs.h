@@ -215,7 +215,6 @@
 #define __UINT16_MAX__ 0xffff
 #define __cdecl __attribute__((__cdecl__))
 #define __FLT128_HAS_INFINITY__ 1
-#define QT_CORE5COMPAT_LIB 1
 #define __FLT32_MIN__ 1.17549435082228750796873653722224568e-38F32
 #define __UINT8_TYPE__ unsigned char
 #define __FLT_DIG__ 6
@@ -267,6 +266,7 @@
 #define __LDBL_EPSILON__ 1.08420217248550443400745280086994171e-19L
 #define __UINTMAX_C(c) c ## ULL
 #define __FLT16_DIG__ 3
+#define QT_MULTIMEDIA_LIB 1
 #define __FLT32X_MIN__ 2.22507385850720138309023271733240406e-308F32x
 #define __SIG_ATOMIC_MAX__ 0x7fffffff
 #define __cpp_constexpr 201603L

@@ -5,7 +5,7 @@
 #include "asio.h"
 #include "asiodrivers.h"
 #include <QTime>
-
+#include <QSoundEffect>
 
 #define MAX_BUFFERS 512
 #define MIN_BUFFERS 64
@@ -86,6 +86,7 @@ extern long softwareSampleRates[];
 extern long numSampleRates;
 extern double inputs[MAX_INPUTS][MAX_BUFFERS];
 extern double outputs[MAX_OUTPUTS][MAX_BUFFERS];
+extern QSoundEffect* effect;
 //----------------------------------------------------------------------------------
 // some external references
 extern AsioDrivers* asioDrivers;

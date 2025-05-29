@@ -10,6 +10,8 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/config.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.cpp \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/soundthread.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/soundthread.h \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/CMakeLists.txt \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/qml_imports/appMyuPrototype_conf.cmake \
 	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
@@ -143,12 +145,22 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtversionchecks.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypeinfo.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypes.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qurl.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qutf8stringview.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvariant.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtgui-config.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/QSoundEffect \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qaudio.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qsoundeffect.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmlregistration.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQmlIntegration/qqmlintegration.h \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6/FindWrapAtomic.cmake \
@@ -217,21 +229,6 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core/Qt6CoreVersionlessAliasTargets.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatAdditionalTargetInfo.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatConfig.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatConfigVersion.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatConfigVersionImpl.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatDependencies.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets-relwithdebinfo.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5Compat/Qt6Core5CompatVersionlessAliasTargets.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate/Qt6Core5CompatPrivateAdditionalTargetInfo.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate/Qt6Core5CompatPrivateConfig.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate/Qt6Core5CompatPrivateConfigVersion.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate/Qt6Core5CompatPrivateConfigVersionImpl.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate/Qt6Core5CompatPrivateDependencies.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate/Qt6Core5CompatPrivateTargets.cmake \
-	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Core5CompatPrivate/Qt6Core5CompatPrivateVersionlessAliasTargets.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6CorePrivate/Qt6CorePrivateAdditionalTargetInfo.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6CorePrivate/Qt6CorePrivateConfig.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6CorePrivate/Qt6CorePrivateConfigVersion.cmake \
@@ -327,6 +324,31 @@ appMyuPrototype_autogen/timestamp: \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaAdditionalTargetInfo.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfig.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersion.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaConfigVersionImpl.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaDependencies.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaMacros.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaPlugins.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets-relwithdebinfo.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginConfig.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-relwithdebinfo.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginAdditionalTargetInfo.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginConfig.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets-relwithdebinfo.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6QWindowsMediaPluginTargets.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateAdditionalTargetInfo.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfig.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersion.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateConfigVersionImpl.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateDependencies.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateTargets.cmake \
+	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6MultimediaPrivate/Qt6MultimediaPrivateVersionlessAliasTargets.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkAdditionalTargetInfo.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake \
 	C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network/Qt6NetworkConfigVersion.cmake \

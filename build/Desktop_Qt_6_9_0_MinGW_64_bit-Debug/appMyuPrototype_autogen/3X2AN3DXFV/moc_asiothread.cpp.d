@@ -125,12 +125,22 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtversionchecks.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypes.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qurl.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvariant.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtgui-config.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/QSoundEffect \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qaudio.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qsoundeffect.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/adxintrin.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/ammintrin.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/amxbf16intrin.h \

@@ -61,7 +61,9 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "size",
         "getSampleRates",
         "setSampleRate",
-        "sampleRate"
+        "sampleRate",
+        "activateMetronome",
+        "bpm"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -90,6 +92,10 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         // Method 'setSampleRate'
         QtMocHelpers::MethodData<void(long)>(22, 6, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Long, 23 },
+        }}),
+        // Method 'activateMetronome'
+        QtMocHelpers::MethodData<void(double)>(24, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Double, 25 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -132,6 +138,7 @@ void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 7: { QList<long> _r = _t->getSampleRates();
             if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
         case 8: _t->setSampleRate((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
+        case 9: _t->activateMetronome((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     }
@@ -156,14 +163,14 @@ int MainController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 10;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 9;
+        _id -= 10;
     }
     return _id;
 }

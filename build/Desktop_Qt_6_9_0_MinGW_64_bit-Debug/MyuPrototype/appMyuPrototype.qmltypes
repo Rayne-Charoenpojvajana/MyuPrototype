@@ -37,5 +37,9 @@ Module {
             name: "setSampleRate"
             Parameter { name: "sampleRate"; type: "int" }
         }
+        Method {
+            name: "activateMetronome"
+            Parameter { name: "bpm"; type: "double" }
+        }
     }
 }

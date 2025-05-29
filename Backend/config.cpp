@@ -17,4 +17,4 @@ long numSampleRates = 2;
 long softwareSampleRates[] = {44100, 48000};
 long selectedSampleRate = softwareSampleRates[0];
 
-
+QSoundEffect* effect = nullptr;

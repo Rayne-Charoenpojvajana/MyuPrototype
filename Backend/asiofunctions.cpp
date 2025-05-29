@@ -1,4 +1,5 @@
 #include "asiofunctions.h"
+#include <qthread.h>
 
 
 
