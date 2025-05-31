@@ -62,7 +62,8 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "getSampleRates",
         "setSampleRate",
         "sampleRate",
-        "activateMetronome",
+        "setMetronome",
+        "state",
         "bpm"
     };
 
@@ -93,9 +94,9 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         QtMocHelpers::MethodData<void(long)>(22, 6, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Long, 23 },
         }}),
-        // Method 'activateMetronome'
-        QtMocHelpers::MethodData<void(double)>(24, 6, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Double, 25 },
+        // Method 'setMetronome'
+        QtMocHelpers::MethodData<void(bool, double)>(24, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Bool, 25 }, { QMetaType::Double, 26 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -138,7 +139,7 @@ void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 7: { QList<long> _r = _t->getSampleRates();
             if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
         case 8: _t->setSampleRate((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
-        case 9: _t->activateMetronome((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 9: _t->setMetronome((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[2]))); break;
         default: ;
         }
     }

@@ -932,6 +932,12 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Audio/wavfile.h",
+			"MU",
+			"S3BXVM6BFX/moc_wavfile.cpp",
+			null
+		],
+		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h",
 			"MU",
 			"3X2AN3DXFV/moc_asiofunctions.cpp",
@@ -947,12 +953,6 @@
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.h",
 			"MU",
 			"3X2AN3DXFV/moc_maincontroller.cpp",
-			null
-		],
-		[
-			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/soundthread.h",
-			"MU",
-			"3X2AN3DXFV/moc_soundthread.cpp",
 			null
 		]
 	],
@@ -1066,6 +1066,11 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Audio/wavfile.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.cpp",
 			"MU",
 			null
@@ -1082,11 +1087,6 @@
 		],
 		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/soundthread.cpp",
 			"MU",
 			null
 		],

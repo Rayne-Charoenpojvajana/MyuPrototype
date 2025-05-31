@@ -4,8 +4,9 @@
 #include <windows.h>
 #include "asio.h"
 #include "asiodrivers.h"
+#include "Audio/wavfile.h"
 #include <QTime>
-#include <QSoundEffect>
+
 
 #define MAX_BUFFERS 512
 #define MIN_BUFFERS 64
@@ -20,7 +21,7 @@ enum {
     kMaxOutputChannels = MAX_OUTPUTS
 };
 
-
+extern int intData[2][64];
 // internal data storage
 typedef struct DriverInfo
 {
@@ -84,12 +85,13 @@ extern const long softwareMaxBuffer;
 extern long selectedSampleRate;
 extern long softwareSampleRates[];
 extern long numSampleRates;
-extern double inputs[MAX_INPUTS][MAX_BUFFERS];
-extern double outputs[MAX_OUTPUTS][MAX_BUFFERS];
-extern QSoundEffect* effect;
+extern float inputs[MAX_INPUTS][MAX_BUFFERS];
+extern float outputs[MAX_OUTPUTS][MAX_BUFFERS];
+
 //----------------------------------------------------------------------------------
 // some external references
 extern AsioDrivers* asioDrivers;
+extern WAVFile* clicks;
 bool loadAsioDriver(char *name);
 
 // internal prototypes (required for the Metrowerks CodeWarrior compiler)

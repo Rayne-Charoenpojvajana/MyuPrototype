@@ -12,7 +12,7 @@
                 }
             ],
             "className": "MainController",
-            "lineNumber": 9,
+            "lineNumber": 10,
             "methods": [
                 {
                     "access": "public",
@@ -78,12 +78,16 @@
                     "access": "public",
                     "arguments": [
                         {
+                            "name": "state",
+                            "type": "bool"
+                        },
+                        {
                             "name": "bpm",
                             "type": "double"
                         }
                     ],
                     "index": 9,
-                    "name": "activateMetronome",
+                    "name": "setMetronome",
                     "returnType": "void"
                 }
             ],

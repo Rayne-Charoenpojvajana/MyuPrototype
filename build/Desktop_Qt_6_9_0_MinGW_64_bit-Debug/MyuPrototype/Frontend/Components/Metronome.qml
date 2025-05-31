@@ -52,6 +52,7 @@ RowLayout {
                 }
             }
             prevVal = control.value
+            MainController.setMetronome(button.checked, bpm)
         }
         snapMode: Dial.SnapAlways
         handle: Rectangle {
@@ -92,6 +93,7 @@ RowLayout {
                 if (!isNaN(text)) {
                     if (text >= 20 && text <= 400) {
                         bpm = Math.round(text * 100) / 100
+                        MainController.setMetronome(button.checked, bpm)
                     }
                 }
             }
@@ -104,13 +106,12 @@ RowLayout {
         }
     }
     Button {
+        id: button
         checkable: true
         implicitWidth: 50
         text: checked ? "On" : "Off"
         onToggled: {
-            if (checked) {
-                MainController.activateMetronome(bpm)
-            }
+            MainController.setMetronome(checked, bpm)
         }
     }
 }

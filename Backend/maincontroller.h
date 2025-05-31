@@ -6,6 +6,7 @@
 #include <QtQml/qqmlregistration.h>
 #include <QStringListModel>
 #include <synchapi.h>
+#include <QAudioFormat>
 class MainController : public QObject
 {
 private:
@@ -14,7 +15,7 @@ private:
     QML_SINGLETON
     ASIOThread* asioThread = new ASIOThread();
     QString selectedDriver = "";
-    QThread thread;
+
 public:
     MainController();
     Q_INVOKABLE QStringList getDriverList() {
@@ -43,7 +44,6 @@ public:
         return list;
     }
     Q_INVOKABLE void setBufferSize(long size) {
-        selectedBufferSize = size;
         if (asioThread->getStreaming()) {
             asioThread->setStreaming(false);
         }
@@ -61,16 +61,11 @@ public:
             asioThread->setStreaming(false);
         }
     }
-    Q_INVOKABLE void activateMetronome(double bpm) {
-        if (!effect) {
-            effect = new QSoundEffect();
-            effect->moveToThread(&thread);
-            thread.start();
-        }
-        QUrl url = QUrl::fromLocalFile(":/Click_1.wav");
-        effect->setSource(url);
-        qDebug() << effect->thread();
-        effect->play();
+    Q_INVOKABLE void setMetronome(bool state, double bpm) {
+        clicks->cursor = 0;
+        clicks->count = 0;
+        clicks->interval = std::round((60/bpm) * clicks->sampleRate);
+        clicks->on = state;
     }
 public slots:
     void qmlInit() {
