@@ -1,5 +1,5 @@
 #include "asiofunctions.h"
-#include <qthread.h>
+
 
 
 
@@ -51,86 +51,27 @@ const double twoRaisedTo32 = 4294967296.;
 #endif
 
 ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processNow)
-{	// the actual processing callback.
-    // Beware that this is normally in a seperate thread, hence be sure that you take care
-    // about thread synchronization. This is omitted here for simplicity.
-    // static long processedSamples = 0;
-    // // store the timeInfo for later use
-    // asioDriverInfo.tInfo = *timeInfo;
-    // // get the time stamp of the buffer, not necessary if no
-    // // synchronization to other media is required
-
-    if(ASIOGetSamplePosition(&timeInfo->timeInfo.samplePosition, &timeInfo->timeInfo.systemTime) == ASE_OK)
-        timeInfo->timeInfo.flags = kSystemTimeValid | kSamplePositionValid;
-
-    // if (timeInfo->timeInfo.flags & kSystemTimeValid)
-    //     asioDriverInfo.nanoSeconds = ASIO64toDouble(timeInfo->timeInfo.systemTime);
-    // else
-    //     asioDriverInfo.nanoSeconds = 0;
-    if (processNow == 0) {
-        qDebug() << asioDriverInfo.nanoSeconds;
-    }
-    // static double nano = 0;
-    // if (nano == 0) {
-    //     nano = asioDriverInfo.nanoSeconds;
-    //     return 0L;
-    // }
-    // double dt = asioDriverInfo.nanoSeconds - nano;
-    // nano = asioDriverInfo.nanoSeconds;
-    // qDebug() << dt;
-
-
-    // if (timeInfo->timeInfo.flags & kSamplePositionValid)
-    //     asioDriverInfo.samples = ASIO64toDouble(timeInfo->timeInfo.samplePosition);
-    // else
-    //     asioDriverInfo.samples = 0;
-
-    // if (timeInfo->timeCode.flags & kTcValid)
-    //     asioDriverInfo.tcSamples = ASIO64toDouble(timeInfo->timeCode.timeCodeSamples);
-    // else
-    //     asioDriverInfo.tcSamples = 0;
-
-    // qDebug() << ASIO64toDouble(timeInfo->timeInfo.systemTime);
-    // qDebug() << ASIO64toDouble(timeInfo->timeInfo.samplePosition);
-    // get the system reference time
-    // asioDriverInfo.sysRefTime = get_sys_reference_time();
-
-    // qDebug() << index;
-    // buffer size in samples
+{
     long buffSize = asioDriverInfo.selectedBufferSize;
 
-
-    // perform the processing
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
     {
-
-
         if (asioDriverInfo.bufferInfos[i].isInput == true)
         {
-            // OK do processing for the outputs only
             switch (asioDriverInfo.channelInfos[i].type)
             {
             case ASIOSTInt32LSB:
                 for(int j = 0; j < buffSize; ++j) {
                     inputs[i][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (float )0x7fffffff;
-                    intData[i][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j);
                 }
                 break;
             }
         }
-
-
         int limit = std::min({asioDriverInfo.inputBuffers, asioDriverInfo.outputBuffers});
         for(int j = 0; j < limit; ++j) {
             memcpy(outputs[j], inputs[j], buffSize*4);
         }
-
         int offset = asioDriverInfo.inputBuffers;
-
-
-
-
-
         bool hi = clicks->on;
         if (asioDriverInfo.bufferInfos[i].isInput == false)
         {
@@ -145,27 +86,24 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
                             clicks->count = 0;
                         }
                         clicks->count++;
-                        if (clicks->atEnd()) {
-                            continue;
+                        if (!clicks->atEnd()) {
+                            outputs[i-offset][j] += clicks->data[0][clicks->cursor];
+                            clicks->increment();
                         }
-                        *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = (int) std::round(clicks->data[0][clicks->cursor] * 0x7fffffff);
-                        clicks->increment();
                     }
-                    // *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = outputs[i-offset][j] * 0x7fffffff;
-                    // *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = (int) (outputs[i-offset][j] * (float) 0x7fffffff);
+                    outputs[i-offset][j] = std::clamp(outputs[i-offset][j], -0.99f, 0.99f);
+                    // qDebug() << val;
+                    // val = std::clamp(val, INT32_MIN, INT32_MAX);
+                    // *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = val;
+
+                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = (int) (outputs[i-offset][j] * (float) 0x7fffffff);
                 }
                 break;
             }
         }
-
-
-
     }
-    // qDebug() << QThread::currentThread();
-    // finally if the driver supports the ASIOOutputReady() optimization, do it here, all data are in place
     if (asioDriverInfo.postOutput)
         ASIOOutputReady();
-    // ASIOOutputReady();
     return 0L;
 }
 
@@ -323,7 +261,6 @@ ASIOError create_asio_buffers (DriverInfo *asioDriverInfo)
             // (input latency is the age of the first sample in the currently returned audio block)
             // (output latency is the time the first sample in the currently returned audio block requires to get to the output)
             result = ASIOGetLatencies(&asioDriverInfo->inputLatency, &asioDriverInfo->outputLatency);
-            qDebug() << asioDriverInfo->inputLatency;
         }
 
     }

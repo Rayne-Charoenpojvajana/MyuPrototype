@@ -50,6 +50,9 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES Frontend/Windows/SettingsWindow.qml
         SOURCES
         SOURCES Backend/Audio/wavfile.h Backend/Audio/wavfile.cpp
+        SOURCES
+        SOURCES Backend/Layer/layer.h Backend/Layer/layer.cpp
+        SOURCES Backend/Layer/clicklayer.h Backend/Layer/clicklayer.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

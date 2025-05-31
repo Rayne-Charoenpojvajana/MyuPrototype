@@ -7,7 +7,7 @@ class WAVFile
 public:
     WAVFile(QString path);
     ~WAVFile();
-    double** data;
+    float** data;
     int channels;
     int length;
     int cursor = 0;

@@ -938,6 +938,18 @@
 			null
 		],
 		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/clicklayer.h",
+			"MU",
+			"XSRNWPFFGL/moc_clicklayer.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.h",
+			"MU",
+			"XSRNWPFFGL/moc_layer.cpp",
+			null
+		],
+		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h",
 			"MU",
 			"3X2AN3DXFV/moc_asiofunctions.cpp",
@@ -1067,6 +1079,16 @@
 	[
 		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Audio/wavfile.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/clicklayer.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.cpp",
 			"MU",
 			null
 		],

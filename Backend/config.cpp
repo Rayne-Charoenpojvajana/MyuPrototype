@@ -13,8 +13,13 @@ AsioDrivers helperDrivers;
 int maxDriverLength = 32;
 long softwareMinBuffer = MIN_BUFFERS;
 const long softwareMaxBuffer = MAX_BUFFERS;
-long numSampleRates = 2;
-long softwareSampleRates[] = {44100, 48000};
+long numSampleRates = 1;
+std::array<long, 1> softwareSampleRates = {44100};
 long selectedSampleRate = softwareSampleRates[0];
 WAVFile* clicks = new WAVFile(":/Click_1.wav");
-int intData[2][64];
+
+
+
+
+std::vector<Layer*> layers[MAX_INPUTS];
+

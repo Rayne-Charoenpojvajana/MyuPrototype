@@ -9,11 +9,10 @@ WAVFile::WAVFile(QString path) {
         return;
     }
     QByteArray rawData = file.readAll();
-    uint32_t subchunksize = *((uint32_t *) &rawData[16]);
     uint32_t fmt = *((ushort *) &rawData[20]);
     ushort channelCount = *((ushort *) &rawData[22]);
     channels = channelCount;
-    data = new double*[channelCount];
+    data = new float*[channelCount];
     uint32_t sr = *((uint32_t *) &rawData[24]);
     uint32_t bufferSize = *((ushort *) &rawData[34]);
     sampleRate = sr;
@@ -30,7 +29,7 @@ WAVFile::WAVFile(QString path) {
     startidx += 4;
     length = size / (channels * (bufferSize / 8));
     for(int i = 0; i < channelCount; i++) {
-        data[i] = new double[length];
+        data[i] = new float[length];
     }
 
     if (fmt == 3 && bufferSize == 32) {

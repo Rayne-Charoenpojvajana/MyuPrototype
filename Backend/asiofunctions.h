@@ -6,7 +6,7 @@
 #include "asiodrivers.h"
 #include "Audio/wavfile.h"
 #include <QTime>
-
+#include "Layer/clicklayer.h"
 
 #define MAX_BUFFERS 512
 #define MIN_BUFFERS 64
@@ -83,10 +83,10 @@ extern long selectedBufferSize;
 extern long softwareMinBuffer;
 extern const long softwareMaxBuffer;
 extern long selectedSampleRate;
-extern long softwareSampleRates[];
-extern long numSampleRates;
+extern std::array<long, 1> softwareSampleRates;
 extern float inputs[MAX_INPUTS][MAX_BUFFERS];
 extern float outputs[MAX_OUTPUTS][MAX_BUFFERS];
+extern std::vector<Layer*> layers[MAX_INPUTS];
 
 //----------------------------------------------------------------------------------
 // some external references

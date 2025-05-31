@@ -50,8 +50,8 @@ public:
     }
     Q_INVOKABLE QList<long> getSampleRates() {
         QList<long> list;
-        for(int i = 0; i < numSampleRates; i++) {
-            list.append(softwareSampleRates[i]);
+        for (auto sr : softwareSampleRates) {
+            list.append(sr);
         }
         return list;
     }
