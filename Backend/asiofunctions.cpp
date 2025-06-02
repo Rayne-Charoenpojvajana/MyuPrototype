@@ -2,6 +2,8 @@
 
 
 
+Configs& configs = Configs::getInstance();
+
 
 
 
@@ -69,8 +71,6 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
                 break;
             }
         }
-        mutex.lock();
-        mutex.unlock();
         for(int k = 0; k < std::min({inputs.size(), outputs.size()}); ++k) {
             for(int j = 0; j < buffSize; j++ ) {
                 outputs[k][j] = inputs[k][j];
@@ -272,15 +272,15 @@ void setupASIO(char* asioDriverName) {
         if (ASIOInit (&asioDriverInfo.driverInfo) == ASE_OK)
         {
 
-            asioDriverInfo.selectedSampleRate = selectedSampleRate;
+            asioDriverInfo.selectedSampleRate = configs.selectedSampleRate;
             if (init_asio_static_data (&asioDriverInfo) == 0)
             {
-                if (selectedBufferSize < asioDriverInfo.minSize) {
-                    asioDriverInfo.selectedBufferSize = std::max({softwareMinBuffer, asioDriverInfo.minSize});
-                } else if (selectedBufferSize > asioDriverInfo.maxSize) {
-                    asioDriverInfo.selectedBufferSize = std::min({softwareMinBuffer, asioDriverInfo.minSize});
+                if (configs.selectedBufferSize < asioDriverInfo.minSize) {
+                    asioDriverInfo.selectedBufferSize = std::max({configs.softwareMinBuffer, asioDriverInfo.minSize});
+                } else if (configs.selectedBufferSize > asioDriverInfo.maxSize) {
+                    asioDriverInfo.selectedBufferSize = std::min({configs.softwareMinBuffer, asioDriverInfo.minSize});
                 } else {
-                    asioDriverInfo.selectedBufferSize = selectedBufferSize;
+                    asioDriverInfo.selectedBufferSize = configs.selectedBufferSize;
                 }
                 // ASIOControlPanel(); you might want to check wether the ASIOControlPanel() can open
 

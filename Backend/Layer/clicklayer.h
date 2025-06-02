@@ -12,18 +12,8 @@ private:
     QML_ELEMENT
     std::unique_ptr<QQuickView> view;
 public:
-    void transform(std::vector<float>& input, std::vector<float>& output) override {
-
-    }
-    void launchUI() override  {
-        view = std::make_unique<QQuickView>();
-        view->setInitialProperties({{"clickLayer", QVariant::fromValue(this)}});
-        view->setSource(QUrl("MyuPrototype/Frontend/Windows/ClickWindow.qml"));
-        view->show();
-    }
-    Q_INVOKABLE void test() {
-        qDebug() << "here";
-    }
+    void transform(std::vector<float>& input, std::vector<float>& output) override;
+    void launchUI() override;
 };
 
 #endif // CLICKLAYER_H

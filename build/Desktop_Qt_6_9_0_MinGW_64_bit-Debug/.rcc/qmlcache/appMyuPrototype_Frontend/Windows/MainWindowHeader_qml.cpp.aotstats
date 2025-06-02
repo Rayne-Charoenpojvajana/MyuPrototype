@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 335,
+                        "durationMicroseconds": 418,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 8
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 264,
+                        "durationMicroseconds": 257,
                         "errorMessage": "Cannot retrieve a non-object type by ID: p0",
                         "functionName": "onTriggered",
                         "line": 63

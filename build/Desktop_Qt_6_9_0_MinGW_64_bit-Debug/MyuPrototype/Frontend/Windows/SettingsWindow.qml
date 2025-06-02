@@ -118,7 +118,7 @@ ApplicationWindow {
                     MainController.setSelectedDriver(currentText);
                 }
                 Timer {
-                    repeat: true; interval: 1000; running: true
+                    repeat: true; interval: 2000; running: true
                     onTriggered: {
                         let drivers = MainController.getDriverList();
                         if (drivers.length === 0) {

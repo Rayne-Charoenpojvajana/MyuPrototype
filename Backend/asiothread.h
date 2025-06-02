@@ -9,52 +9,15 @@
 class ASIOThread : public QThread
 {
 public:
-    explicit ASIOThread(QObject *parent = nullptr)
-        : QThread(parent)
-    {
-    }
-    bool getStreaming() {
-        return streaming;
-    }
-    void setStreaming(bool stream) {
-        streaming = stream;
-    }
-    QStringList getDriverList() {
-        QStringList list;
-        if (getStreaming()) {
-            return list;
-        }
-        extern AsioDrivers helperDrivers;
-        long numDev = helperDrivers.asioGetNumDev();
-        char* drivers[numDev];
-        for (int i = 0; i < numDev; i++) {
-            drivers[i] = new char[maxDriverLength];
-        }
-        helperDrivers.getDriverNames(drivers, numDev);
-        for (int i = 0; i < numDev; i++) {
-            list.append(drivers[i]);
-            delete drivers[i];
-        }
-        return list;
-    }
-    void closeThread() {
-        close = true;
-    }
+    explicit ASIOThread(QObject *parent = nullptr);
+    bool getStreaming();
+    void setStreaming(bool stream);
+    QStringList getDriverList();
+    void closeThread();
 private:
     Q_OBJECT
     bool close = false;
-    void run() override {
-        while(!close) {
-            msleep(500);
-            char* selectedDriver = (char*) "";
-            bool await = true;
-            emit requestSelectedDriver(&selectedDriver, &await);
-            while(await && !close);
-            streaming = true;
-            setupASIO(selectedDriver);
-            streaming = false;
-        }
-    }
+    void run() override;
 signals:
     void requestSelectedDriver(char**, bool*);
 };

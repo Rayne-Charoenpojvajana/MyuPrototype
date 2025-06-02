@@ -961,6 +961,12 @@
 			null
 		],
 		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/configs.h",
+			"MU",
+			"3X2AN3DXFV/moc_configs.cpp",
+			null
+		],
+		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/maincontroller.h",
 			"MU",
 			"3X2AN3DXFV/moc_maincontroller.cpp",
@@ -1102,7 +1108,7 @@
 			null
 		],
 		[
-			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/config.cpp",
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/configs.cpp",
 			"MU",
 			null
 		],

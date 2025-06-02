@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 302,
+                        "durationMicroseconds": 320,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 13
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 45,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 40

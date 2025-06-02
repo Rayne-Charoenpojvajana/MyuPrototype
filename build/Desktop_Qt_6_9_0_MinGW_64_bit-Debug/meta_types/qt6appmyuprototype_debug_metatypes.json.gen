@@ -124,12 +124,6 @@
                         "index": 10,
                         "name": "addLayer",
                         "returnType": "void"
-                    },
-                    {
-                        "access": "public",
-                        "index": 11,
-                        "name": "test",
-                        "returnType": "void"
                     }
                 ],
                 "object": true,
@@ -196,14 +190,6 @@
                 ],
                 "className": "ClickLayer",
                 "lineNumber": 8,
-                "methods": [
-                    {
-                        "access": "public",
-                        "index": 0,
-                        "name": "test",
-                        "returnType": "void"
-                    }
-                ],
                 "object": true,
                 "qualifiedClassName": "ClickLayer",
                 "superClasses": [

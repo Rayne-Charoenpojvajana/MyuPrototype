@@ -5,6 +5,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiolist.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/ginclude.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Audio/wavfile.h \
+  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Configs.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/clicklayer.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h \

@@ -59,7 +59,7 @@ ToolBar {
         }
     }
     Timer {
-        repeat: true; interval: 20; running: true
+        repeat: true; interval: 30; running: true
         onTriggered: {
             const list = MainController.getMonitor()
             p0.value = Math.abs(list[0])

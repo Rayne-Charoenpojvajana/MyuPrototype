@@ -65,8 +65,7 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "sampleRate",
         "addLayer",
         "channelNum",
-        "path",
-        "test"
+        "path"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -104,8 +103,6 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         QtMocHelpers::MethodData<void(int, QString)>(25, 6, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Int, 26 }, { QMetaType::QString, 27 },
         }}),
-        // Method 'test'
-        QtMocHelpers::MethodData<void()>(28, 6, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -149,7 +146,6 @@ void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
             if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
         case 9: _t->setSampleRate((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
         case 10: _t->addLayer((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 11: _t->test(); break;
         default: ;
         }
     }
@@ -178,14 +174,14 @@ int MainController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 11;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 12)
+        if (_id < 11)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 12;
+        _id -= 11;
     }
     return _id;
 }

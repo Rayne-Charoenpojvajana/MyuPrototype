@@ -12,13 +12,8 @@ private:
     int channelNum;
     QString path;
 public:
-    Layer() {
-
-    }
-    void setInfo(int channelNum, QString path) {
-        this->channelNum = channelNum;
-        this->path = path;
-    }
+    Layer();
+    void setInfo(int channelNum, QString path);
     virtual void transform(std::vector<float>& input, std::vector<float>& output) = 0;
     virtual void launchUI() = 0;
 };

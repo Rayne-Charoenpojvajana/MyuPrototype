@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 370,
+                        "durationMicroseconds": 345,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 8
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 19,
+                        "durationMicroseconds": 16,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 7
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 18,
-                        "durationMicroseconds": 6674,
+                        "durationMicroseconds": 4803,
                         "errorMessage": "",
                         "functionName": "spacing",
                         "line": 11
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 167,
+                        "durationMicroseconds": 142,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 13
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 36,
-                        "durationMicroseconds": 118,
+                        "durationMicroseconds": 125,
                         "errorMessage": "",
                         "functionName": "preferredWidth",
                         "line": 20

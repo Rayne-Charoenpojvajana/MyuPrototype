@@ -27,7 +27,7 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES Frontend/Style.qml
         RESOURCES resources.qrc
         SOURCES Backend/asiothread.h Backend/asiothread.cpp
-        SOURCES Backend/config.cpp
+        SOURCES Backend/configs.h Backend/configs.cpp
         QML_FILES
         QML_FILES
         QML_FILES Frontend/Components/ToolBarButton.qml

@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 2171,
+                        "durationMicroseconds": 183,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "opacity",
                         "line": 7
