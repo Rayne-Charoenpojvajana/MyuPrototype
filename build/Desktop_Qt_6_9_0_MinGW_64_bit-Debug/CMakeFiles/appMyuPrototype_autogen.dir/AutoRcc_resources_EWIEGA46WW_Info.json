@@ -10,7 +10,7 @@
 	"INPUTS" : 
 	[
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/logo.png",
-		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Click_1.wav"
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Clicks/click_1.wav"
 	],
 	"LOCK_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/CMakeFiles/appMyuPrototype_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
 	"MULTI_CONFIG" : false,

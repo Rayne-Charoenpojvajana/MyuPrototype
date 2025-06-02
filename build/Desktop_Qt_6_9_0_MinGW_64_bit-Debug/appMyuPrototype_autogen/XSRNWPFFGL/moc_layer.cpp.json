@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "Layer",
+            "lineNumber": 7,
+            "object": true,
+            "qualifiedClassName": "Layer",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "layer.h",
+    "outputRevision": 69
+}

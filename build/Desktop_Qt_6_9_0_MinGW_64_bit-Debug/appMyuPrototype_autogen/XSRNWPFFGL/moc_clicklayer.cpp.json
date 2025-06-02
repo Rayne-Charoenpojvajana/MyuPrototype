@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "ClickLayer",
+            "lineNumber": 8,
+            "object": true,
+            "qualifiedClassName": "ClickLayer",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "Layer"
+                }
+            ]
+        }
+    ],
+    "inputFile": "clicklayer.h",
+    "outputRevision": 69
+}

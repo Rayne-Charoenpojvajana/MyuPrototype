@@ -53,6 +53,8 @@ qt_add_qml_module(appMyuPrototype
         SOURCES
         SOURCES Backend/Layer/layer.h Backend/Layer/layer.cpp
         SOURCES Backend/Layer/clicklayer.h Backend/Layer/clicklayer.cpp
+        QML_FILES Frontend/Windows/LayerWindow.qml
+        QML_FILES Frontend/Windows/ClickWindow.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -88,6 +90,7 @@ target_include_directories(appMyuPrototype PUBLIC
 set(QML_INCLUDES
     ${CMAKE_CURRENT_SOURCE_DIR}/Backend
 )
+
 
 # Add includepaths
 target_include_directories(appMyuPrototype PRIVATE

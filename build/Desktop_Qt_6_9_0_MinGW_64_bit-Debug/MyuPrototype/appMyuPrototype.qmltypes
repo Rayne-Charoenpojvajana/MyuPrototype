@@ -15,6 +15,11 @@ Module {
         isCreatable: false
         isSingleton: true
         exportMetaObjectRevisions: [256]
+        Signal {
+            name: "addedLayer"
+            Parameter { type: "int" }
+            Parameter { type: "QString" }
+        }
         Method { name: "qmlInit" }
         Method {
             name: "sendSelectedDriver"
@@ -38,9 +43,10 @@ Module {
             Parameter { name: "sampleRate"; type: "int" }
         }
         Method {
-            name: "setMetronome"
-            Parameter { name: "state"; type: "bool" }
-            Parameter { name: "bpm"; type: "double" }
+            name: "addLayer"
+            Parameter { name: "channelNum"; type: "int" }
+            Parameter { name: "path"; type: "QString" }
         }
+        Method { name: "test" }
     }
 }

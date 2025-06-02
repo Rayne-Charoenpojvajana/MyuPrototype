@@ -6,13 +6,16 @@
 #include "asiodrivers.h"
 #include "Audio/wavfile.h"
 #include <QTime>
+#include <QThread>
+#include <QMutex>
 #include "Layer/clicklayer.h"
 
-#define MAX_BUFFERS 512
-#define MIN_BUFFERS 64
-#define MAX_OUTPUTS 32
-#define MAX_INPUTS 32
-
+#define MAX_BUFFERS 256
+#define MIN_BUFFERS 256
+#define MAX_INPUTS 2
+#define MAX_OUTPUTS 2
+#define MAX_DRIVERLENGTH 128
+#define NUM_SAMPLERATES 1
 
 enum {
     // number of input and outputs supported by the host application
@@ -21,7 +24,7 @@ enum {
     kMaxOutputChannels = MAX_OUTPUTS
 };
 
-extern int intData[2][64];
+
 // internal data storage
 typedef struct DriverInfo
 {
@@ -73,25 +76,22 @@ typedef struct DriverInfo
     bool           stopped;
 } DriverInfo;
 
-
-
 extern DriverInfo asioDriverInfo;
 extern ASIOCallbacks asioCallbacks;
 extern bool streaming;
 extern int maxDriverLength;
 extern long selectedBufferSize;
 extern long softwareMinBuffer;
-extern const long softwareMaxBuffer;
+extern long softwareMaxBuffer;
 extern long selectedSampleRate;
-extern std::array<long, 1> softwareSampleRates;
-extern float inputs[MAX_INPUTS][MAX_BUFFERS];
-extern float outputs[MAX_OUTPUTS][MAX_BUFFERS];
-extern std::vector<Layer*> layers[MAX_INPUTS];
-
+extern std::array<long, NUM_SAMPLERATES> softwareSampleRates;
+extern std::array<std::vector<float>, MAX_INPUTS> inputs;
+extern std::array<std::vector<float>, MAX_OUTPUTS> outputs;
+extern QMutex mutex;
 //----------------------------------------------------------------------------------
 // some external references
 extern AsioDrivers* asioDrivers;
-extern WAVFile* clicks;
+extern std::array<std::vector<std::unique_ptr<Layer>>, MAX_INPUTS> layers;
 bool loadAsioDriver(char *name);
 
 // internal prototypes (required for the Metrowerks CodeWarrior compiler)

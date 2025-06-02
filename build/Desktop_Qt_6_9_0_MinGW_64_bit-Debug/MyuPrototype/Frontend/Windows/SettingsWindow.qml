@@ -13,17 +13,14 @@ ApplicationWindow {
     minimumHeight: height
     maximumWidth: width
     maximumHeight: height
-    visible: false
     ColumnLayout {
-
-
         RowLayout {
             id: row
             Layout.topMargin: 10
             Layout.leftMargin: 10
             ComboBox {
                 model: ListModel {
-                    id: sModel
+
                 }
                 Layout.preferredHeight: 30
                 Layout.preferredWidth: 200
@@ -50,7 +47,7 @@ ApplicationWindow {
                 Component.onCompleted: {
                     const sampleRates = MainController.getSampleRates()
                     for (const rate of sampleRates) {
-                        sModel.append({text: rate})
+                        model.append({text: rate})
                     }
                     currentIndex = 0
                     MainController.setSampleRate(currentText)
@@ -60,7 +57,7 @@ ApplicationWindow {
                 id: box
                 textRole: "text"
                 model: ListModel {
-                    id: model
+
                 }
                 Layout.preferredHeight: 30
                 Layout.preferredWidth: 100

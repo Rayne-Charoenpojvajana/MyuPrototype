@@ -25,12 +25,12 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"snapMode\".",
                         "functionName": "snapMode",
-                        "line": 57
+                        "line": 56
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 150,
+                        "durationMicroseconds": 206,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "x",
                         "line": 15
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 34,
+                        "durationMicroseconds": 55,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "y",
                         "line": 16
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 315,
+                        "durationMicroseconds": 615,
                         "errorMessage": "Cannot access value for name Math",
                         "functionName": "width",
                         "line": 19
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 8,
+                        "durationMicroseconds": 13,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "height",
                         "line": 20
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 10,
+                        "durationMicroseconds": 17,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "radius",
                         "line": 22
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 67,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "opacity",
                         "line": 24
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 145,
+                        "durationMicroseconds": 229,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 23
@@ -86,74 +86,74 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 69,
+                        "durationMicroseconds": 147,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "x",
-                        "line": 60
+                        "line": 59
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 109,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "y",
-                        "line": 61
+                        "line": 60
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 7,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "height",
-                        "line": 63
+                        "line": 62
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 138,
+                        "durationMicroseconds": 282,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
-                        "line": 64
+                        "line": 63
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 6,
+                        "durationMicroseconds": 14,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "radius",
-                        "line": 65
+                        "line": 64
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 20,
+                        "durationMicroseconds": 43,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "angle",
+                        "line": 71
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 31,
+                        "durationMicroseconds": 54,
+                        "errorMessage": "Cannot access value for name handleItem",
+                        "functionName": "x",
                         "line": 72
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 30,
+                        "durationMicroseconds": 41,
                         "errorMessage": "Cannot access value for name handleItem",
-                        "functionName": "x",
+                        "functionName": "y",
                         "line": 73
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 31,
-                        "durationMicroseconds": 22,
-                        "errorMessage": "Cannot access value for name handleItem",
-                        "functionName": "y",
-                        "line": 74
-                    },
-                    {
-                        "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 110,
+                        "durationMicroseconds": 203,
                         "errorMessage": "Cannot access value for name Math",
                         "functionName": "y",
-                        "line": 69
+                        "line": 68
                     },
                     {
                         "codegenSuccessfull": false,
@@ -161,7 +161,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"x\".",
                         "functionName": "x",
-                        "line": 84
+                        "line": 83
                     },
                     {
                         "codegenSuccessfull": false,
@@ -169,7 +169,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"y\".",
                         "functionName": "y",
-                        "line": 85
+                        "line": 84
                     },
                     {
                         "codegenSuccessfull": false,
@@ -177,7 +177,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"horizontalAlignment\".",
                         "functionName": "horizontalAlignment",
-                        "line": 87
+                        "line": 86
                     },
                     {
                         "codegenSuccessfull": false,
@@ -185,7 +185,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"text\".",
                         "functionName": "text",
-                        "line": 88
+                        "line": 87
                     },
                     {
                         "codegenSuccessfull": false,
@@ -193,7 +193,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"editingFinished\".",
                         "functionName": "onEditingFinished",
-                        "line": 92
+                        "line": 91
                     },
                     {
                         "codegenSuccessfull": false,
@@ -201,7 +201,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"x\".",
                         "functionName": "x",
-                        "line": 103
+                        "line": 101
                     },
                     {
                         "codegenSuccessfull": false,
@@ -209,7 +209,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"y\".",
                         "functionName": "y",
-                        "line": 104
+                        "line": 102
                     },
                     {
                         "codegenSuccessfull": false,
@@ -217,7 +217,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find property \"text\".",
                         "functionName": "text",
-                        "line": 112
+                        "line": 110
                     },
                     {
                         "codegenSuccessfull": false,
@@ -225,7 +225,7 @@
                         "durationMicroseconds": 0,
                         "errorMessage": "Could not find signal \"toggled\".",
                         "functionName": "onToggled",
-                        "line": 113
+                        "line": 111
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Components/Metronome.qml"

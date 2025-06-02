@@ -53,51 +53,40 @@ const double twoRaisedTo32 = 4294967296.;
 ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processNow)
 {
     long buffSize = asioDriverInfo.selectedBufferSize;
-
+    int iCount = 0;
+    int oCount = 0;
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
     {
-        if (asioDriverInfo.bufferInfos[i].isInput == true)
+        if (asioDriverInfo.bufferInfos[i].isInput == true && iCount < inputs.size())
         {
             switch (asioDriverInfo.channelInfos[i].type)
             {
             case ASIOSTInt32LSB:
                 for(int j = 0; j < buffSize; ++j) {
-                    inputs[i][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (float )0x7fffffff;
+                    inputs[iCount][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (float )0x7fffffff;
                 }
+                iCount++;
                 break;
             }
         }
-        int limit = std::min({asioDriverInfo.inputBuffers, asioDriverInfo.outputBuffers});
-        for(int j = 0; j < limit; ++j) {
-            memcpy(outputs[j], inputs[j], buffSize*4);
+        mutex.lock();
+        mutex.unlock();
+        for(int k = 0; k < std::min({inputs.size(), outputs.size()}); ++k) {
+            for(int j = 0; j < buffSize; j++ ) {
+                outputs[k][j] = inputs[k][j];
+            }
         }
         int offset = asioDriverInfo.inputBuffers;
-        bool hi = clicks->on;
-        if (asioDriverInfo.bufferInfos[i].isInput == false)
+        if (asioDriverInfo.bufferInfos[i].isInput == false && oCount < outputs.size())
         {
-            // OK do processing for the outputs only
             switch (asioDriverInfo.channelInfos[i].type)
             {
             case ASIOSTInt32LSB:
                 for(int j = 0; j < buffSize; ++j) {
-                    if (hi) {
-                        if (clicks->count == clicks->interval) {
-                            clicks->cursor = 0;
-                            clicks->count = 0;
-                        }
-                        clicks->count++;
-                        if (!clicks->atEnd()) {
-                            outputs[i-offset][j] += clicks->data[0][clicks->cursor];
-                            clicks->increment();
-                        }
-                    }
                     outputs[i-offset][j] = std::clamp(outputs[i-offset][j], -0.99f, 0.99f);
-                    // qDebug() << val;
-                    // val = std::clamp(val, INT32_MIN, INT32_MAX);
-                    // *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = val;
-
-                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = (int) (outputs[i-offset][j] * (float) 0x7fffffff);
+                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = outputs[i-offset][j] * (float) 0x7fffffff;
                 }
+                oCount++;
                 break;
             }
         }
@@ -286,9 +275,6 @@ void setupASIO(char* asioDriverName) {
             asioDriverInfo.selectedSampleRate = selectedSampleRate;
             if (init_asio_static_data (&asioDriverInfo) == 0)
             {
-
-
-
                 if (selectedBufferSize < asioDriverInfo.minSize) {
                     asioDriverInfo.selectedBufferSize = std::max({softwareMinBuffer, asioDriverInfo.minSize});
                 } else if (selectedBufferSize > asioDriverInfo.maxSize) {
@@ -305,13 +291,18 @@ void setupASIO(char* asioDriverName) {
                 asioCallbacks.bufferSwitchTimeInfo = &bufferSwitchTimeInfo;
                 if (create_asio_buffers (&asioDriverInfo) == ASE_OK)
                 {
-
+                    for(int i = 0; i < inputs.size(); i++) {
+                        inputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
+                    }
+                    for(int i = 0; i < outputs.size(); i++) {
+                        outputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
+                    }
                     if (ASIOStart() == ASE_OK)
                     {
                         // Now all is up and running
                         while (!asioDriverInfo.stopped && streaming)
                         {
-                            Sleep(500);
+                            QThread::msleep(250);
                         }
                         ASIOStop();
                     }

@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 17,
-                        "durationMicroseconds": 379,
+                        "durationMicroseconds": 424,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 8
@@ -14,18 +14,26 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 16,
+                        "durationMicroseconds": 19,
                         "errorMessage": "Cannot access value for name parent",
                         "functionName": "fill",
                         "line": 7
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 30,
-                        "durationMicroseconds": 258,
+                        "column": 28,
+                        "durationMicroseconds": 0,
+                        "errorMessage": "Could not find signal \"clicked\".",
+                        "functionName": "onClicked",
+                        "line": 51
+                    },
+                    {
+                        "codegenSuccessfull": false,
+                        "column": 22,
+                        "durationMicroseconds": 250,
                         "errorMessage": "Cannot retrieve a non-object type by ID: p0",
                         "functionName": "onTriggered",
-                        "line": 26
+                        "line": 63
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/MainWindowHeader.qml"

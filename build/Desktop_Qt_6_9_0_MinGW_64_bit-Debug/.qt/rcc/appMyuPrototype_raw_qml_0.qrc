@@ -8,6 +8,8 @@
     <file alias="Frontend/Windows/MainWindowFooter.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/MainWindowFooter.qml</file>
     <file alias="Frontend/Windows/MainWindowHeader.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/MainWindowHeader.qml</file>
     <file alias="Frontend/Windows/SettingsWindow.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/SettingsWindow.qml</file>
+    <file alias="Frontend/Windows/LayerWindow.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/LayerWindow.qml</file>
+    <file alias="Frontend/Windows/ClickWindow.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/ClickWindow.qml</file>
     <file alias="resources.qrc">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/resources.qrc</file>
   </qresource>
 </RCC>

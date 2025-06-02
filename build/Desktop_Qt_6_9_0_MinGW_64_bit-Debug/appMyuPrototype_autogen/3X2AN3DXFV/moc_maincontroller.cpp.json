@@ -16,7 +16,7 @@
             "methods": [
                 {
                     "access": "public",
-                    "index": 2,
+                    "index": 3,
                     "name": "getDriverList",
                     "returnType": "QStringList"
                 },
@@ -28,19 +28,19 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 3,
+                    "index": 4,
                     "name": "setSelectedDriver",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 4,
+                    "index": 5,
                     "name": "getMonitor",
                     "returnType": "QList<double>"
                 },
                 {
                     "access": "public",
-                    "index": 5,
+                    "index": 6,
                     "name": "getBufferSizes",
                     "returnType": "QList<long>"
                 },
@@ -52,13 +52,13 @@
                             "type": "long"
                         }
                     ],
-                    "index": 6,
+                    "index": 7,
                     "name": "setBufferSize",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 7,
+                    "index": 8,
                     "name": "getSampleRates",
                     "returnType": "QList<long>"
                 },
@@ -70,7 +70,7 @@
                             "type": "long"
                         }
                     ],
-                    "index": 8,
+                    "index": 9,
                     "name": "setSampleRate",
                     "returnType": "void"
                 },
@@ -78,25 +78,47 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "state",
-                            "type": "bool"
+                            "name": "channelNum",
+                            "type": "int"
                         },
                         {
-                            "name": "bpm",
-                            "type": "double"
+                            "name": "path",
+                            "type": "QString"
                         }
                     ],
-                    "index": 9,
-                    "name": "setMetronome",
+                    "index": 10,
+                    "name": "addLayer",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 11,
+                    "name": "test",
                     "returnType": "void"
                 }
             ],
             "object": true,
             "qualifiedClassName": "MainController",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "addedLayer",
+                    "returnType": "void"
+                }
+            ],
             "slots": [
                 {
                     "access": "public",
-                    "index": 0,
+                    "index": 1,
                     "name": "qmlInit",
                     "returnType": "void"
                 },
@@ -112,7 +134,7 @@
                             "type": "bool*"
                         }
                     ],
-                    "index": 1,
+                    "index": 2,
                     "name": "sendSelectedDriver",
                     "returnType": "void"
                 }

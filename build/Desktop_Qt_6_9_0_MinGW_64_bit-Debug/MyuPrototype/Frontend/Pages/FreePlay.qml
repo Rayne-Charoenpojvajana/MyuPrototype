@@ -3,8 +3,5 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import "../Components"
 Item {
-    Metronome {
-
-    }
 
 }

@@ -37,15 +37,19 @@ public:
         }
         return list;
     }
+    void closeThread() {
+        close = true;
+    }
 private:
     Q_OBJECT
+    bool close = false;
     void run() override {
-        while(1) {
-            msleep(2000);
+        while(!close) {
+            msleep(500);
             char* selectedDriver = (char*) "";
             bool await = true;
             emit requestSelectedDriver(&selectedDriver, &await);
-            while(await);
+            while(await && !close);
             streaming = true;
             setupASIO(selectedDriver);
             streaming = false;

@@ -43,8 +43,9 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "auto",
         "QML.Singleton",
         "true",
-        "qmlInit",
+        "addedLayer",
         "",
+        "qmlInit",
         "sendSelectedDriver",
         "char**",
         "selectedDriver",
@@ -62,42 +63,49 @@ template <> constexpr inline auto MainController::qt_create_metaobjectdata<qt_me
         "getSampleRates",
         "setSampleRate",
         "sampleRate",
-        "setMetronome",
-        "state",
-        "bpm"
+        "addLayer",
+        "channelNum",
+        "path",
+        "test"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'addedLayer'
+        QtMocHelpers::SignalData<void(int, QString)>(5, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 6 }, { QMetaType::QString, 6 },
+        }}),
         // Slot 'qmlInit'
-        QtMocHelpers::SlotData<void()>(5, 6, QMC::AccessPublic, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(7, 6, QMC::AccessPublic, QMetaType::Void),
         // Slot 'sendSelectedDriver'
-        QtMocHelpers::SlotData<void(char * *, bool *)>(7, 6, QMC::AccessPublic, QMetaType::Void, {{
-            { 0x80000000 | 8, 9 }, { 0x80000000 | 10, 11 },
+        QtMocHelpers::SlotData<void(char * *, bool *)>(8, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 9, 10 }, { 0x80000000 | 11, 12 },
         }}),
         // Method 'getDriverList'
-        QtMocHelpers::MethodData<QStringList()>(12, 6, QMC::AccessPublic, QMetaType::QStringList),
+        QtMocHelpers::MethodData<QStringList()>(13, 6, QMC::AccessPublic, QMetaType::QStringList),
         // Method 'setSelectedDriver'
-        QtMocHelpers::MethodData<void(QString)>(13, 6, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 14 },
+        QtMocHelpers::MethodData<void(QString)>(14, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 15 },
         }}),
         // Method 'getMonitor'
-        QtMocHelpers::MethodData<QList<double>()>(15, 6, QMC::AccessPublic, 0x80000000 | 16),
+        QtMocHelpers::MethodData<QList<double>()>(16, 6, QMC::AccessPublic, 0x80000000 | 17),
         // Method 'getBufferSizes'
-        QtMocHelpers::MethodData<QList<long>()>(17, 6, QMC::AccessPublic, 0x80000000 | 18),
+        QtMocHelpers::MethodData<QList<long>()>(18, 6, QMC::AccessPublic, 0x80000000 | 19),
         // Method 'setBufferSize'
-        QtMocHelpers::MethodData<void(long)>(19, 6, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Long, 20 },
+        QtMocHelpers::MethodData<void(long)>(20, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Long, 21 },
         }}),
         // Method 'getSampleRates'
-        QtMocHelpers::MethodData<QList<long>()>(21, 6, QMC::AccessPublic, 0x80000000 | 18),
+        QtMocHelpers::MethodData<QList<long>()>(22, 6, QMC::AccessPublic, 0x80000000 | 19),
         // Method 'setSampleRate'
-        QtMocHelpers::MethodData<void(long)>(22, 6, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Long, 23 },
+        QtMocHelpers::MethodData<void(long)>(23, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Long, 24 },
         }}),
-        // Method 'setMetronome'
-        QtMocHelpers::MethodData<void(bool, double)>(24, 6, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::Bool, 25 }, { QMetaType::Double, 26 },
+        // Method 'addLayer'
+        QtMocHelpers::MethodData<void(int, QString)>(25, 6, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 26 }, { QMetaType::QString, 27 },
         }}),
+        // Method 'test'
+        QtMocHelpers::MethodData<void()>(28, 6, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -126,22 +134,28 @@ void MainController::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     auto *_t = static_cast<MainController *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->qmlInit(); break;
-        case 1: _t->sendSelectedDriver((*reinterpret_cast< std::add_pointer_t<char**>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool*>>(_a[2]))); break;
-        case 2: { QStringList _r = _t->getDriverList();
+        case 0: _t->addedLayer((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 1: _t->qmlInit(); break;
+        case 2: _t->sendSelectedDriver((*reinterpret_cast< std::add_pointer_t<char**>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<bool*>>(_a[2]))); break;
+        case 3: { QStringList _r = _t->getDriverList();
             if (_a[0]) *reinterpret_cast< QStringList*>(_a[0]) = std::move(_r); }  break;
-        case 3: _t->setSelectedDriver((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 4: { QList<double> _r = _t->getMonitor();
+        case 4: _t->setSelectedDriver((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: { QList<double> _r = _t->getMonitor();
             if (_a[0]) *reinterpret_cast< QList<double>*>(_a[0]) = std::move(_r); }  break;
-        case 5: { QList<long> _r = _t->getBufferSizes();
+        case 6: { QList<long> _r = _t->getBufferSizes();
             if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
-        case 6: _t->setBufferSize((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
-        case 7: { QList<long> _r = _t->getSampleRates();
+        case 7: _t->setBufferSize((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
+        case 8: { QList<long> _r = _t->getSampleRates();
             if (_a[0]) *reinterpret_cast< QList<long>*>(_a[0]) = std::move(_r); }  break;
-        case 8: _t->setSampleRate((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
-        case 9: _t->setMetronome((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[2]))); break;
+        case 9: _t->setSampleRate((*reinterpret_cast< std::add_pointer_t<long>>(_a[1]))); break;
+        case 10: _t->addLayer((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 11: _t->test(); break;
         default: ;
         }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (MainController::*)(int , QString )>(_a, &MainController::addedLayer, 0))
+            return;
     }
 }
 
@@ -164,15 +178,21 @@ int MainController::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 12;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 10;
+        _id -= 12;
     }
     return _id;
+}
+
+// SIGNAL 0
+void MainController::addedLayer(int _t1, QString _t2)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1, _t2);
 }
 QT_WARNING_POP

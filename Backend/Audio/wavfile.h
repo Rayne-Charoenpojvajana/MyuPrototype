@@ -2,25 +2,15 @@
 #define WAVFILE_H
 #include <QFile>
 #include <QDebug>
+#include <QAudioFormat>
+
 class WAVFile
 {
 public:
     WAVFile(QString path);
     ~WAVFile();
-    float** data;
-    int channels;
-    int length;
-    int cursor = 0;
-    bool on = false;
-    int interval;
-    int count = 0;
-    int sampleRate;
-    void increment() {
-        cursor++;
-    }
-    bool atEnd() {
-        return (cursor == length);
-    }
+    std::vector<float> data;
+    QAudioFormat format;
 };
 
 #endif // WAVFILE_H
