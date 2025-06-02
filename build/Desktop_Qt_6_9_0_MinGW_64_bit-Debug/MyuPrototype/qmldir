@@ -2,8 +2,6 @@ module MyuPrototype
 typeinfo appMyuPrototype.qmltypes
 prefer :/qt/qml/MyuPrototype/
 singleton Style 1.0 Frontend/Style.qml
-Metronome 1.0 Frontend/Components/Metronome.qml
-FreePlay 1.0 Frontend/Pages/FreePlay.qml
 ToolBarButton 1.0 Frontend/Components/ToolBarButton.qml
 MainWindow 1.0 Frontend/Windows/MainWindow.qml
 MainWindowFooter 1.0 Frontend/Windows/MainWindowFooter.qml

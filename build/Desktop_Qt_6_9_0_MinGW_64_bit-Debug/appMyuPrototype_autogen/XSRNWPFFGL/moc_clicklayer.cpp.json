@@ -1,8 +1,22 @@
 {
     "classes": [
         {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "auto"
+                }
+            ],
             "className": "ClickLayer",
             "lineNumber": 8,
+            "methods": [
+                {
+                    "access": "public",
+                    "index": 0,
+                    "name": "test",
+                    "returnType": "void"
+                }
+            ],
             "object": true,
             "qualifiedClassName": "ClickLayer",
             "superClasses": [

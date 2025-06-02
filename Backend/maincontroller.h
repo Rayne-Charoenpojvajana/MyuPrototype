@@ -5,7 +5,6 @@
 #include <QObject>
 #include <QtQml/qqmlregistration.h>
 #include <QStringListModel>
-#include <synchapi.h>
 
 class MainController : public QObject
 {
@@ -71,7 +70,8 @@ public:
         }
     }
     Q_INVOKABLE void addLayer(int channelNum, QString path) {
-        layers[channelNum].push_back(std::make_unique<ClickLayer>(channelNum, path));
+        layers[channelNum].push_back(std::make_unique<ClickLayer>());
+        layers[channelNum].back()->setInfo(channelNum, path);
         layers[channelNum].back()->launchUI();
     }
     Q_INVOKABLE void test() {

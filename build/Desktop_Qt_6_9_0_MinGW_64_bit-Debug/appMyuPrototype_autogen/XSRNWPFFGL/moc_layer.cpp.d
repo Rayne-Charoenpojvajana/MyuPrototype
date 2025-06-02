@@ -1,11 +1,8 @@
 C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/appMyuPrototype_autogen/XSRNWPFFGL/moc_layer.cpp: C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/appMyuPrototype_autogen/moc_predefs.h \
-  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Audio/wavfile.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QDebug \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QFile \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QObject \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20memory.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20type_traits.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qalgorithms.h \
@@ -32,13 +29,9 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcontainerfwd.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcontainerinfo.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcontainertools_impl.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdatastream.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qexceptionhandling.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qfile.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qfiledevice.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qflags.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qfloat16.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qforeach.h \
@@ -47,9 +40,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qgenericatomic.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qglobal.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qglobalstatic.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qhash.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qhashfunctions.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qiodevice.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qiterable.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qiterator.h \
@@ -57,7 +48,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlist.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qlogging.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmalloc.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmap.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmath.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmetacontainer.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qmetatype.h \
@@ -74,12 +64,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qrefcount.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qscopedpointer.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qscopeguard.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qset.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qshareddata.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qshareddata_impl.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qsharedpointer.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qspan.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qstdlibdetection.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qstring.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qstringalgorithms.h \
@@ -105,7 +89,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtdeprecationdefinitions.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtextstream.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtformat_impl.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtnoop.h \
@@ -118,18 +101,9 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtypes.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qutf8stringview.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtgui-config.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/QAudioFormat \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qaudioformat.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic \
@@ -143,14 +117,11 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_base.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/concept_check.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
@@ -160,10 +131,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
@@ -171,15 +138,9 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.tcc \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h \
@@ -187,13 +148,11 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
@@ -201,7 +160,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h \
@@ -216,12 +174,10 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_list.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
@@ -234,19 +190,15 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uniform_int_dist.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
@@ -255,7 +207,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
@@ -266,30 +217,22 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
@@ -312,7 +255,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_map \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/variant \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
@@ -321,14 +263,10 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
@@ -369,5 +307,4 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h
+  C:/Users/User/Documents/NewFolder/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h

@@ -1,20 +1,23 @@
 import QtQuick.Controls.Material
 import QtQuick
 import QtQuick.Controls
+import MyuPrototype
+
 Item {
-    // required property ClickLayer layer
     width: 300
     height: 300
     property real bpm
+    required property ClickLayer clickLayer
+
     Rectangle
     {
         id: background
         anchors.fill: parent
-        color: "black"
+        color: Style.mainWindowBackgroundColor
     }
     Dial {
         onMoved: {
-            MainController.test()
+
         }
     }
 }

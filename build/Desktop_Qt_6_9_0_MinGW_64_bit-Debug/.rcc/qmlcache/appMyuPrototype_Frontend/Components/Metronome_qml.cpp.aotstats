@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 206,
+                        "durationMicroseconds": 197,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "x",
                         "line": 15
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 53,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "y",
                         "line": 16
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 615,
+                        "durationMicroseconds": 509,
                         "errorMessage": "Cannot access value for name Math",
                         "functionName": "width",
                         "line": 19
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 17,
+                        "durationMicroseconds": 18,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "radius",
                         "line": 22
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 22,
-                        "durationMicroseconds": 67,
+                        "durationMicroseconds": 63,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "opacity",
                         "line": 24
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 27,
-                        "durationMicroseconds": 229,
+                        "durationMicroseconds": 237,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 23
@@ -86,7 +86,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 147,
+                        "durationMicroseconds": 107,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "x",
                         "line": 59
@@ -94,7 +94,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 109,
+                        "durationMicroseconds": 91,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "y",
                         "line": 60
@@ -110,7 +110,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 282,
+                        "durationMicroseconds": 222,
                         "errorMessage": "Cannot access value for name Style",
                         "functionName": "color",
                         "line": 63
@@ -118,7 +118,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 21,
-                        "durationMicroseconds": 14,
+                        "durationMicroseconds": 11,
                         "errorMessage": "Cannot access value for name width",
                         "functionName": "radius",
                         "line": 64
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 28,
-                        "durationMicroseconds": 43,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name control",
                         "functionName": "angle",
                         "line": 71
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 54,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name handleItem",
                         "functionName": "x",
                         "line": 72
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 41,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name handleItem",
                         "functionName": "y",
                         "line": 73
@@ -150,7 +150,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 24,
-                        "durationMicroseconds": 203,
+                        "durationMicroseconds": 191,
                         "errorMessage": "Cannot access value for name Math",
                         "functionName": "y",
                         "line": 68

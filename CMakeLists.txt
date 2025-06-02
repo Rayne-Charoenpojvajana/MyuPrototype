@@ -21,36 +21,21 @@ qt_add_qml_module(appMyuPrototype
     URI MyuPrototype
     VERSION 1.0
     QML_FILES
-
-        SOURCES
         SOURCES Backend/asiofunctions.h
         SOURCES Backend/asiofunctions.cpp
         SOURCES Backend/maincontroller.h Backend/maincontroller.cpp
         QML_FILES Frontend/Style.qml
-        QML_FILES
-        QML_FILES
-        QML_FILES
         RESOURCES resources.qrc
-        QML_FILES
         SOURCES Backend/asiothread.h Backend/asiothread.cpp
         SOURCES Backend/config.cpp
-        SOURCES
         QML_FILES
         QML_FILES
-        QML_FILES
-        QML_FILES
-        QML_FILES Frontend/Components/Metronome.qml
-        QML_FILES
-        QML_FILES Frontend/Pages/FreePlay.qml
         QML_FILES Frontend/Components/ToolBarButton.qml
-        QML_FILES
         QML_FILES Frontend/Windows/MainWindow.qml
         QML_FILES Frontend/Windows/MainWindowFooter.qml
         QML_FILES Frontend/Windows/MainWindowHeader.qml
         QML_FILES Frontend/Windows/SettingsWindow.qml
-        SOURCES
         SOURCES Backend/Audio/wavfile.h Backend/Audio/wavfile.cpp
-        SOURCES
         SOURCES Backend/Layer/layer.h Backend/Layer/layer.cpp
         SOURCES Backend/Layer/clicklayer.h Backend/Layer/clicklayer.cpp
         QML_FILES Frontend/Windows/LayerWindow.qml
@@ -87,14 +72,12 @@ target_include_directories(appMyuPrototype PUBLIC
                           )
 
 
-set(QML_INCLUDES
+
+
+
+target_include_directories(appMyuPrototype PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/Backend
 )
 
-
-# Add includepaths
-target_include_directories(appMyuPrototype PRIVATE
-    ${QML_INCLUDES}
-)
 
 target_link_libraries(appMyuPrototype PRIVATE Qt6::Multimedia)

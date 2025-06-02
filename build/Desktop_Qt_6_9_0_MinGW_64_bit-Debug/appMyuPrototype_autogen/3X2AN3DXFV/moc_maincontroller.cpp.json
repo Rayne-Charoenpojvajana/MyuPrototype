@@ -12,7 +12,7 @@
                 }
             ],
             "className": "MainController",
-            "lineNumber": 10,
+            "lineNumber": 9,
             "methods": [
                 {
                     "access": "public",

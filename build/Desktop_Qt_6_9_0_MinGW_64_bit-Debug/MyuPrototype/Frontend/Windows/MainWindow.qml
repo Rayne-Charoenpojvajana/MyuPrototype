@@ -2,8 +2,6 @@ import QtQuick.Controls.Fusion
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import MyuPrototype
-import "../Pages"
 
 ApplicationWindow {
     title: "Myu"
@@ -16,20 +14,4 @@ ApplicationWindow {
     Component.onCompleted: {
         MainController.qmlInit();
     }
-    StackView {
-        id: stack
-        initialItem: freePlay
-    }
-    FreePlay {
-        id: freePlay
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: forceActiveFocus()
-        z: -999
-    }
-
-
-
 }

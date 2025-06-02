@@ -1,8 +1,6 @@
 <RCC>
   <qresource prefix="/qt/qml/MyuPrototype/">
     <file alias="Frontend/Style.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Style.qml</file>
-    <file alias="Frontend/Components/Metronome.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Components/Metronome.qml</file>
-    <file alias="Frontend/Pages/FreePlay.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Pages/FreePlay.qml</file>
     <file alias="Frontend/Components/ToolBarButton.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Components/ToolBarButton.qml</file>
     <file alias="Frontend/Windows/MainWindow.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/MainWindow.qml</file>
     <file alias="Frontend/Windows/MainWindowFooter.qml">C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/MainWindowFooter.qml</file>

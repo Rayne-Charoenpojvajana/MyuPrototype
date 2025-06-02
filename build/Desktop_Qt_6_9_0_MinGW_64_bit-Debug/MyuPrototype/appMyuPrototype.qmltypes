@@ -7,6 +7,16 @@ import QtQuick.tooling 1.2
 
 Module {
     Component {
+        file: "clicklayer.h"
+        name: "ClickLayer"
+        accessSemantics: "reference"
+        prototype: "Layer"
+        exports: ["MyuPrototype/ClickLayer 1.0"]
+        exportMetaObjectRevisions: [256]
+        Method { name: "test" }
+    }
+    Component { file: "layer.h"; name: "Layer"; accessSemantics: "reference"; prototype: "QObject" }
+    Component {
         file: "maincontroller.h"
         name: "MainController"
         accessSemantics: "reference"

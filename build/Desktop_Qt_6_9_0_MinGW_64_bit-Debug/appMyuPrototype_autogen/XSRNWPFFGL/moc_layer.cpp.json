@@ -2,7 +2,7 @@
     "classes": [
         {
             "className": "Layer",
-            "lineNumber": 7,
+            "lineNumber": 8,
             "object": true,
             "qualifiedClassName": "Layer",
             "superClasses": [

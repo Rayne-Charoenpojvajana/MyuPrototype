@@ -47,7 +47,7 @@
                     }
                 ],
                 "className": "MainController",
-                "lineNumber": 10,
+                "lineNumber": 9,
                 "methods": [
                     {
                         "access": "public",
@@ -188,8 +188,22 @@
     {
         "classes": [
             {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "auto"
+                    }
+                ],
                 "className": "ClickLayer",
                 "lineNumber": 8,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "test",
+                        "returnType": "void"
+                    }
+                ],
                 "object": true,
                 "qualifiedClassName": "ClickLayer",
                 "superClasses": [
@@ -207,7 +221,7 @@
         "classes": [
             {
                 "className": "Layer",
-                "lineNumber": 7,
+                "lineNumber": 8,
                 "object": true,
                 "qualifiedClassName": "Layer",
                 "superClasses": [

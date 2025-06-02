@@ -6,42 +6,18 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 4938,
+                        "durationMicroseconds": 5949,
                         "errorMessage": "",
                         "functionName": "color",
-                        "line": 13
+                        "line": 11
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 182,
+                        "durationMicroseconds": 169,
                         "errorMessage": "",
                         "functionName": "onCompleted",
-                        "line": 16
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 22,
-                        "durationMicroseconds": 102,
-                        "errorMessage": "",
-                        "functionName": "initialItem",
-                        "line": 21
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 20,
-                        "durationMicroseconds": 121,
-                        "errorMessage": "",
-                        "functionName": "onClicked",
-                        "line": 29
-                    },
-                    {
-                        "codegenSuccessfull": true,
-                        "column": 23,
-                        "durationMicroseconds": 99,
-                        "errorMessage": "",
-                        "functionName": "fill",
-                        "line": 28
+                        "line": 14
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/MainWindow.qml"

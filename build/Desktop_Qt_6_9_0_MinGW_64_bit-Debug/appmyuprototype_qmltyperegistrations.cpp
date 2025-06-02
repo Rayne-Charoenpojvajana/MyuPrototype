@@ -7,6 +7,9 @@
 #include <QtQml/qqml.h>
 #include <QtQml/qqmlmoduleregistration.h>
 
+#if __has_include(<clicklayer.h>)
+#  include <clicklayer.h>
+#endif
 #if __has_include(<maincontroller.h>)
 #  include <maincontroller.h>
 #endif
@@ -20,6 +23,8 @@
 Q_QMLTYPE_EXPORT void qml_register_types_MyuPrototype()
 {
     QT_WARNING_PUSH QT_WARNING_DISABLE_DEPRECATED
+    qmlRegisterTypesAndRevisions<ClickLayer>("MyuPrototype", 1);
+    QMetaType::fromType<Layer *>().id();
     qmlRegisterTypesAndRevisions<MainController>("MyuPrototype", 1);
     QT_WARNING_POP
     qmlRegisterModule("MyuPrototype", 1, 0);
