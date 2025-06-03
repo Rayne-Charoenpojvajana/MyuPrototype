@@ -113,25 +113,25 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/Metronome_qml.cpp.rule",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/ToolBarButton_qml.cpp.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Pages/FreePlay_qml.cpp.rule",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Style_qml.cpp.rule",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Style_qml.cpp.rule",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/ClickWindow_qml.cpp.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/GainWindow_qml.cpp.rule",
 			"sourceGroupIndex" : 1
 		},
 		{

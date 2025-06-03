@@ -61,6 +61,13 @@ namespace _qt_qml_MyuPrototype_Frontend_Windows_ClickWindow_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_MyuPrototype_Frontend_Windows_GainWindow_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -83,6 +90,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MyuPrototype/Frontend/Windows/SettingsWindow.qml"), &QmlCacheGeneratedCode::_qt_qml_MyuPrototype_Frontend_Windows_SettingsWindow_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MyuPrototype/Frontend/Windows/LayerWindow.qml"), &QmlCacheGeneratedCode::_qt_qml_MyuPrototype_Frontend_Windows_LayerWindow_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MyuPrototype/Frontend/Windows/ClickWindow.qml"), &QmlCacheGeneratedCode::_qt_qml_MyuPrototype_Frontend_Windows_ClickWindow_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/MyuPrototype/Frontend/Windows/GainWindow.qml"), &QmlCacheGeneratedCode::_qt_qml_MyuPrototype_Frontend_Windows_GainWindow_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;

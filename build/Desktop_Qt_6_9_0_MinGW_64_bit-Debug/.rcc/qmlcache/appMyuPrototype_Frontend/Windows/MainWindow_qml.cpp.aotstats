@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 12,
-                        "durationMicroseconds": 3464,
+                        "durationMicroseconds": 3445,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 11
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 117,
+                        "durationMicroseconds": 128,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 14

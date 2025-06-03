@@ -9,6 +9,41 @@
             ],
             "className": "ClickLayer",
             "lineNumber": 8,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "float"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "setBPM",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "setAccent",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "float"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "setGain",
+                    "returnType": "void"
+                }
+            ],
             "object": true,
             "qualifiedClassName": "ClickLayer",
             "superClasses": [

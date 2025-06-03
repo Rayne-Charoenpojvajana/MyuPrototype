@@ -16,7 +16,7 @@
             "methods": [
                 {
                     "access": "public",
-                    "index": 3,
+                    "index": 2,
                     "name": "getDriverList",
                     "returnType": "QStringList"
                 },
@@ -24,23 +24,22 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "driver",
                             "type": "QString"
                         }
                     ],
-                    "index": 4,
+                    "index": 3,
                     "name": "setSelectedDriver",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 5,
+                    "index": 4,
                     "name": "getMonitor",
                     "returnType": "QList<double>"
                 },
                 {
                     "access": "public",
-                    "index": 6,
+                    "index": 5,
                     "name": "getBufferSizes",
                     "returnType": "QList<long>"
                 },
@@ -48,17 +47,16 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "size",
                             "type": "long"
                         }
                     ],
-                    "index": 7,
+                    "index": 6,
                     "name": "setBufferSize",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 8,
+                    "index": 7,
                     "name": "getSampleRates",
                     "returnType": "QList<long>"
                 },
@@ -66,11 +64,10 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "sampleRate",
                             "type": "long"
                         }
                     ],
-                    "index": 9,
+                    "index": 8,
                     "name": "setSampleRate",
                     "returnType": "void"
                 },
@@ -78,22 +75,27 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "channelNum",
                             "type": "int"
                         },
                         {
-                            "name": "path",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 9,
+                    "name": "addLayer",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
                             "type": "QString"
                         }
                     ],
                     "index": 10,
-                    "name": "addLayer",
-                    "returnType": "void"
-                }
-            ],
-            "object": true,
-            "qualifiedClassName": "MainController",
-            "signals": [
+                    "name": "getLayerPaths",
+                    "returnType": "QStringList"
+                },
                 {
                     "access": "public",
                     "arguments": [
@@ -101,18 +103,130 @@
                             "type": "int"
                         },
                         {
-                            "type": "QString"
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
                         }
                     ],
-                    "index": 0,
-                    "name": "addedLayer",
+                    "index": 11,
+                    "name": "swapLayers",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
+                        }
+                    ],
+                    "index": 12,
+                    "name": "removeLayer",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
+                        }
+                    ],
+                    "index": 13,
+                    "name": "toggleLayerUI",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 14,
+                    "name": "setLayerEnabled",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "setLayerProcess",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "setLayerOutput",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
+                        }
+                    ],
+                    "index": 17,
+                    "name": "setInputRoute",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "int"
+                        },
+                        {
+                            "type": "int"
+                        }
+                    ],
+                    "index": 18,
+                    "name": "setOutputRoute",
                     "returnType": "void"
                 }
             ],
+            "object": true,
+            "qualifiedClassName": "MainController",
             "slots": [
                 {
                     "access": "public",
-                    "index": 1,
+                    "index": 0,
                     "name": "qmlInit",
                     "returnType": "void"
                 },
@@ -120,15 +234,13 @@
                     "access": "public",
                     "arguments": [
                         {
-                            "name": "selectedDriver",
                             "type": "char**"
                         },
                         {
-                            "name": "await",
                             "type": "bool*"
                         }
                     ],
-                    "index": 2,
+                    "index": 1,
                     "name": "sendSelectedDriver",
                     "returnType": "void"
                 }

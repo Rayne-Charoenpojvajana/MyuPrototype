@@ -943,6 +943,12 @@
 			null
 		],
 		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/gainlayer.h",
+			"MU",
+			"XSRNWPFFGL/moc_gainlayer.cpp",
+			null
+		],
+		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.h",
 			"MU",
 			"XSRNWPFFGL/moc_layer.cpp",
@@ -964,6 +970,12 @@
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/configs.h",
 			"MU",
 			"3X2AN3DXFV/moc_configs.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/livedata.h",
+			"MU",
+			"3X2AN3DXFV/moc_livedata.cpp",
 			null
 		],
 		[
@@ -1011,6 +1023,7 @@
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer",
 		"C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/6.9.0",
 		"C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/6.9.0/QtQml",
 		"C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/6.9.0",
@@ -1064,6 +1077,7 @@
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/ToolBarButton_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Style_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/ClickWindow_qml.cpp",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/GainWindow_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/LayerWindow_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowFooter_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowHeader_qml.cpp",
@@ -1093,6 +1107,11 @@
 			null
 		],
 		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/gainlayer.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.cpp",
 			"MU",
 			null
@@ -1109,6 +1128,11 @@
 		],
 		[
 			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/configs.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/livedata.cpp",
 			"MU",
 			null
 		],
@@ -1133,6 +1157,7 @@
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/ToolBarButton_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Style_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/ClickWindow_qml.cpp",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/GainWindow_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/LayerWindow_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowFooter_qml.cpp",
 		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowHeader_qml.cpp",

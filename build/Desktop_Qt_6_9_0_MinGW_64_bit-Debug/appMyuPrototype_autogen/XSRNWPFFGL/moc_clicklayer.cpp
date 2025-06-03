@@ -40,10 +40,26 @@ template <> constexpr inline auto ClickLayer::qt_create_metaobjectdata<qt_meta_t
     QtMocHelpers::StringRefStorage qt_stringData {
         "ClickLayer",
         "QML.Element",
-        "auto"
+        "auto",
+        "setBPM",
+        "",
+        "setAccent",
+        "setGain"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Method 'setBPM'
+        QtMocHelpers::MethodData<void(float)>(3, 4, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Float, 4 },
+        }}),
+        // Method 'setAccent'
+        QtMocHelpers::MethodData<void(int)>(5, 4, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 4 },
+        }}),
+        // Method 'setGain'
+        QtMocHelpers::MethodData<void(float)>(6, 4, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Float, 4 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -69,10 +85,14 @@ Q_CONSTINIT const QMetaObject ClickLayer::staticMetaObject = { {
 void ClickLayer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<ClickLayer *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->setBPM((*reinterpret_cast< std::add_pointer_t<float>>(_a[1]))); break;
+        case 1: _t->setAccent((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 2: _t->setGain((*reinterpret_cast< std::add_pointer_t<float>>(_a[1]))); break;
+        default: ;
+        }
+    }
 }
 
 const QMetaObject *ClickLayer::metaObject() const
@@ -91,6 +111,18 @@ void *ClickLayer::qt_metacast(const char *_clname)
 int ClickLayer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = Layer::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 3)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 3;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 3)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 3;
+    }
     return _id;
 }
 QT_WARNING_POP

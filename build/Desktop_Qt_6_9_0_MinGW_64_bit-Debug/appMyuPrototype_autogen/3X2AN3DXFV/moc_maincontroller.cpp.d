@@ -4,15 +4,16 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiodrivers.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiolist.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/ginclude.h \
-  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Audio/wavfile.h \
-  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Configs.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/clicklayer.h \
+  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/gainlayer.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiofunctions.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/asiothread.h \
+  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/configs.h \
+  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/livedata.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QDebug \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QDirIterator \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QEvent \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QFile \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QList \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QMargins \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QMutex \
@@ -23,7 +24,6 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QSizeF \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QStringListModel \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QThread \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QTime \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \
@@ -68,11 +68,15 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdatetime.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdeadlinetimer.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdir.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdiriterator.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qdirlisting.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qelapsedtimer.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qeventloop.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qfile.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qfiledevice.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qfileinfo.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qflags.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qfloat16.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qforeach.h \
@@ -153,6 +157,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtextstream.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtformat_impl.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qthread.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtimezone.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtnoop.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -213,19 +218,19 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qwindow.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/QAudioFormat \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qaudioformat.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
-  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qjsengine.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qjsmanagedvalue.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qjsnumbercoercion.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qjsprimitivevalue.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qjsvalue.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqml.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmlabstracturlinterceptor.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmlapplicationengine.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmldebug.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmlengine.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmlerror.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmlinfo.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/qqmllist.h \

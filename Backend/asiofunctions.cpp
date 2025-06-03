@@ -3,6 +3,12 @@
 
 
 Configs& configs = Configs::getInstance();
+LiveData& liveData = LiveData::getInstance();
+
+DriverInfo asioDriverInfo;
+ASIOCallbacks asioCallbacks;
+extern AsioDrivers* asioDrivers;
+AsioDrivers helperDrivers;
 
 
 
@@ -12,34 +18,62 @@ long init_asio_static_data (DriverInfo *asioDriverInfo)
 {	// collect the informational data of the driver
     // get the number of available channels
 
-    if(ASIOGetChannels(&asioDriverInfo->inputChannels, &asioDriverInfo->outputChannels) == ASE_OK)
-    {
-
-        // get the usable buffer sizes
-        if(ASIOGetBufferSize(&asioDriverInfo->minSize, &asioDriverInfo->maxSize, &asioDriverInfo->preferredSize, &asioDriverInfo->granularity) == ASE_OK)
-        {
-            if (ASIOCanSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
-                if (ASIOSetSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
-                    if (ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK) {
-                        if(ASIOOutputReady() == ASE_OK) {
-                            asioDriverInfo->postOutput = true;
-                        } else {
-                            asioDriverInfo->postOutput = false;
-                        }
-                        return 0;
-                    } else {
-                        return -5;
-                    }
-                } else {
-                    return -4;
-                }
-            } else {
-                return -3;
-            }
-        }
+    if (ASIOGetChannels(&asioDriverInfo->inputChannels, &asioDriverInfo->outputChannels) != ASE_OK) {
+        return -1;
+    }
+    if (ASIOGetBufferSize(&asioDriverInfo->minSize, &asioDriverInfo->maxSize, &asioDriverInfo->preferredSize, &asioDriverInfo->granularity) != ASE_OK) {
         return -2;
     }
-    return -1;
+    if (ASIOCanSampleRate(asioDriverInfo->selectedSampleRate) != ASE_OK) {
+        return -3;
+    }
+
+    if (ASIOSetSampleRate(asioDriverInfo->selectedSampleRate) != ASE_OK) {
+        return -4;
+    }
+
+    if (ASIOGetSampleRate(&asioDriverInfo->sampleRate) != ASE_OK) {
+        return -5;
+    }
+
+    if(ASIOOutputReady() == ASE_OK) {
+        asioDriverInfo->postOutput = true;
+    } else {
+        asioDriverInfo->postOutput = false;
+    }
+
+    return 0;
+
+
+
+    // if(ASIOGetChannels(&asioDriverInfo->inputChannels, &asioDriverInfo->outputChannels) == ASE_OK)
+    // {
+
+    //     // get the usable buffer sizes
+    //     if(ASIOGetBufferSize(&asioDriverInfo->minSize, &asioDriverInfo->maxSize, &asioDriverInfo->preferredSize, &asioDriverInfo->granularity) == ASE_OK)
+    //     {
+    //         if (ASIOCanSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
+    //             if (ASIOSetSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
+    //                 if (ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK) {
+    //                     if(ASIOOutputReady() == ASE_OK) {
+    //                         asioDriverInfo->postOutput = true;
+    //                     } else {
+    //                         asioDriverInfo->postOutput = false;
+    //                     }
+    //                     return 0;
+    //                 } else {
+    //                     return -5;
+    //                 }
+    //             } else {
+    //                 return -4;
+    //             }
+    //         } else {
+    //             return -3;
+    //         }
+    //     }
+    //     return -2;
+    // }
+    // return -1;
 }
 
 
@@ -59,32 +93,32 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     int oCount = 0;
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
     {
-        if (asioDriverInfo.bufferInfos[i].isInput == true && iCount < inputs.size())
+        if (asioDriverInfo.bufferInfos[i].isInput == true && iCount < liveData.inputs.size())
         {
             switch (asioDriverInfo.channelInfos[i].type)
             {
             case ASIOSTInt32LSB:
                 for(int j = 0; j < buffSize; ++j) {
-                    inputs[iCount][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (float )0x7fffffff;
+                    liveData.inputs[iCount][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (float )0x7fffffff;
                 }
                 iCount++;
                 break;
             }
         }
-        for(int k = 0; k < std::min({inputs.size(), outputs.size()}); ++k) {
+        for(int k = 0; k < std::min({liveData.inputs.size(), liveData.outputs.size()}); ++k) {
             for(int j = 0; j < buffSize; j++ ) {
-                outputs[k][j] = inputs[k][j];
+                liveData.outputs[k][j] = liveData.inputs[k][j];
             }
         }
         int offset = asioDriverInfo.inputBuffers;
-        if (asioDriverInfo.bufferInfos[i].isInput == false && oCount < outputs.size())
+        if (asioDriverInfo.bufferInfos[i].isInput == false && oCount < liveData.outputs.size())
         {
             switch (asioDriverInfo.channelInfos[i].type)
             {
             case ASIOSTInt32LSB:
                 for(int j = 0; j < buffSize; ++j) {
-                    outputs[i-offset][j] = std::clamp(outputs[i-offset][j], -0.99f, 0.99f);
-                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = outputs[i-offset][j] * (float) 0x7fffffff;
+                    liveData.outputs[i-offset][j] = std::clamp(liveData.outputs[i-offset][j], -0.99f, 0.99f);
+                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = liveData.outputs[i-offset][j] * (float) 0x7fffffff;
                 }
                 oCount++;
                 break;
@@ -263,7 +297,7 @@ unsigned long get_sys_reference_time()
 }
 
 void setupASIO(char* asioDriverName) {
-    asioDriverInfo = {0};
+    asioDriverInfo = {};
     // load the driver, this will setup all the necessary internal data structures
     if (loadAsioDriver (asioDriverName))
     {
@@ -291,19 +325,20 @@ void setupASIO(char* asioDriverName) {
                 asioCallbacks.bufferSwitchTimeInfo = &bufferSwitchTimeInfo;
                 if (create_asio_buffers (&asioDriverInfo) == ASE_OK)
                 {
-                    for(int i = 0; i < inputs.size(); i++) {
-                        inputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
+                    for(int i = 0; i < liveData.inputs.size(); i++) {
+                        liveData.inputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
                     }
-                    for(int i = 0; i < outputs.size(); i++) {
-                        outputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
+                    for(int i = 0; i < liveData.outputs.size(); i++) {
+                        liveData.outputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
                     }
                     if (ASIOStart() == ASE_OK)
                     {
                         // Now all is up and running
-                        while (!asioDriverInfo.stopped && streaming)
+                        while (!asioDriverInfo.stopped && liveData.streaming)
                         {
                             QThread::msleep(250);
                         }
+                        asioDriverInfo.stopped = true;
                         ASIOStop();
                     }
                     ASIODisposeBuffers();

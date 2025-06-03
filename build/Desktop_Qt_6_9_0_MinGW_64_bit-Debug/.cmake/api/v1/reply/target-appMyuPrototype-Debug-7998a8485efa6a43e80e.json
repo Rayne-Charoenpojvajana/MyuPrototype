@@ -104,25 +104,25 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 61,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 56,
+				"line" : 59,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 68,
+				"line" : 71,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 83,
+				"line" : 89,
 				"parent" : 0
 			},
 			{
@@ -511,13 +511,19 @@
 			{
 				"command" : 21,
 				"file" : 1,
-				"line" : 69,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
 				"command" : 21,
 				"file" : 1,
-				"line" : 78,
+				"line" : 80,
+				"parent" : 0
+			},
+			{
+				"command" : 21,
+				"file" : 1,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
@@ -536,7 +542,7 @@
 				"command" : 23,
 				"file" : 0,
 				"line" : 1489,
-				"parent" : 82
+				"parent" : 83
 			},
 			{
 				"command" : 23,
@@ -560,19 +566,19 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 86
+				"parent" : 87
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2530,
-				"parent" : 87
+				"parent" : 88
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2074,
-				"parent" : 88
+				"parent" : 89
 			},
 			{
 				"command" : 23,
@@ -596,7 +602,19 @@
 				"command" : 23,
 				"file" : 10,
 				"line" : 1721,
-				"parent" : 92
+				"parent" : 93
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3385,
+				"parent" : 65
+			},
+			{
+				"command" : 23,
+				"file" : 10,
+				"line" : 3192,
+				"parent" : 65
 			},
 			{
 				"command" : 23,
@@ -698,19 +716,19 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 109
+				"parent" : 112
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2530,
-				"parent" : 110
+				"parent" : 113
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2074,
-				"parent" : 111
+				"parent" : 114
 			},
 			{
 				"command" : 28,
@@ -722,19 +740,19 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 113
+				"parent" : 116
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2530,
-				"parent" : 114
+				"parent" : 117
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2074,
-				"parent" : 115
+				"parent" : 118
 			},
 			{
 				"command" : 30,
@@ -746,7 +764,7 @@
 				"command" : 23,
 				"file" : 0,
 				"line" : 2199,
-				"parent" : 117
+				"parent" : 120
 			}
 		]
 	},
@@ -862,51 +880,55 @@
 				},
 				{
 					"backtrace" : 81,
+					"path" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer"
+				},
+				{
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/6.9.0"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/6.9.0/QtQml"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/6.9.0"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/6.9.0/QtCore"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/mkspecs/win32-g++"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQmlIntegration"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork"
 				},
@@ -960,17 +982,20 @@
 				16,
 				18,
 				20,
-				21,
-				23,
+				22,
+				24,
 				25,
 				27,
 				29,
 				31,
 				33,
 				35,
-				36,
 				37,
-				47
+				39,
+				41,
+				42,
+				43,
+				53
 			]
 		},
 		{
@@ -980,7 +1005,7 @@
 					"fragment" : "-DQT_QML_DEBUG -g -fdiagnostics-color=always"
 				},
 				{
-					"backtrace" : 85,
+					"backtrace" : 86,
 					"fragment" : "-Wa,-mbig-obj"
 				}
 			],
@@ -1087,51 +1112,55 @@
 				},
 				{
 					"backtrace" : 81,
+					"path" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer"
+				},
+				{
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/6.9.0"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml/6.9.0/QtQml"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/6.9.0"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/6.9.0/QtCore"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/mkspecs/win32-g++"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQml"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtQmlIntegration"
 				},
 				{
-					"backtrace" : 81,
+					"backtrace" : 82,
 					"isSystem" : true,
 					"path" : "C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork"
 				},
@@ -1181,10 +1210,6 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 7,
-			"id" : "ASIO::@d87dbbe90bf50de5617c"
-		},
-		{
 			"backtrace" : 67,
 			"id" : "appMyuPrototype_copy_res::@6890427a1f51a3e7e1df"
 		},
@@ -1197,11 +1222,15 @@
 			"id" : "appMyuPrototype_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appMyuPrototype_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 7,
+			"id" : "ASIO::@d87dbbe90bf50de5617c"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "appMyuPrototype_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "appMyuPrototype_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMyuPrototype::@6890427a1f51a3e7e1df",
@@ -1362,18 +1391,18 @@
 			"sourceIndexes" : 
 			[
 				0,
-				46,
-				47,
-				65,
-				66,
-				67,
-				68,
-				69,
-				70,
-				71,
+				52,
+				53,
 				72,
 				73,
-				74
+				74,
+				75,
+				76,
+				77,
+				78,
+				79,
+				80,
+				81
 			]
 		},
 		{
@@ -1391,16 +1420,19 @@
 				16,
 				18,
 				20,
-				21,
-				23,
+				22,
+				24,
 				25,
 				27,
 				29,
 				31,
 				33,
 				35,
-				36,
-				37
+				37,
+				39,
+				41,
+				42,
+				43
 			]
 		},
 		{
@@ -1408,18 +1440,19 @@
 			"sourceIndexes" : 
 			[
 				2,
-				19,
-				22,
-				24,
+				23,
 				26,
 				28,
 				30,
 				32,
 				34,
-				39,
-				43,
-				44,
-				45
+				36,
+				38,
+				40,
+				45,
+				49,
+				50,
+				51
 			]
 		},
 		{
@@ -1432,29 +1465,25 @@
 				11,
 				13,
 				15,
-				17
+				17,
+				19,
+				21
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				38,
-				40,
-				41,
-				42
+				44,
+				46,
+				47,
+				48
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				48,
-				49,
-				50,
-				51,
-				52,
-				53,
 				54,
 				55,
 				56,
@@ -1465,7 +1494,14 @@
 				61,
 				62,
 				63,
-				64
+				64,
+				65,
+				66,
+				67,
+				68,
+				69,
+				70,
+				71
 			]
 		}
 	],
@@ -1485,262 +1521,296 @@
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 83,
+			"backtrace" : 84,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/meta_types/qt6appmyuprototype_debug_metatypes.json.gen",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 84,
+			"backtrace" : 85,
 			"compileGroupIndex" : 1,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/appmyuprototype_qmltyperegistrations.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 89,
+			"backtrace" : 90,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_qmake_MyuPrototype.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"path" : "Backend/asiofunctions.h",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"compileGroupIndex" : 0,
 			"path" : "Backend/asiofunctions.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"path" : "Backend/maincontroller.h",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"compileGroupIndex" : 0,
 			"path" : "Backend/maincontroller.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"path" : "Backend/asiothread.h",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"compileGroupIndex" : 0,
 			"path" : "Backend/asiothread.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"path" : "Backend/configs.h",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"compileGroupIndex" : 0,
 			"path" : "Backend/configs.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"path" : "Backend/Audio/wavfile.h",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"compileGroupIndex" : 0,
 			"path" : "Backend/Audio/wavfile.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"path" : "Backend/Layer/layer.h",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"compileGroupIndex" : 0,
 			"path" : "Backend/Layer/layer.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"path" : "Backend/Layer/clicklayer.h",
 			"sourceGroupIndex" : 3
 		},
 		{
-			"backtrace" : 90,
+			"backtrace" : 91,
 			"compileGroupIndex" : 0,
 			"path" : "Backend/Layer/clicklayer.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 91,
+			"path" : "Backend/livedata.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 91,
+			"compileGroupIndex" : 0,
+			"path" : "Backend/livedata.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 91,
+			"path" : "Backend/Layer/gainlayer.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 91,
+			"compileGroupIndex" : 0,
+			"path" : "Backend/Layer/gainlayer.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 92,
 			"path" : "Frontend/Style.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 93,
+			"backtrace" : 94,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_qmlcache_loader.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 94,
+			"backtrace" : 95,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Style_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 95,
+			"backtrace" : 96,
 			"path" : "Frontend/Components/ToolBarButton.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 96,
+			"backtrace" : 97,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/ToolBarButton_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 97,
+			"backtrace" : 98,
 			"path" : "Frontend/Windows/MainWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 98,
+			"backtrace" : 99,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 99,
+			"backtrace" : 100,
 			"path" : "Frontend/Windows/MainWindowFooter.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 100,
+			"backtrace" : 101,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowFooter_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 101,
+			"backtrace" : 102,
 			"path" : "Frontend/Windows/MainWindowHeader.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 102,
+			"backtrace" : 103,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowHeader_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 103,
+			"backtrace" : 104,
 			"path" : "Frontend/Windows/SettingsWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 104,
+			"backtrace" : 105,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/SettingsWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 105,
+			"backtrace" : 106,
 			"path" : "Frontend/Windows/LayerWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 106,
+			"backtrace" : 107,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/LayerWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 107,
+			"backtrace" : 108,
 			"path" : "Frontend/Windows/ClickWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 108,
+			"backtrace" : 109,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/ClickWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 112,
+			"backtrace" : 110,
+			"path" : "Frontend/Windows/GainWindow.qml",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 111,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/GainWindow_qml.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 115,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_appMyuPrototype_raw_qml_0.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 116,
+			"backtrace" : 119,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_appMyuPrototype_raw_qml_0_extra_qmldirs.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qmake_MyuPrototype.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/qmldir",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/appMyuPrototype_raw_qml_0.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"path" : "resources.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/appMyuPrototype_raw_qml_0_extra_qmldirs.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/qmldir",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Components/qmldir",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 121,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Windows/qmldir",
 			"sourceGroupIndex" : 2
@@ -1828,6 +1898,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/ClickWindow_qml.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/GainWindow_qml.cpp.rule",
 			"sourceGroupIndex" : 5
 		},
 		{

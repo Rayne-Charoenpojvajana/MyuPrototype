@@ -18,6 +18,8 @@ set(src_and_dest_list
     "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Windows/LayerWindow.qml"
     "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/ClickWindow.qml"
     "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Windows/ClickWindow.qml"
+    "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/GainWindow.qml"
+    "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Windows/GainWindow.qml"
 
 )
 set(timestamp_file "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/appMyuPrototype_qml.txt")

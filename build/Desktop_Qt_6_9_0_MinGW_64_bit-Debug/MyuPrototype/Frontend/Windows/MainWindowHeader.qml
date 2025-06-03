@@ -7,21 +7,6 @@ ToolBar {
         anchors.fill: parent
         color : Style.mainWindowBackgroundColor
     }
-    // RowLayout {
-    //     ColumnLayout {
-    //         Layout.topMargin: 10
-    //         spacing: 2
-    //         ProgressBar {
-    //             id: p0
-    //             Layout.preferredHeight: 20
-    //         }
-    //         ProgressBar {
-    //             id: p1
-    //             Layout.preferredHeight: 20
-    //         }
-
-    //     }
-    // }
     RowLayout {
         GridLayout {
             Layout.topMargin: 10
@@ -36,6 +21,13 @@ ToolBar {
                 text: "chain"
                 Layout.row: 0
                 Layout.column: 1
+                onClicked: {
+                    l0.visible = !l0.visible;
+                }
+            }
+            LayerWindow {
+                id: l0
+                channelNum: 0
             }
             ProgressBar {
                 id: p1
@@ -54,12 +46,12 @@ ToolBar {
             }
             LayerWindow {
                 id: l1
-
+                channelNum: 1
             }
         }
     }
     Timer {
-        repeat: true; interval: 30; running: true
+        repeat: true; interval: 20; running: true
         onTriggered: {
             const list = MainController.getMonitor()
             p0.value = Math.abs(list[0])

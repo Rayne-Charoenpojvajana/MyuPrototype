@@ -11,12 +11,7 @@
 
 
 #include "asio.h"
-#include <QTime>
-#include <QThread>
-#include <QMutex>
-#include "asiodrivers.h"
-#include "Layer/clicklayer.h"
-
+#include <array>
 enum {
     // number of input and outputs supported by the host application
     // you can change these to higher or lower values
@@ -78,18 +73,16 @@ typedef struct DriverInfo
 
 class Configs {
 private:
-    Configs() {};
-    ~Configs() {};
+    Configs();;
+    ~Configs();;
 public:
+    int maxDriverLength = MAX_DRIVERLENGTH;
     long selectedBufferSize = MIN_BUFFERS;
     long softwareMinBuffer = MIN_BUFFERS;
     long softwareMaxBuffer = MAX_BUFFERS;
     std::array<long, NUM_SAMPLERATES> softwareSampleRates = {192000};
     long selectedSampleRate = softwareSampleRates[0];
-    static Configs& getInstance() {
-        static Configs s;
-        return s;
-    }
+    static Configs& getInstance();
 
 };
 

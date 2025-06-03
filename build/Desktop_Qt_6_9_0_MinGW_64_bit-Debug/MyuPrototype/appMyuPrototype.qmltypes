@@ -13,6 +13,30 @@ Module {
         prototype: "Layer"
         exports: ["MyuPrototype/ClickLayer 1.0"]
         exportMetaObjectRevisions: [256]
+        Method {
+            name: "setBPM"
+            Parameter { type: "float" }
+        }
+        Method {
+            name: "setAccent"
+            Parameter { type: "int" }
+        }
+        Method {
+            name: "setGain"
+            Parameter { type: "float" }
+        }
+    }
+    Component {
+        file: "gainlayer.h"
+        name: "GainLayer"
+        accessSemantics: "reference"
+        prototype: "Layer"
+        exports: ["MyuPrototype/GainLayer 1.0"]
+        exportMetaObjectRevisions: [256]
+        Method {
+            name: "setGain"
+            Parameter { type: "float" }
+        }
     }
     Component { file: "layer.h"; name: "Layer"; accessSemantics: "reference"; prototype: "QObject" }
     Component {
@@ -24,37 +48,81 @@ Module {
         isCreatable: false
         isSingleton: true
         exportMetaObjectRevisions: [256]
-        Signal {
-            name: "addedLayer"
-            Parameter { type: "int" }
-            Parameter { type: "QString" }
-        }
         Method { name: "qmlInit" }
         Method {
             name: "sendSelectedDriver"
-            Parameter { name: "selectedDriver"; type: "char*"; isPointer: true }
-            Parameter { name: "await"; type: "bool"; isPointer: true }
+            Parameter { type: "char*"; isPointer: true }
+            Parameter { type: "bool"; isPointer: true }
         }
         Method { name: "getDriverList"; type: "QStringList" }
         Method {
             name: "setSelectedDriver"
-            Parameter { name: "driver"; type: "QString" }
+            Parameter { type: "QString" }
         }
         Method { name: "getMonitor"; type: "double"; isList: true }
         Method { name: "getBufferSizes"; type: "int"; isList: true }
         Method {
             name: "setBufferSize"
-            Parameter { name: "size"; type: "int" }
+            Parameter { type: "int" }
         }
         Method { name: "getSampleRates"; type: "int"; isList: true }
         Method {
             name: "setSampleRate"
-            Parameter { name: "sampleRate"; type: "int" }
+            Parameter { type: "int" }
         }
         Method {
             name: "addLayer"
-            Parameter { name: "channelNum"; type: "int" }
-            Parameter { name: "path"; type: "QString" }
+            Parameter { type: "int" }
+            Parameter { type: "QString" }
+        }
+        Method {
+            name: "getLayerPaths"
+            type: "QStringList"
+            Parameter { type: "QString" }
+        }
+        Method {
+            name: "swapLayers"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+        }
+        Method {
+            name: "removeLayer"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+        }
+        Method {
+            name: "toggleLayerUI"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+        }
+        Method {
+            name: "setLayerEnabled"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+            Parameter { type: "bool" }
+        }
+        Method {
+            name: "setLayerProcess"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+            Parameter { type: "bool" }
+        }
+        Method {
+            name: "setLayerOutput"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+            Parameter { type: "bool" }
+        }
+        Method {
+            name: "setInputRoute"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
+        }
+        Method {
+            name: "setOutputRoute"
+            Parameter { type: "int" }
+            Parameter { type: "int" }
         }
     }
 }

@@ -104,25 +104,25 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 75,
+				"line" : 62,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 70,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 82,
+				"line" : 69,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 98,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
@@ -444,6 +444,47 @@
 				"parent" : 66
 			},
 			{
+				"file" : 1,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 20,
+				"file" : 23,
+				"line" : 1,
+				"parent" : 68
+			},
+			{
+				"command" : 19,
+				"file" : 0,
+				"line" : 816,
+				"parent" : 69
+			},
+			{
+				"command" : 18,
+				"file" : 0,
+				"line" : 738,
+				"parent" : 70
+			},
+			{
+				"command" : 17,
+				"file" : 0,
+				"line" : 738,
+				"parent" : 71
+			},
+			{
+				"command" : 16,
+				"file" : 10,
+				"line" : 4344,
+				"parent" : 72
+			},
+			{
+				"command" : 13,
+				"file" : 10,
+				"line" : 4119,
+				"parent" : 73
+			},
+			{
 				"command" : 14,
 				"file" : 10,
 				"line" : 3471,
@@ -453,47 +494,6 @@
 				"command" : 13,
 				"file" : 10,
 				"line" : 2870,
-				"parent" : 68
-			},
-			{
-				"file" : 1,
-				"line" : -1,
-				"parent" : 0
-			},
-			{
-				"command" : 20,
-				"file" : 23,
-				"line" : 1,
-				"parent" : 70
-			},
-			{
-				"command" : 19,
-				"file" : 0,
-				"line" : 816,
-				"parent" : 71
-			},
-			{
-				"command" : 18,
-				"file" : 0,
-				"line" : 738,
-				"parent" : 72
-			},
-			{
-				"command" : 17,
-				"file" : 0,
-				"line" : 738,
-				"parent" : 73
-			},
-			{
-				"command" : 16,
-				"file" : 10,
-				"line" : 4344,
-				"parent" : 74
-			},
-			{
-				"command" : 13,
-				"file" : 10,
-				"line" : 4119,
 				"parent" : 75
 			},
 			{
@@ -511,13 +511,13 @@
 			{
 				"command" : 21,
 				"file" : 1,
-				"line" : 83,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
 				"command" : 21,
 				"file" : 1,
-				"line" : 94,
+				"line" : 79,
 				"parent" : 0
 			},
 			{
@@ -689,18 +689,6 @@
 				"parent" : 65
 			},
 			{
-				"command" : 23,
-				"file" : 10,
-				"line" : 3192,
-				"parent" : 65
-			},
-			{
-				"command" : 23,
-				"file" : 10,
-				"line" : 3385,
-				"parent" : 65
-			},
-			{
 				"command" : 28,
 				"file" : 10,
 				"line" : 3487,
@@ -710,19 +698,19 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 111
+				"parent" : 109
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2530,
-				"parent" : 112
+				"parent" : 110
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2074,
-				"parent" : 113
+				"parent" : 111
 			},
 			{
 				"command" : 28,
@@ -734,31 +722,31 @@
 				"command" : 27,
 				"file" : 0,
 				"line" : 401,
-				"parent" : 115
+				"parent" : 113
 			},
 			{
 				"command" : 26,
 				"file" : 0,
 				"line" : 2530,
-				"parent" : 116
+				"parent" : 114
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2074,
-				"parent" : 117
+				"parent" : 115
 			},
 			{
 				"command" : 30,
 				"file" : 0,
 				"line" : 810,
-				"parent" : 71
+				"parent" : 69
 			},
 			{
 				"command" : 23,
 				"file" : 0,
 				"line" : 2199,
-				"parent" : 119
+				"parent" : 117
 			}
 		]
 	},
@@ -967,22 +955,22 @@
 				6,
 				8,
 				10,
-				11,
-				13,
-				15,
-				17,
-				19,
+				12,
+				14,
+				16,
+				18,
 				20,
 				22,
-				24,
-				26,
-				28,
-				30,
-				32,
-				34,
-				36,
+				23,
+				25,
+				27,
+				29,
+				31,
+				33,
+				35,
 				37,
 				38,
+				39,
 				49
 			]
 		},
@@ -1198,7 +1186,11 @@
 			"id" : "appMyuPrototype_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 69,
+			"backtrace" : 74,
+			"id" : "appMyuPrototype_qmlimportscan::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 76,
 			"id" : "appMyuPrototype_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -1206,15 +1198,11 @@
 			"id" : "ASIO::@d87dbbe90bf50de5617c"
 		},
 		{
-			"backtrace" : 76,
-			"id" : "appMyuPrototype_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appMyuPrototype_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "appMyuPrototype_autogen::@6890427a1f51a3e7e1df"
-		},
-		{
-			"id" : "appMyuPrototype_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMyuPrototype::@6890427a1f51a3e7e1df",
@@ -1377,6 +1365,7 @@
 				0,
 				48,
 				49,
+				67,
 				68,
 				69,
 				70,
@@ -1385,8 +1374,7 @@
 				73,
 				74,
 				75,
-				76,
-				77
+				76
 			]
 		},
 		{
@@ -1399,31 +1387,12 @@
 				6,
 				8,
 				10,
-				11,
-				13,
-				15,
-				17,
-				19,
+				12,
+				14,
+				16,
+				18,
 				20,
 				22,
-				24,
-				26,
-				28,
-				30,
-				32,
-				34,
-				36,
-				37,
-				38
-			]
-		},
-		{
-			"name" : "",
-			"sourceIndexes" : 
-			[
-				2,
-				18,
-				21,
 				23,
 				25,
 				27,
@@ -1431,8 +1400,25 @@
 				31,
 				33,
 				35,
-				40,
-				44,
+				37,
+				38,
+				39
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				2,
+				21,
+				24,
+				26,
+				28,
+				30,
+				32,
+				34,
+				36,
+				41,
 				45,
 				46,
 				47
@@ -1445,19 +1431,21 @@
 				5,
 				7,
 				9,
-				12,
-				14,
-				16
+				11,
+				13,
+				15,
+				17,
+				19
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				39,
-				41,
+				40,
 				42,
-				43
+				43,
+				44
 			]
 		},
 		{
@@ -1480,8 +1468,7 @@
 				63,
 				64,
 				65,
-				66,
-				67
+				66
 			]
 		}
 	],
@@ -1555,8 +1542,13 @@
 		},
 		{
 			"backtrace" : 90,
+			"path" : "Backend/configs.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 90,
 			"compileGroupIndex" : 0,
-			"path" : "Backend/config.cpp",
+			"path" : "Backend/configs.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -1593,6 +1585,17 @@
 			"sourceGroupIndex" : 1
 		},
 		{
+			"backtrace" : 90,
+			"path" : "Backend/livedata.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 90,
+			"compileGroupIndex" : 0,
+			"path" : "Backend/livedata.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
 			"backtrace" : 91,
 			"path" : "Frontend/Style.qml",
 			"sourceGroupIndex" : 2
@@ -1613,163 +1616,145 @@
 		},
 		{
 			"backtrace" : 95,
-			"path" : "Frontend/Components/Metronome.qml",
+			"path" : "Frontend/Components/ToolBarButton.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 96,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/Metronome_qml.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/ToolBarButton_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 97,
-			"path" : "Frontend/Pages/FreePlay.qml",
+			"path" : "Frontend/Windows/MainWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 98,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Pages/FreePlay_qml.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 99,
-			"path" : "Frontend/Components/ToolBarButton.qml",
+			"path" : "Frontend/Windows/MainWindowFooter.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 100,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/ToolBarButton_qml.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowFooter_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 101,
-			"path" : "Frontend/Windows/MainWindow.qml",
+			"path" : "Frontend/Windows/MainWindowHeader.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 102,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindow_qml.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowHeader_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 103,
-			"path" : "Frontend/Windows/MainWindowFooter.qml",
+			"path" : "Frontend/Windows/SettingsWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 104,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowFooter_qml.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/SettingsWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 105,
-			"path" : "Frontend/Windows/MainWindowHeader.qml",
+			"path" : "Frontend/Windows/LayerWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 106,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/MainWindowHeader_qml.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/LayerWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 107,
-			"path" : "Frontend/Windows/SettingsWindow.qml",
+			"path" : "Frontend/Windows/ClickWindow.qml",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 108,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/SettingsWindow_qml.cpp",
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/ClickWindow_qml.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 109,
-			"path" : "Frontend/Windows/LayerWindow.qml",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 110,
-			"compileGroupIndex" : 0,
-			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/LayerWindow_qml.cpp",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 114,
+			"backtrace" : 112,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_appMyuPrototype_raw_qml_0.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 118,
+			"backtrace" : 116,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qrc_appMyuPrototype_raw_qml_0_extra_qmldirs.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/qmake_MyuPrototype.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/qmldir",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/appMyuPrototype_raw_qml_0.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"path" : "resources.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.qt/rcc/appMyuPrototype_raw_qml_0_extra_qmldirs.qrc",
 			"sourceGroupIndex" : 4
 		},
 		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/qmldir",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Components/qmldir",
 			"sourceGroupIndex" : 2
 		},
 		{
-			"backtrace" : 120,
-			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Pages/qmldir",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 120,
+			"backtrace" : 118,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/MyuPrototype/Frontend/Windows/qmldir",
 			"sourceGroupIndex" : 2
@@ -1820,18 +1805,6 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/Metronome_qml.cpp.rule",
-			"sourceGroupIndex" : 5
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
-			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Pages/FreePlay_qml.cpp.rule",
-			"sourceGroupIndex" : 5
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Components/ToolBarButton_qml.cpp.rule",
 			"sourceGroupIndex" : 5
 		},
@@ -1863,6 +1836,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/LayerWindow_qml.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug/.rcc/qmlcache/appMyuPrototype_Frontend/Windows/ClickWindow_qml.cpp.rule",
 			"sourceGroupIndex" : 5
 		},
 		{

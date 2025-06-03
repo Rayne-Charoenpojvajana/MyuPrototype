@@ -9,4 +9,5 @@ MainWindowHeader 1.0 Frontend/Windows/MainWindowHeader.qml
 SettingsWindow 1.0 Frontend/Windows/SettingsWindow.qml
 LayerWindow 1.0 Frontend/Windows/LayerWindow.qml
 ClickWindow 1.0 Frontend/Windows/ClickWindow.qml
+GainWindow 1.0 Frontend/Windows/GainWindow.qml
 
