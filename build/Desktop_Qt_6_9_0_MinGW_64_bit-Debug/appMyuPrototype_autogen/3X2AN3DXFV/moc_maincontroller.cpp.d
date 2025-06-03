@@ -4,6 +4,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiodrivers.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiolist.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/ginclude.h \
+  C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Audio/wavfile.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/clicklayer.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/gainlayer.h \
   C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Backend/Layer/layer.h \
@@ -14,6 +15,7 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QDebug \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QDirIterator \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QEvent \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QFile \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QList \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QMargins \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtCore/QMutex \
@@ -218,6 +220,11 @@ C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_9
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qwindow.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/QAudioFormat \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qaudioformat.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimedia-config.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
+  C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
   C:/Users/User/Documents/NewFolder/Qt/6.9.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \

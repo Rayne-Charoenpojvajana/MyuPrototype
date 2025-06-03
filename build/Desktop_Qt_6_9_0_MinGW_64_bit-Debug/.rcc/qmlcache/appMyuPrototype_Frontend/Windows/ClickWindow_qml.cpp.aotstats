@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 3026,
+                        "durationMicroseconds": 3136,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 26
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 55,
+                        "durationMicroseconds": 52,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 25
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 246,
+                        "durationMicroseconds": 306,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 28
@@ -30,106 +30,106 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 39,
+                        "durationMicroseconds": 40,
                         "errorMessage": "Cannot access value for name initBPM",
                         "functionName": "text",
-                        "line": 39
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 36,
-                        "durationMicroseconds": 125,
-                        "errorMessage": "Cannot access value for name minBPM",
-                        "functionName": "onEditingFinished",
                         "line": 40
                     },
                     {
                         "codegenSuccessfull": false,
+                        "column": 36,
+                        "durationMicroseconds": 117,
+                        "errorMessage": "Cannot access value for name minBPM",
+                        "functionName": "onEditingFinished",
+                        "line": 41
+                    },
+                    {
+                        "codegenSuccessfull": false,
                         "column": 23,
-                        "durationMicroseconds": 27,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name initAccent",
                         "functionName": "text",
-                        "line": 48
+                        "line": 49
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 36,
-                        "durationMicroseconds": 108,
+                        "durationMicroseconds": 101,
                         "errorMessage": "Cannot access value for name minAccent",
                         "functionName": "onEditingFinished",
-                        "line": 52
+                        "line": 53
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 20,
-                        "durationMicroseconds": 24,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name initGain",
                         "functionName": "value",
-                        "line": 61
-                    },
-                    {
-                        "codegenSuccessfull": false,
-                        "column": 22,
-                        "durationMicroseconds": 33,
-                        "errorMessage": "Cannot access value for name clickLayer",
-                        "functionName": "onMoved",
                         "line": 62
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 19,
-                        "durationMicroseconds": 21,
-                        "errorMessage": "Cannot access value for name minGain",
-                        "functionName": "from",
-                        "line": 70
+                        "column": 22,
+                        "durationMicroseconds": 30,
+                        "errorMessage": "Cannot access value for name clickLayer",
+                        "functionName": "onMoved",
+                        "line": 63
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 17,
-                        "durationMicroseconds": 19,
-                        "errorMessage": "Cannot access value for name maxGain",
-                        "functionName": "to",
+                        "column": 19,
+                        "durationMicroseconds": 20,
+                        "errorMessage": "Cannot access value for name minGain",
+                        "functionName": "from",
                         "line": 71
                     },
                     {
                         "codegenSuccessfull": false,
-                        "column": 23,
-                        "durationMicroseconds": 96,
-                        "errorMessage": "Cannot load property value from (component in C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/ClickWindow.qml)::parent with type QQuickItem.",
-                        "functionName": "text",
-                        "line": 66
+                        "column": 17,
+                        "durationMicroseconds": 18,
+                        "errorMessage": "Cannot access value for name maxGain",
+                        "functionName": "to",
+                        "line": 72
                     },
                     {
-                        "codegenSuccessfull": true,
-                        "column": 20,
-                        "durationMicroseconds": 206,
-                        "errorMessage": "",
-                        "functionName": "x",
+                        "codegenSuccessfull": false,
+                        "column": 23,
+                        "durationMicroseconds": 94,
+                        "errorMessage": "Cannot load property value from (component in C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/ClickWindow.qml)::parent with type QQuickItem.",
+                        "functionName": "text",
                         "line": 67
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 182,
+                        "durationMicroseconds": 193,
                         "errorMessage": "",
-                        "functionName": "y",
+                        "functionName": "x",
                         "line": 68
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 20,
-                        "durationMicroseconds": 63,
+                        "durationMicroseconds": 264,
+                        "errorMessage": "",
+                        "functionName": "y",
+                        "line": 69
+                    },
+                    {
+                        "codegenSuccessfull": true,
+                        "column": 20,
+                        "durationMicroseconds": 67,
                         "errorMessage": "",
                         "functionName": "onClicked",
-                        "line": 79
+                        "line": 80
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 46,
+                        "durationMicroseconds": 55,
                         "errorMessage": "",
                         "functionName": "fill",
-                        "line": 78
+                        "line": 79
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/ClickWindow.qml"

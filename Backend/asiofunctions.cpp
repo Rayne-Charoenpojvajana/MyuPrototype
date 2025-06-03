@@ -2,22 +2,20 @@
 
 
 
-Configs& configs = Configs::getInstance();
-LiveData& liveData = LiveData::getInstance();
+
+
 
 DriverInfo asioDriverInfo;
 ASIOCallbacks asioCallbacks;
-extern AsioDrivers* asioDrivers;
 AsioDrivers helperDrivers;
+extern AsioDrivers* asioDrivers;
 
 
 
 
 //----------------------------------------------------------------------------------
 long init_asio_static_data (DriverInfo *asioDriverInfo)
-{	// collect the informational data of the driver
-    // get the number of available channels
-
+{
     if (ASIOGetChannels(&asioDriverInfo->inputChannels, &asioDriverInfo->outputChannels) != ASE_OK) {
         return -1;
     }
@@ -27,53 +25,18 @@ long init_asio_static_data (DriverInfo *asioDriverInfo)
     if (ASIOCanSampleRate(asioDriverInfo->selectedSampleRate) != ASE_OK) {
         return -3;
     }
-
     if (ASIOSetSampleRate(asioDriverInfo->selectedSampleRate) != ASE_OK) {
         return -4;
     }
-
     if (ASIOGetSampleRate(&asioDriverInfo->sampleRate) != ASE_OK) {
         return -5;
     }
-
     if(ASIOOutputReady() == ASE_OK) {
         asioDriverInfo->postOutput = true;
     } else {
         asioDriverInfo->postOutput = false;
     }
-
     return 0;
-
-
-
-    // if(ASIOGetChannels(&asioDriverInfo->inputChannels, &asioDriverInfo->outputChannels) == ASE_OK)
-    // {
-
-    //     // get the usable buffer sizes
-    //     if(ASIOGetBufferSize(&asioDriverInfo->minSize, &asioDriverInfo->maxSize, &asioDriverInfo->preferredSize, &asioDriverInfo->granularity) == ASE_OK)
-    //     {
-    //         if (ASIOCanSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
-    //             if (ASIOSetSampleRate(asioDriverInfo->selectedSampleRate) == ASE_OK) {
-    //                 if (ASIOGetSampleRate(&asioDriverInfo->sampleRate) == ASE_OK) {
-    //                     if(ASIOOutputReady() == ASE_OK) {
-    //                         asioDriverInfo->postOutput = true;
-    //                     } else {
-    //                         asioDriverInfo->postOutput = false;
-    //                     }
-    //                     return 0;
-    //                 } else {
-    //                     return -5;
-    //                 }
-    //             } else {
-    //                 return -4;
-    //             }
-    //         } else {
-    //             return -3;
-    //         }
-    //     }
-    //     return -2;
-    // }
-    // return -1;
 }
 
 
@@ -90,63 +53,62 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
 {
     long buffSize = asioDriverInfo.selectedBufferSize;
     int iCount = 0;
-    int oCount = 0;
-    for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++)
-    {
-        if (asioDriverInfo.bufferInfos[i].isInput == true && iCount < liveData.inputs.size())
-        {
-            switch (asioDriverInfo.channelInfos[i].type)
-            {
+    for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++) {
+        if (asioDriverInfo.bufferInfos[i].isInput == true && iCount < liveData.inputs.size()) {
+            switch (asioDriverInfo.channelInfos[i].type) {
             case ASIOSTInt32LSB:
                 for(int j = 0; j < buffSize; ++j) {
                     liveData.inputs[iCount][j] = *((int *)asioDriverInfo.bufferInfos[i].buffers[index] + j) / (float )0x7fffffff;
-                }
-                iCount++;
+                }   
                 break;
             }
+            iCount++;
         }
-        for(int k = 0; k < std::min({liveData.inputs.size(), liveData.outputs.size()}); ++k) {
-            for(int j = 0; j < buffSize; j++ ) {
-                liveData.outputs[k][j] = liveData.inputs[k][j];
+    }
+    for (int i = 0; i < configs.layers.size(); i++) {
+        liveData.outputs[i].assign(buffSize, 0);
+        auto &chain = configs.layers[i];
+        int inputSrc = configs.inputRoute[i];
+        liveData.processes[i] = liveData.inputs[inputSrc];
+        for(int k = 0; k < chain.size(); k++) {
+            auto &layer = chain[k];
+            if (layer->getEnabled()) {
+                layer->transform(liveData.processes[i]);
             }
-        }
-        int offset = asioDriverInfo.inputBuffers;
-        if (asioDriverInfo.bufferInfos[i].isInput == false && oCount < liveData.outputs.size())
-        {
-            switch (asioDriverInfo.channelInfos[i].type)
-            {
-            case ASIOSTInt32LSB:
-                for(int j = 0; j < buffSize; ++j) {
-                    liveData.outputs[i-offset][j] = std::clamp(liveData.outputs[i-offset][j], -0.99f, 0.99f);
-                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = liveData.outputs[i-offset][j] * (float) 0x7fffffff;
-                }
-                oCount++;
-                break;
+            if (layer->getProcess()) {
+
+            }
+            if (layer->getOutput()) {
+                liveData.outputs[i] = liveData.processes[i];
             }
         }
     }
-    if (asioDriverInfo.postOutput)
+    int oCount = 0;
+    for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++) {
+        if (asioDriverInfo.bufferInfos[i].isInput == false && oCount < liveData.outputs.size()) {
+            switch (asioDriverInfo.channelInfos[i].type) {
+            case ASIOSTInt32LSB:
+                for(int j = 0; j < buffSize; ++j) {
+                    *((int*)asioDriverInfo.bufferInfos[i].buffers[index] + j) = liveData.outputs[oCount][j] * (float) 0x7fffffff;
+                }
+                break;
+            }
+            oCount++;
+        }
+    }
+    if (asioDriverInfo.postOutput) {
         ASIOOutputReady();
+    }
     return 0L;
 }
 
 //----------------------------------------------------------------------------------
 void bufferSwitch(long index, ASIOBool processNow)
-{	// the actual processing callback.
-    // Beware that this is normally in a seperate thread, hence be sure that you take care
-    // about thread synchronization. This is omitted here for simplicity.
-
-    // as this is a "back door" into the bufferSwitchTimeInfo a timeInfo needs to be created
-    // though it will only set the timeInfo.samplePosition and timeInfo.systemTime fields and the according flags
+{
     ASIOTime  timeInfo;
     memset (&timeInfo, 0, sizeof (timeInfo));
-
-    // get the time stamp of the buffer, not necessary if no
-    // synchronization to other media is required
     if(ASIOGetSamplePosition(&timeInfo.timeInfo.samplePosition, &timeInfo.timeInfo.systemTime) == ASE_OK)
         timeInfo.timeInfo.flags = kSystemTimeValid | kSamplePositionValid;
-
-
     bufferSwitchTimeInfo (&timeInfo, index, processNow);
 }
 
@@ -154,18 +116,12 @@ void bufferSwitch(long index, ASIOBool processNow)
 //----------------------------------------------------------------------------------
 void sampleRateChanged(ASIOSampleRate sRate)
 {
-    // do whatever you need to do if the sample rate changed
-    // usually this only happens during external sync.
-    // Audio processing is not stopped by the driver, actual sample rate
-    // might not have even changed, maybe only the sample rate status of an
-    // AES/EBU or S/PDIF digital input at the audio device.
-    // You might have to update time/sample related conversion routines, etc.
+
 }
 
 //----------------------------------------------------------------------------------
 long asioMessages(long selector, long value, void* message, double* opt)
 {
-    // currently the parameters "value", "message" and "opt" are not used.
     long ret = 0;
     switch(selector)
     {
@@ -174,52 +130,27 @@ long asioMessages(long selector, long value, void* message, double* opt)
             || value == kAsioEngineVersion
             || value == kAsioResyncRequest
             || value == kAsioLatenciesChanged
-            // the following three were added for ASIO 2.0, you don't necessarily have to support them
             || value == kAsioSupportsTimeInfo
             || value == kAsioSupportsTimeCode
             || value == kAsioSupportsInputMonitor)
             ret = 1L;
         break;
     case kAsioResetRequest:
-        // defer the task and perform the reset of the driver during the next "safe" situation
-        // You cannot reset the driver right now, as this code is called from the driver.
-        // Reset the driver is done by completely destruct is. I.e. ASIOStop(), ASIODisposeBuffers(), Destruction
-        // Afterwards you initialize the driver again.
-        // asioDriverInfo.stopped = true;  // In this sample the processing will just stop
         ret = 1L;
         break;
     case kAsioResyncRequest:
-        // This informs the application, that the driver encountered some non fatal data loss.
-        // It is used for synchronization purposes of different media.
-        // Added mainly to work around the Win16Mutex problems in Windows 95/98 with the
-        // Windows Multimedia system, which could loose data because the Mutex was hold too long
-        // by another thread.
-        // However a driver can issue it in other situations, too.
         ret = 1L;
         break;
     case kAsioLatenciesChanged:
-        // This will inform the host application that the drivers were latencies changed.
-        // Beware, it this does not mean that the buffer sizes have changed!
-        // You might need to update internal delay data.
         ret = 1L;
         break;
     case kAsioEngineVersion:
-        // return the supported ASIO version of the host application
-        // If a host applications does not implement this selector, ASIO 1.0 is assumed
-        // by the driver
         ret = 2L;
         break;
     case kAsioSupportsTimeInfo:
-        // informs the driver wether the asioCallbacks.bufferSwitchTimeInfo() callback
-        // is supported.
-        // For compatibility with ASIO 1.0 drivers the host application should always support
-        // the "old" bufferSwitch method, too.
         ret = 1;
         break;
     case kAsioSupportsTimeCode:
-        // informs the driver wether application is interested in time code info.
-        // If an application does not need to know about time code, the driver has less work
-        // to do.
         ret = 0;
         break;
     }
@@ -229,15 +160,10 @@ long asioMessages(long selector, long value, void* message, double* opt)
 
 //----------------------------------------------------------------------------------
 ASIOError create_asio_buffers (DriverInfo *asioDriverInfo)
-{	// create buffers for all inputs and outputs of the card with the
-    // preferredSize from ASIOGetBufferSize() as buffer size
+{
     long i;
     ASIOError result;
-
-    // fill the bufferInfos from the start without a gap
     ASIOBufferInfo *info = asioDriverInfo->bufferInfos;
-
-    // prepare inputs (Though this is not necessaily required, no opened inputs will work, too
     if (asioDriverInfo->inputChannels > kMaxInputChannels)
         asioDriverInfo->inputBuffers = kMaxInputChannels;
     else
@@ -248,8 +174,6 @@ ASIOError create_asio_buffers (DriverInfo *asioDriverInfo)
         info->channelNum = i;
         info->buffers[0] = info->buffers[1] = 0;
     }
-
-    // prepare outputs
     if (asioDriverInfo->outputChannels > kMaxOutputChannels)
         asioDriverInfo->outputBuffers = kMaxOutputChannels;
     else
@@ -260,14 +184,11 @@ ASIOError create_asio_buffers (DriverInfo *asioDriverInfo)
         info->channelNum = i;
         info->buffers[0] = info->buffers[1] = 0;
     }
-
-    // create and activate buffers
     result = ASIOCreateBuffers(asioDriverInfo->bufferInfos,
                                asioDriverInfo->inputBuffers + asioDriverInfo->outputBuffers,
                                asioDriverInfo->selectedBufferSize, &asioCallbacks);
     if (result == ASE_OK)
     {
-        // now get all the buffer details, sample word length, name, word clock group and activation
         for (i = 0; i < asioDriverInfo->inputBuffers + asioDriverInfo->outputBuffers; i++)
         {
             asioDriverInfo->channelInfos[i].channel = asioDriverInfo->bufferInfos[i].channelNum;
@@ -276,13 +197,8 @@ ASIOError create_asio_buffers (DriverInfo *asioDriverInfo)
             if (result != ASE_OK)
                 break;
         }
-
         if (result == ASE_OK)
         {
-            // get the input and output latencies
-            // Latencies often are only valid after ASIOCreateBuffers()
-            // (input latency is the age of the first sample in the currently returned audio block)
-            // (output latency is the time the first sample in the currently returned audio block requires to get to the output)
             result = ASIOGetLatencies(&asioDriverInfo->inputLatency, &asioDriverInfo->outputLatency);
         }
 
@@ -297,15 +213,11 @@ unsigned long get_sys_reference_time()
 }
 
 void setupASIO(char* asioDriverName) {
-    asioDriverInfo = {};
-    // load the driver, this will setup all the necessary internal data structures
+    asioDriverInfo = {};    
     if (loadAsioDriver (asioDriverName))
     {
-
-        // initialize the driver
         if (ASIOInit (&asioDriverInfo.driverInfo) == ASE_OK)
         {
-
             asioDriverInfo.selectedSampleRate = configs.selectedSampleRate;
             if (init_asio_static_data (&asioDriverInfo) == 0)
             {
@@ -316,9 +228,6 @@ void setupASIO(char* asioDriverName) {
                 } else {
                     asioDriverInfo.selectedBufferSize = configs.selectedBufferSize;
                 }
-                // ASIOControlPanel(); you might want to check wether the ASIOControlPanel() can open
-
-                // set up the asioCallback structure and create the ASIO data buffer
                 asioCallbacks.bufferSwitch = &bufferSwitch;
                 asioCallbacks.sampleRateDidChange = &sampleRateChanged;
                 asioCallbacks.asioMessage = &asioMessages;
@@ -328,12 +237,14 @@ void setupASIO(char* asioDriverName) {
                     for(int i = 0; i < liveData.inputs.size(); i++) {
                         liveData.inputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
                     }
+                    for(int i = 0; i < liveData.processes.size(); i++) {
+                        liveData.processes[i].assign(asioDriverInfo.selectedBufferSize, 0);
+                    }
                     for(int i = 0; i < liveData.outputs.size(); i++) {
                         liveData.outputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
                     }
                     if (ASIOStart() == ASE_OK)
                     {
-                        // Now all is up and running
                         while (!asioDriverInfo.stopped && liveData.streaming)
                         {
                             QThread::msleep(250);

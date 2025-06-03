@@ -434,7 +434,7 @@
 			{
 				"command" : 14,
 				"file" : 10,
-				"line" : 3471,
+				"line" : 3465,
 				"parent" : 65
 			},
 			{
@@ -446,7 +446,7 @@
 			{
 				"command" : 14,
 				"file" : 10,
-				"line" : 3465,
+				"line" : 3471,
 				"parent" : 65
 			},
 			{
@@ -1211,26 +1211,26 @@
 	[
 		{
 			"backtrace" : 67,
-			"id" : "appMyuPrototype_copy_res::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 69,
 			"id" : "appMyuPrototype_copy_qml::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 76,
-			"id" : "appMyuPrototype_qmlimportscan::@6890427a1f51a3e7e1df"
+			"backtrace" : 69,
+			"id" : "appMyuPrototype_copy_res::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 7,
 			"id" : "ASIO::@d87dbbe90bf50de5617c"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "appMyuPrototype_autogen::@6890427a1f51a3e7e1df"
+			"backtrace" : 76,
+			"id" : "appMyuPrototype_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "appMyuPrototype_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "appMyuPrototype_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appMyuPrototype::@6890427a1f51a3e7e1df",

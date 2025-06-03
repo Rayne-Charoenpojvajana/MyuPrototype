@@ -3,22 +3,9 @@
 
 #include "livedata.h"
 
-extern Configs& configs;
-extern LiveData& liveData;
+static Configs& configs = Configs::getInstance();
+static LiveData& liveData = LiveData::getInstance();
 extern AsioDrivers helperDrivers;
-
-
-// extern bool streaming;
-
-
-// extern std::array<std::vector<float>, MAX_INPUTS> inputs;
-// extern std::array<std::vector<std::unique_ptr<Layer>>, MAX_INPUTS> layers;
-// extern std::array<std::vector<float>, MAX_OUTPUTS> outputs;
-
-
-
-
-
 bool loadAsioDriver(char*);
 void setupASIO(char*);
 long init_asio_static_data (DriverInfo*);

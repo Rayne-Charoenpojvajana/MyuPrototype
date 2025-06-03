@@ -37,20 +37,6 @@ ApplicationWindow {
                     MainController.setInputRoute(channelNum, 1)
                 }
             }
-            CheckBox {
-                checked: channelNum === 0
-                ButtonGroup.group: switchGroup2
-                onClicked: {
-                    MainController.setOutputRoute(channelNum, 0)
-                }
-            }
-            CheckBox {
-                checked: channelNum === 1
-                ButtonGroup.group: switchGroup2
-                onClicked: {
-                    MainController.setOutputRoute(channelNum, 1)
-                }
-            }
             ComboBox {
                 model: listModel
                 textRole: "path"

@@ -14,6 +14,10 @@ Item {
         anchors.fill: parent
         color: Style.mainWindowBackgroundColor
     }
+    Component.onCompleted: {
+        gainLayer.setGain(initGain)
+    }
+
     Dial {
         value: initGain
         onMoved: {

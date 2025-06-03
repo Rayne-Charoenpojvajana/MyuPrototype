@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 3086,
+                        "durationMicroseconds": 3118,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 15
@@ -14,42 +14,50 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 71,
+                        "durationMicroseconds": 60,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 14
                     },
                     {
+                        "codegenSuccessfull": true,
+                        "column": 28,
+                        "durationMicroseconds": 193,
+                        "errorMessage": "",
+                        "functionName": "onCompleted",
+                        "line": 17
+                    },
+                    {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 35,
+                        "durationMicroseconds": 32,
                         "errorMessage": "Cannot access value for name initGain",
                         "functionName": "value",
-                        "line": 18
+                        "line": 22
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 44,
+                        "durationMicroseconds": 36,
                         "errorMessage": "Cannot access value for name gainLayer",
                         "functionName": "onMoved",
-                        "line": 19
+                        "line": 23
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 15,
-                        "durationMicroseconds": 23,
+                        "durationMicroseconds": 22,
                         "errorMessage": "Cannot access value for name minGain",
                         "functionName": "from",
-                        "line": 27
+                        "line": 31
                     },
                     {
                         "codegenSuccessfull": false,
                         "column": 13,
-                        "durationMicroseconds": 18,
+                        "durationMicroseconds": 25,
                         "errorMessage": "Cannot access value for name maxGain",
                         "functionName": "to",
-                        "line": 28
+                        "line": 32
                     },
                     {
                         "codegenSuccessfull": false,
@@ -57,23 +65,23 @@
                         "durationMicroseconds": 107,
                         "errorMessage": "Cannot load property value from (component in C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/GainWindow.qml)::parent with type QQuickItem.",
                         "functionName": "text",
-                        "line": 23
+                        "line": 27
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 240,
+                        "durationMicroseconds": 243,
                         "errorMessage": "",
                         "functionName": "x",
-                        "line": 24
+                        "line": 28
                     },
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 233,
+                        "durationMicroseconds": 234,
                         "errorMessage": "",
                         "functionName": "y",
-                        "line": 25
+                        "line": 29
                     }
                 ],
                 "filepath": "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/GainWindow.qml"

@@ -25,10 +25,17 @@ ToolBar {
                     l0.visible = !l0.visible;
                 }
             }
+            ProgressBar {
+                id: o0
+                Layout.preferredHeight: 20
+                Layout.row: 0
+                Layout.column: 2
+            }
             LayerWindow {
                 id: l0
                 channelNum: 0
             }
+
             ProgressBar {
                 id: p1
                 Layout.preferredHeight: 20
@@ -44,6 +51,12 @@ ToolBar {
                     l1.visible = !l1.visible;
                 }
             }
+            ProgressBar {
+                id: o1
+                Layout.preferredHeight: 20
+                Layout.row: 1
+                Layout.column: 2
+            }
             LayerWindow {
                 id: l1
                 channelNum: 1
@@ -56,6 +69,9 @@ ToolBar {
             const list = MainController.getMonitor()
             p0.value = Math.abs(list[0])
             p1.value = Math.abs(list[1])
+            const out = MainController.getOutput()
+            o0.value = Math.abs(out[0])
+            o1.value = Math.abs(out[1])
         }
     }
 }

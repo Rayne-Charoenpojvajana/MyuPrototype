@@ -59,7 +59,8 @@ Module {
             name: "setSelectedDriver"
             Parameter { type: "QString" }
         }
-        Method { name: "getMonitor"; type: "double"; isList: true }
+        Method { name: "getMonitor"; type: "float"; isList: true }
+        Method { name: "getOutput"; type: "float"; isList: true }
         Method { name: "getBufferSizes"; type: "int"; isList: true }
         Method {
             name: "setBufferSize"

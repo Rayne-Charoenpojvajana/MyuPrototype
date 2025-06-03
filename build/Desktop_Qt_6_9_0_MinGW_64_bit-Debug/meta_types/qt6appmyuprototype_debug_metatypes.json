@@ -70,11 +70,17 @@
                         "access": "public",
                         "index": 4,
                         "name": "getMonitor",
-                        "returnType": "QList<double>"
+                        "returnType": "QList<float>"
                     },
                     {
                         "access": "public",
                         "index": 5,
+                        "name": "getOutput",
+                        "returnType": "QList<float>"
+                    },
+                    {
+                        "access": "public",
+                        "index": 6,
                         "name": "getBufferSizes",
                         "returnType": "QList<long>"
                     },
@@ -85,13 +91,13 @@
                                 "type": "long"
                             }
                         ],
-                        "index": 6,
+                        "index": 7,
                         "name": "setBufferSize",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
-                        "index": 7,
+                        "index": 8,
                         "name": "getSampleRates",
                         "returnType": "QList<long>"
                     },
@@ -102,7 +108,7 @@
                                 "type": "long"
                             }
                         ],
-                        "index": 8,
+                        "index": 9,
                         "name": "setSampleRate",
                         "returnType": "void"
                     },
@@ -116,7 +122,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 9,
+                        "index": 10,
                         "name": "addLayer",
                         "returnType": "void"
                     },
@@ -127,7 +133,7 @@
                                 "type": "QString"
                             }
                         ],
-                        "index": 10,
+                        "index": 11,
                         "name": "getLayerPaths",
                         "returnType": "QStringList"
                     },
@@ -144,7 +150,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 11,
+                        "index": 12,
                         "name": "swapLayers",
                         "returnType": "void"
                     },
@@ -158,7 +164,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 12,
+                        "index": 13,
                         "name": "removeLayer",
                         "returnType": "void"
                     },
@@ -172,7 +178,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 13,
+                        "index": 14,
                         "name": "toggleLayerUI",
                         "returnType": "void"
                     },
@@ -189,7 +195,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "index": 14,
+                        "index": 15,
                         "name": "setLayerEnabled",
                         "returnType": "void"
                     },
@@ -206,7 +212,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "index": 15,
+                        "index": 16,
                         "name": "setLayerProcess",
                         "returnType": "void"
                     },
@@ -223,7 +229,7 @@
                                 "type": "bool"
                             }
                         ],
-                        "index": 16,
+                        "index": 17,
                         "name": "setLayerOutput",
                         "returnType": "void"
                     },
@@ -237,7 +243,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 17,
+                        "index": 18,
                         "name": "setInputRoute",
                         "returnType": "void"
                     },
@@ -251,7 +257,7 @@
                                 "type": "int"
                             }
                         ],
-                        "index": 18,
+                        "index": 19,
                         "name": "setOutputRoute",
                         "returnType": "void"
                     }
@@ -301,7 +307,7 @@
                     }
                 ],
                 "className": "ClickLayer",
-                "lineNumber": 8,
+                "lineNumber": 9,
                 "methods": [
                     {
                         "access": "public",

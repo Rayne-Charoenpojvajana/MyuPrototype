@@ -12,7 +12,7 @@ private:
     std::unique_ptr<QQuickView> view;
     float gain;
 public:
-    void transform(std::vector<float>&, std::vector<float>&) override;
+    void transform(std::vector<float>&) override;
     void setupUI() override;
     void toggleUI() override;
     Q_INVOKABLE void setGain(float);

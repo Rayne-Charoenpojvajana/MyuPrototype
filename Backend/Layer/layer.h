@@ -22,7 +22,7 @@ protected:
 public:
     Layer();
     void setInfo(int channelNum, QString path);
-    virtual void transform(std::vector<float>& input, std::vector<float>& output) = 0;
+    virtual void transform(std::vector<float>&) = 0;
     virtual void setupUI() = 0;
     virtual void toggleUI() = 0;
     QString getPath();

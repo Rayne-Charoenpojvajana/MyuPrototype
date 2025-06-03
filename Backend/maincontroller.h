@@ -20,7 +20,8 @@ public:
     ~MainController();
     Q_INVOKABLE QStringList getDriverList();
     Q_INVOKABLE void setSelectedDriver(QString);
-    Q_INVOKABLE QList<double> getMonitor();
+    Q_INVOKABLE QList<float> getMonitor();
+    Q_INVOKABLE QList<float> getOutput();
     Q_INVOKABLE QList<long> getBufferSizes();
     Q_INVOKABLE void setBufferSize(long);
     Q_INVOKABLE QList<long> getSampleRates();

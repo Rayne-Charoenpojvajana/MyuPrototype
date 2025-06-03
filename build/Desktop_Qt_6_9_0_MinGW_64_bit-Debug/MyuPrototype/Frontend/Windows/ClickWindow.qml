@@ -4,7 +4,7 @@ import QtQuick.Controls
 import MyuPrototype
 import QtQuick.Layouts
 
-Window {
+Item {
     width: 300
     height: 300
 
@@ -28,6 +28,7 @@ Window {
     Component.onCompleted: {
         clickLayer.setBPM(initBPM);
         clickLayer.setAccent(initAccent);
+        clickLayer.setGain(initGain);
     }
 
     RowLayout {

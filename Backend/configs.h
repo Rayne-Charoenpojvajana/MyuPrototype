@@ -2,16 +2,17 @@
 #define CONFIGS_H
 
 
-#define MAX_BUFFERS 256
-#define MIN_BUFFERS 256
+#define MAX_BUFFERS 512
+#define MIN_BUFFERS 512
 #define MAX_INPUTS 2
 #define MAX_OUTPUTS 2
 #define MAX_DRIVERLENGTH 128
 #define NUM_SAMPLERATES 1
 
-
+#include "Layer/clicklayer.h"
+#include "Layer/gainlayer.h"
 #include "asio.h"
-#include <array>
+
 enum {
     // number of input and outputs supported by the host application
     // you can change these to higher or lower values
@@ -76,6 +77,9 @@ private:
     Configs();;
     ~Configs();;
 public:
+    std::array<std::vector<std::unique_ptr<Layer>>, MAX_OUTPUTS> layers;
+    std::array<int, MAX_INPUTS> inputRoute = {0, 1};
+    std::array<int, MAX_OUTPUTS> outputRoute = {0, 1};
     int maxDriverLength = MAX_DRIVERLENGTH;
     long selectedBufferSize = MIN_BUFFERS;
     long softwareMinBuffer = MIN_BUFFERS;
