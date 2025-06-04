@@ -1,5 +1,0 @@
-C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/appMyuPrototype_autogen/include/../3X2AN3DXFV/moc_asiothread.cpp.json
-C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/appMyuPrototype_autogen/include/../3X2AN3DXFV/moc_maincontroller.cpp.json
-C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/appMyuPrototype_autogen/include/../XSRNWPFFGL/moc_clicklayer.cpp.json
-C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/appMyuPrototype_autogen/include/../XSRNWPFFGL/moc_gainlayer.cpp.json
-C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/appMyuPrototype_autogen/include/../XSRNWPFFGL/moc_layer.cpp.json

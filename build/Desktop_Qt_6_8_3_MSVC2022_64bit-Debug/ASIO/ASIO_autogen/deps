@@ -1,9 +1,0 @@
-ASIO_autogen/timestamp: \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/CMakeLists.txt \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asio.cpp \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asio.h \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiodrivers.cpp \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiodrivers.h \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiolist.cpp \
-	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/ASIO/asiolist.h \
-	C:/Users/User/Documents/NewFolder/Qt/Tools/CMake_64/bin/cmake.exe
