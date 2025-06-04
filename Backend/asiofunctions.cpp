@@ -223,9 +223,9 @@ void setupASIO(char* asioDriverName) {
             if (init_asio_static_data (&asioDriverInfo) == 0)
             {
                 if (configs.selectedBufferSize < asioDriverInfo.minSize) {
-                    asioDriverInfo.selectedBufferSize = (std::max)({configs.softwareMinBuffer, asioDriverInfo.minSize});
+                    asioDriverInfo.selectedBufferSize = std::max({configs.softwareMinBuffer, asioDriverInfo.minSize});
                 } else if (configs.selectedBufferSize > asioDriverInfo.maxSize) {
-                    asioDriverInfo.selectedBufferSize = (std::min)({configs.softwareMinBuffer, asioDriverInfo.minSize});
+                    asioDriverInfo.selectedBufferSize = std::min({configs.softwareMinBuffer, asioDriverInfo.minSize});
                 } else {
                     asioDriverInfo.selectedBufferSize = configs.selectedBufferSize;
                 }

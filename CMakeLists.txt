@@ -28,8 +28,6 @@ qt_add_qml_module(appMyuPrototype
         RESOURCES resources.qrc
         SOURCES Backend/asiothread.h Backend/asiothread.cpp
         SOURCES Backend/configs.h Backend/configs.cpp
-        QML_FILES
-        QML_FILES
         QML_FILES Frontend/Components/ToolBarButton.qml
         QML_FILES Frontend/Windows/MainWindow.qml
         QML_FILES Frontend/Windows/MainWindowFooter.qml
@@ -67,6 +65,7 @@ install(TARGETS appMyuPrototype
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
+
 add_subdirectory(ASIO)
 target_link_libraries(appMyuPrototype PUBLIC ASIO)
 target_include_directories(appMyuPrototype PUBLIC
@@ -74,13 +73,21 @@ target_include_directories(appMyuPrototype PUBLIC
                           "${PROJECT_SOURCE_DIR}/ASIO"
                           )
 
-# add_subdirectory(vst3sdk)
-# target_link_libraries(appMyuPrototype PUBLIC vst3sdk)
-# target_include_directories(appMyuPrototype PUBLIC
-#                             "${PROJECT_BINARY_DIR}"
-#                             "${PROJECT_SOURCE_DIR}/vst3sdk"
-#                             )
 
+add_subdirectory(vst3sdk)
+set(VST_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/vst3sdk CACHE INTERNAL "VST SDK includes" FORCE)
+set(VST_LIBS "base;sdk" CACHE INTERNAL "VST SDK libs" FORCE)
+set(VST_GUI_LIB "vstgui" CACHE INTERNAL "VSG GUI lib" FORCE)
+set(VST_GUI_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/vst3sdk/vstgui4" CACHE INTERNAL "VST GUI includes" FORCE)
+target_link_libraries(appMyuPrototype PUBLIC sdk_hosting)
+target_include_directories(appMyuPrototype PUBLIC
+                            "${PROJECT_BINARY_DIR}"
+                            "${PROJECT_SOURCE_DIR}/vst3sdk"
+                            )
+
+
+
+target_compile_definitions(appMyuPrototype PRIVATE NOMINMAX)
 
 
 target_include_directories(appMyuPrototype PRIVATE
