@@ -1,0 +1,28 @@
+base_autogen/timestamp: \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/.qtc/package-manager/auto-setup.cmake \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/CMakeLists.txt \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/baseiids.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/classfactoryhelpers.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fbuffer.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fbuffer.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fcleanup.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fcommandline.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fdebug.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fdebug.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fdynlib.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fdynlib.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fobject.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fobject.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fstreamer.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fstreamer.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fstring.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/fstring.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/timer.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/timer.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/updatehandler.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/source/updatehandler.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/thread/include/fcondition.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/thread/include/flock.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/thread/source/fcondition.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/base/thread/source/flock.cpp \
+	C:/Users/User/Documents/NewFolder/Qt/Tools/CMake_64/bin/cmake.exe

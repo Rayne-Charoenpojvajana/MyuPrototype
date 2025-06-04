@@ -1,0 +1,75 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/public.sdk/samples/vst-hosting/inspectorapp/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "VST3Inspector_autogen_timestamp_deps::@dc840a833f6d1fb1f0f7"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "VST3Inspector_autogen::@dc840a833f6d1fb1f0f7",
+	"isGeneratorProvided" : true,
+	"name" : "VST3Inspector_autogen",
+	"paths" : 
+	{
+		"build" : "vst3sdk/public.sdk/samples/vst-hosting/inspectorapp",
+		"source" : "vst3sdk/public.sdk/samples/vst-hosting/inspectorapp"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst-hosting/inspectorapp/CMakeFiles/VST3Inspector_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst-hosting/inspectorapp/CMakeFiles/VST3Inspector_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst-hosting/inspectorapp/VST3Inspector_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

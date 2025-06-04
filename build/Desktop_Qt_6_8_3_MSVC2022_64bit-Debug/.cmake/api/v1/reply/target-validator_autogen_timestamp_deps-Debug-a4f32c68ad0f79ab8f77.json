@@ -1,0 +1,38 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/public.sdk/samples/vst-hosting/validator/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "sdk_hosting::@cd6fd055087e8e969d30"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "validator_autogen_timestamp_deps::@cb6a5f45744856ded658",
+	"isGeneratorProvided" : true,
+	"name" : "validator_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "vst3sdk/public.sdk/samples/vst-hosting/validator",
+		"source" : "vst3sdk/public.sdk/samples/vst-hosting/validator"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

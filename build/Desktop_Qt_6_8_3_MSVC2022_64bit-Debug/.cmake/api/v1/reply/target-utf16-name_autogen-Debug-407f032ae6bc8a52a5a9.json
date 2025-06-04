@@ -1,0 +1,75 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/public.sdk/samples/vst/utf16name/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "utf16-name_autogen_timestamp_deps::@01af0040865c6dbce22c"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "utf16-name_autogen::@01af0040865c6dbce22c",
+	"isGeneratorProvided" : true,
+	"name" : "utf16-name_autogen",
+	"paths" : 
+	{
+		"build" : "vst3sdk/public.sdk/samples/vst/utf16name",
+		"source" : "vst3sdk/public.sdk/samples/vst/utf16name"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/utf16name/CMakeFiles/utf16-name_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/utf16name/CMakeFiles/utf16-name_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/utf16name/utf16-name_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

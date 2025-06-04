@@ -1,0 +1,46 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/public.sdk/samples/vst/syncdelay/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "sdk::@cd6fd055087e8e969d30"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "validator::@cb6a5f45744856ded658"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "moduleinfotool::@0ccd92616ad435ec5cfd"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "sync-delay_autogen_timestamp_deps::@932a70a66b653d92d5dd",
+	"isGeneratorProvided" : true,
+	"name" : "sync-delay_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "vst3sdk/public.sdk/samples/vst/syncdelay",
+		"source" : "vst3sdk/public.sdk/samples/vst/syncdelay"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

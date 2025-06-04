@@ -1,0 +1,12 @@
+moduleinfotool_autogen/timestamp: \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst-utilities/moduleinfotool/CMakeLists.txt \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst-utilities/moduleinfotool/source/main.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/hosting/module_win32.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/moduleinfo/json.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/moduleinfo/jsoncxx.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/moduleinfo/moduleinfo.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/moduleinfo/moduleinfocreator.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/moduleinfo/moduleinfocreator.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/moduleinfo/moduleinfoparser.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/moduleinfo/moduleinfoparser.h \
+	C:/Users/User/Documents/NewFolder/Qt/Tools/CMake_64/bin/cmake.exe

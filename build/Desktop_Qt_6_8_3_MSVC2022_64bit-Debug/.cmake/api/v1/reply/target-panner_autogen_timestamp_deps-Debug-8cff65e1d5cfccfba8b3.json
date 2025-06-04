@@ -1,0 +1,50 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/public.sdk/samples/vst/panner/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "vstgui_support::@84df0381bbe72cab14f2"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "sdk::@cd6fd055087e8e969d30"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "validator::@cb6a5f45744856ded658"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "moduleinfotool::@0ccd92616ad435ec5cfd"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "panner_autogen_timestamp_deps::@9ddfdca674381b5d9228",
+	"isGeneratorProvided" : true,
+	"name" : "panner_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "vst3sdk/public.sdk/samples/vst/panner",
+		"source" : "vst3sdk/public.sdk/samples/vst/panner"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

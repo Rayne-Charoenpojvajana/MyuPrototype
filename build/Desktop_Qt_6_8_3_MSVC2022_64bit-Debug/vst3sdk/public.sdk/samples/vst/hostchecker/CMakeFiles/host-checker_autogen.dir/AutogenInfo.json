@@ -1,0 +1,220 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker/host-checker_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker",
+	"CMAKE_EXECUTABLE" : "C:/Users/User/Documents/NewFolder/Qt/Tools/CMake_64/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/CMakeLists.txt",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/cmake/templates/projectversion.h.in"
+	],
+	"CMAKE_SOURCE_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker/host-checker_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "host-checker_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/cids.h",
+			"MU",
+			"CAWN4ZDDTK/moc_cids.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/editorsizecontroller.h",
+			"MU",
+			"CAWN4ZDDTK/moc_editorsizecontroller.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/eventlistcheck.h",
+			"MU",
+			"CAWN4ZDDTK/moc_eventlistcheck.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/eventlogdatabrowsersource.h",
+			"MU",
+			"CAWN4ZDDTK/moc_eventlogdatabrowsersource.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/eventlogger.h",
+			"MU",
+			"CAWN4ZDDTK/moc_eventlogger.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/hostcheck.h",
+			"MU",
+			"CAWN4ZDDTK/moc_hostcheck.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/hostcheckercontroller.h",
+			"MU",
+			"CAWN4ZDDTK/moc_hostcheckercontroller.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/hostcheckerprocessor.h",
+			"MU",
+			"CAWN4ZDDTK/moc_hostcheckerprocessor.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/logevents.h",
+			"MU",
+			"CAWN4ZDDTK/moc_logevents.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/parameterchangescheck.h",
+			"MU",
+			"CAWN4ZDDTK/moc_parameterchangescheck.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/processcontextcheck.h",
+			"MU",
+			"CAWN4ZDDTK/moc_processcontextcheck.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/processsetupcheck.h",
+			"MU",
+			"CAWN4ZDDTK/moc_processsetupcheck.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/version.h",
+			"MU",
+			"CAWN4ZDDTK/moc_version.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker/host-checker_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker/host-checker_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"SMTG_MODULE_IS_BUNDLE=1",
+		"VSTGUI_ENABLE_DEPRECATED_METHODS=1",
+		"VSTGUI_LIVE_EDITING",
+		"WIN32",
+		"_CRT_SECURE_NO_WARNINGS",
+		"_UNICODE",
+		"host_checker_EXPORTS"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/vstgui4",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : [],
+	"MOC_PREDEFS_FILE" : "",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker/CMakeFiles/host-checker_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Users/User/Documents/NewFolder/Qt/6.8.3/msvc2022_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 8,
+	"SETTINGS_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/hostchecker/CMakeFiles/host-checker_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/editorsizecontroller.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/eventlistcheck.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/eventlogdatabrowsersource.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/eventlogger.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/factory.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/hostcheck.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/hostcheckercontroller.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/hostcheckerprocessor.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/parameterchangescheck.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/processcontextcheck.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/hostchecker/source/processsetupcheck.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/main/dllmain.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

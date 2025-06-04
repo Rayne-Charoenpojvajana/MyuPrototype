@@ -1,0 +1,46 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/public.sdk/samples/vst/programchange/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "sdk::@cd6fd055087e8e969d30"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "validator::@cb6a5f45744856ded658"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "moduleinfotool::@0ccd92616ad435ec5cfd"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "program-change_autogen_timestamp_deps::@4808a36c53bf121bab3c",
+	"isGeneratorProvided" : true,
+	"name" : "program-change_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "vst3sdk/public.sdk/samples/vst/programchange",
+		"source" : "vst3sdk/public.sdk/samples/vst/programchange"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

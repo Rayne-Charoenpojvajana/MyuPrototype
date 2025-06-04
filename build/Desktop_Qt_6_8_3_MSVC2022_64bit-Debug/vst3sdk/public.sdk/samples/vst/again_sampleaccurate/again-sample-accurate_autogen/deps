@@ -1,0 +1,15 @@
+again-sample-accurate_autogen/timestamp: \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/.qtc/package-manager/auto-setup.cmake \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/cmake/templates/projectversion.h.in \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/CMakeLists.txt \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/source/agsa.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/source/agsa_controller.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/source/agsa_factory.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/source/agsa_processor.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/source/tutorial.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/source/tutorial.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/again_sampleaccurate/source/version.h \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/main/dllmain.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/utility/test/rttransfertest.cpp \
+	C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/vst/utility/test/sampleaccuratetest.cpp \
+	C:/Users/User/Documents/NewFolder/Qt/Tools/CMake_64/bin/cmake.exe

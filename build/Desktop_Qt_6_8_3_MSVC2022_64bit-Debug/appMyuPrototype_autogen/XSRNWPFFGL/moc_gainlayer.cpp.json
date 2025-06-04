@@ -1,0 +1,37 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "auto"
+                }
+            ],
+            "className": "GainLayer",
+            "lineNumber": 7,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "type": "float"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "setGain",
+                    "returnType": "void"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "GainLayer",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "Layer"
+                }
+            ]
+        }
+    ],
+    "inputFile": "gainlayer.h",
+    "outputRevision": 68
+}

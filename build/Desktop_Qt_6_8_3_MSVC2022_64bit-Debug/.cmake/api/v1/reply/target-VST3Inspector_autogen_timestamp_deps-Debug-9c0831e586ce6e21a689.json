@@ -1,0 +1,50 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/public.sdk/samples/vst-hosting/inspectorapp/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "vstgui_uidescription::@119a8cbf1440fab7ca2b"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "vstgui::@54a0746fa10a39fdb5d0"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "vstgui_standalone::@ba128293594f8ecb9757"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "sdk_hosting::@cd6fd055087e8e969d30"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "VST3Inspector_autogen_timestamp_deps::@dc840a833f6d1fb1f0f7",
+	"isGeneratorProvided" : true,
+	"name" : "VST3Inspector_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "vst3sdk/public.sdk/samples/vst-hosting/inspectorapp",
+		"source" : "vst3sdk/public.sdk/samples/vst-hosting/inspectorapp"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

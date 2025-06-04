@@ -1,0 +1,31 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/vstgui4/vstgui/lib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "vstgui_autogen_timestamp_deps::@54a0746fa10a39fdb5d0",
+	"isGeneratorProvided" : true,
+	"name" : "vstgui_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "vst3sdk/VSTGUI.build/vstgui/lib",
+		"source" : "vst3sdk/vstgui4/vstgui/lib"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

@@ -1,0 +1,31 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"vst3sdk/base/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "base_autogen_timestamp_deps::@0735951bbe0919745031",
+	"isGeneratorProvided" : true,
+	"name" : "base_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "vst3sdk/base",
+		"source" : "vst3sdk/base"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
