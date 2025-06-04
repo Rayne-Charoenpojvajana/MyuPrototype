@@ -16,7 +16,7 @@
             "methods": [
                 {
                     "access": "public",
-                    "index": 2,
+                    "index": 1,
                     "name": "getDriverList",
                     "returnType": "QStringList"
                 },
@@ -27,25 +27,25 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 3,
+                    "index": 2,
                     "name": "setSelectedDriver",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 4,
+                    "index": 3,
                     "name": "getMonitor",
                     "returnType": "QList<float>"
                 },
                 {
                     "access": "public",
-                    "index": 5,
+                    "index": 4,
                     "name": "getOutput",
                     "returnType": "QList<float>"
                 },
                 {
                     "access": "public",
-                    "index": 6,
+                    "index": 5,
                     "name": "getBufferSizes",
                     "returnType": "QList<long>"
                 },
@@ -56,13 +56,13 @@
                             "type": "long"
                         }
                     ],
-                    "index": 7,
+                    "index": 6,
                     "name": "setBufferSize",
                     "returnType": "void"
                 },
                 {
                     "access": "public",
-                    "index": 8,
+                    "index": 7,
                     "name": "getSampleRates",
                     "returnType": "QList<long>"
                 },
@@ -73,7 +73,7 @@
                             "type": "long"
                         }
                     ],
-                    "index": 9,
+                    "index": 8,
                     "name": "setSampleRate",
                     "returnType": "void"
                 },
@@ -87,7 +87,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 10,
+                    "index": 9,
                     "name": "addLayer",
                     "returnType": "void"
                 },
@@ -98,7 +98,7 @@
                             "type": "QString"
                         }
                     ],
-                    "index": 11,
+                    "index": 10,
                     "name": "getLayerPaths",
                     "returnType": "QStringList"
                 },
@@ -115,7 +115,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 12,
+                    "index": 11,
                     "name": "swapLayers",
                     "returnType": "void"
                 },
@@ -129,7 +129,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 13,
+                    "index": 12,
                     "name": "removeLayer",
                     "returnType": "void"
                 },
@@ -143,7 +143,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 14,
+                    "index": 13,
                     "name": "toggleLayerUI",
                     "returnType": "void"
                 },
@@ -160,7 +160,7 @@
                             "type": "bool"
                         }
                     ],
-                    "index": 15,
+                    "index": 14,
                     "name": "setLayerEnabled",
                     "returnType": "void"
                 },
@@ -177,7 +177,7 @@
                             "type": "bool"
                         }
                     ],
-                    "index": 16,
+                    "index": 15,
                     "name": "setLayerProcess",
                     "returnType": "void"
                 },
@@ -194,7 +194,7 @@
                             "type": "bool"
                         }
                     ],
-                    "index": 17,
+                    "index": 16,
                     "name": "setLayerOutput",
                     "returnType": "void"
                 },
@@ -208,7 +208,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 18,
+                    "index": 17,
                     "name": "setInputRoute",
                     "returnType": "void"
                 },
@@ -222,7 +222,7 @@
                             "type": "int"
                         }
                     ],
-                    "index": 19,
+                    "index": 18,
                     "name": "setOutputRoute",
                     "returnType": "void"
                 }
@@ -234,20 +234,6 @@
                     "access": "public",
                     "index": 0,
                     "name": "qmlInit",
-                    "returnType": "void"
-                },
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "type": "char**"
-                        },
-                        {
-                            "type": "bool*"
-                        }
-                    ],
-                    "index": 1,
-                    "name": "sendSelectedDriver",
                     "returnType": "void"
                 }
             ],

@@ -54,7 +54,7 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
     long buffSize = asioDriverInfo.selectedBufferSize;
     int iCount = 0;
     for (int i = 0; i < asioDriverInfo.inputBuffers + asioDriverInfo.outputBuffers; i++) {
-        if (asioDriverInfo.bufferInfos[i].isInput == true && iCount < liveData.inputs.size()) {
+        if (asioDriverInfo.bufferInfos[i].isInput == ASIOTrue && iCount < liveData.inputs.size()) {
             switch (asioDriverInfo.channelInfos[i].type) {
             case ASIOSTInt32LSB:
                 for(int j = 0; j < buffSize; ++j) {
@@ -213,7 +213,8 @@ unsigned long get_sys_reference_time()
 }
 
 void setupASIO(char* asioDriverName) {
-    asioDriverInfo = {};    
+
+    asioDriverInfo = {};
     if (loadAsioDriver (asioDriverName))
     {
         if (ASIOInit (&asioDriverInfo.driverInfo) == ASE_OK)
@@ -222,9 +223,9 @@ void setupASIO(char* asioDriverName) {
             if (init_asio_static_data (&asioDriverInfo) == 0)
             {
                 if (configs.selectedBufferSize < asioDriverInfo.minSize) {
-                    asioDriverInfo.selectedBufferSize = std::max({configs.softwareMinBuffer, asioDriverInfo.minSize});
+                    asioDriverInfo.selectedBufferSize = (std::max)({configs.softwareMinBuffer, asioDriverInfo.minSize});
                 } else if (configs.selectedBufferSize > asioDriverInfo.maxSize) {
-                    asioDriverInfo.selectedBufferSize = std::min({configs.softwareMinBuffer, asioDriverInfo.minSize});
+                    asioDriverInfo.selectedBufferSize = (std::min)({configs.softwareMinBuffer, asioDriverInfo.minSize});
                 } else {
                     asioDriverInfo.selectedBufferSize = configs.selectedBufferSize;
                 }
@@ -247,6 +248,7 @@ void setupASIO(char* asioDriverName) {
                     {
                         while (!asioDriverInfo.stopped && liveData.streaming)
                         {
+
                             QThread::msleep(250);
                         }
                         asioDriverInfo.stopped = true;

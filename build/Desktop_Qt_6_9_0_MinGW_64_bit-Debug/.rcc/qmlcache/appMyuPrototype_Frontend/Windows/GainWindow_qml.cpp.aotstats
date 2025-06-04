@@ -6,7 +6,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 3118,
+                        "durationMicroseconds": 5435,
                         "errorMessage": "",
                         "functionName": "color",
                         "line": 15
@@ -14,7 +14,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 23,
-                        "durationMicroseconds": 60,
+                        "durationMicroseconds": 98,
                         "errorMessage": "",
                         "functionName": "fill",
                         "line": 14
@@ -22,7 +22,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 28,
-                        "durationMicroseconds": 193,
+                        "durationMicroseconds": 259,
                         "errorMessage": "",
                         "functionName": "onCompleted",
                         "line": 17
@@ -30,7 +30,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 16,
-                        "durationMicroseconds": 32,
+                        "durationMicroseconds": 57,
                         "errorMessage": "Cannot access value for name initGain",
                         "functionName": "value",
                         "line": 22
@@ -38,7 +38,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 18,
-                        "durationMicroseconds": 36,
+                        "durationMicroseconds": 63,
                         "errorMessage": "Cannot access value for name gainLayer",
                         "functionName": "onMoved",
                         "line": 23
@@ -46,7 +46,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 15,
-                        "durationMicroseconds": 22,
+                        "durationMicroseconds": 33,
                         "errorMessage": "Cannot access value for name minGain",
                         "functionName": "from",
                         "line": 31
@@ -54,7 +54,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 13,
-                        "durationMicroseconds": 25,
+                        "durationMicroseconds": 32,
                         "errorMessage": "Cannot access value for name maxGain",
                         "functionName": "to",
                         "line": 32
@@ -62,7 +62,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 19,
-                        "durationMicroseconds": 107,
+                        "durationMicroseconds": 175,
                         "errorMessage": "Cannot load property value from (component in C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/Frontend/Windows/GainWindow.qml)::parent with type QQuickItem.",
                         "functionName": "text",
                         "line": 27
@@ -70,7 +70,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 243,
+                        "durationMicroseconds": 328,
                         "errorMessage": "",
                         "functionName": "x",
                         "line": 28
@@ -78,7 +78,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 16,
-                        "durationMicroseconds": 234,
+                        "durationMicroseconds": 316,
                         "errorMessage": "",
                         "functionName": "y",
                         "line": 29

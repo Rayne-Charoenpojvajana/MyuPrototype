@@ -4,7 +4,7 @@
 void ClickLayer::transform(std::vector<float> &input) {
     for(int j = 0; j < input.size(); j++) {
         if (cursor < wavFile->data.size()) {
-            input[j] += wavFile->data[cursor];
+            input[j] += gain * wavFile->data[cursor];
             cursor++;
         }
         count++;
@@ -33,7 +33,6 @@ void ClickLayer::setupUI()  {
 void ClickLayer::setBPM(float bpm) {
     this->bpm = bpm;
     interval = (60 / this->bpm) * wavFile->format.sampleRate();
-    qDebug() << interval;
 }
 
 void ClickLayer::setAccent(int accent) {

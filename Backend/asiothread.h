@@ -14,14 +14,12 @@ public:
     QStringList getDriverList();
     void closeThread();
     explicit ASIOThread(QObject* = nullptr);
-
+    void setSelectedDriver(QString);
 private:
     Q_OBJECT
-
+    QString selectedDriver;
     bool closed = false;
     void run() override;
-signals:
-    void requestSelectedDriver(char**, bool*);
 };
 
 #endif // ASIOTHREAD_H

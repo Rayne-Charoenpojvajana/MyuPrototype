@@ -102,7 +102,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 40,
-                        "durationMicroseconds": 2770,
+                        "durationMicroseconds": 3242,
                         "errorMessage": "Cannot find name currentIndex",
                         "functionName": "onCompleted",
                         "line": 44
@@ -126,7 +126,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 31,
-                        "durationMicroseconds": 804,
+                        "durationMicroseconds": 767,
                         "errorMessage": "Cannot access value for name index",
                         "functionName": "text",
                         "line": 79
@@ -134,7 +134,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 46,
-                        "durationMicroseconds": 297,
+                        "durationMicroseconds": 333,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "horizontalAlignment",
                         "line": 80
@@ -142,7 +142,7 @@
                     {
                         "codegenSuccessfull": false,
                         "column": 32,
-                        "durationMicroseconds": 283,
+                        "durationMicroseconds": 330,
                         "errorMessage": "Cannot access value for name Text",
                         "functionName": "elide",
                         "line": 81
@@ -214,7 +214,7 @@
                     {
                         "codegenSuccessfull": true,
                         "column": 22,
-                        "durationMicroseconds": 133,
+                        "durationMicroseconds": 148,
                         "errorMessage": "",
                         "functionName": "onTriggered",
                         "line": 144

@@ -1,0 +1,122 @@
+{
+	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
+	"BUILD_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay/sync-delay_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay",
+	"CMAKE_EXECUTABLE" : "C:/Users/User/Documents/NewFolder/Qt/Tools/CMake_64/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/CMakeLists.txt",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/.qtc/package-manager/auto-setup.cmake",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/cmake/templates/projectversion.h.in"
+	],
+	"CMAKE_SOURCE_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay/sync-delay_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "sync-delay_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/sync.h",
+			"MU",
+			"CAWN4ZDDTK/moc_sync.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/syncdelaycontroller.h",
+			"MU",
+			"CAWN4ZDDTK/moc_syncdelaycontroller.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/syncdelayids.h",
+			"MU",
+			"CAWN4ZDDTK/moc_syncdelayids.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/syncdelayprocessor.h",
+			"MU",
+			"CAWN4ZDDTK/moc_syncdelayprocessor.cpp",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/syncdelayversion.h",
+			"MU",
+			"CAWN4ZDDTK/moc_syncdelayversion.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay/sync-delay_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay/sync-delay_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "WIN32", "_CRT_SECURE_NO_WARNINGS", "_UNICODE", "sync_delay_EXPORTS" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk",
+		"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : [],
+	"MOC_PREDEFS_FILE" : "",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay/CMakeFiles/sync-delay_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "C:/Users/User/Documents/NewFolder/Qt/6.8.3/msvc2022_64/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 8,
+	"SETTINGS_FILE" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug/vst3sdk/public.sdk/samples/vst/syncdelay/CMakeFiles/sync-delay_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/syncdelaycontroller.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/syncdelayfactory.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/samples/vst/syncdelay/source/syncdelayprocessor.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/vst3sdk/public.sdk/source/main/dllmain.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-4f6cf26f3063348a7739.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "ASIO",
+					"jsonFile" : "directory-ASIO-Debug-4041505872531f97c58d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ASIO",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "MyuPrototype",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "ASIO::@d87dbbe90bf50de5617c",
+					"jsonFile" : "target-ASIO-Debug-051a23f636b3ca6fe267.json",
+					"name" : "ASIO",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ASIO_autogen::@d87dbbe90bf50de5617c",
+					"jsonFile" : "target-ASIO_autogen-Debug-5c31d164d0c88f92e6b5.json",
+					"name" : "ASIO_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ASIO_autogen_timestamp_deps::@d87dbbe90bf50de5617c",
+					"jsonFile" : "target-ASIO_autogen_timestamp_deps-Debug-a2e8946dc98bea49a4e1.json",
+					"name" : "ASIO_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-79cc0664ac681e2b2b66.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-0fe2514cfc3fc162d8ef.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-db40dd4f3fe0353d3fdd.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-cce6867e3057dd9eb534.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-b78df3e56d214db13d94.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype-Debug-7a540d52cf61b782409c.json",
+					"name" : "appMyuPrototype",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_autogen-Debug-d56c2c2ebbb77e813c05.json",
+					"name" : "appMyuPrototype_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_autogen_timestamp_deps-Debug-8f758ad6c97bbfcb254f.json",
+					"name" : "appMyuPrototype_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_copy_qml-Debug-782fe0c77c62cfd6be9e.json",
+					"name" : "appMyuPrototype_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_copy_res-Debug-019a1aac681af575ef7b.json",
+					"name" : "appMyuPrototype_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_qmlimportscan-Debug-ec06374956aa73cbb105.json",
+					"name" : "appMyuPrototype_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_qmllint-Debug-0b1e07cf9b33d0c6fcf8.json",
+					"name" : "appMyuPrototype_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_qmllint_json-Debug-52e5636341bffbdbc3b4.json",
+					"name" : "appMyuPrototype_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_qmllint_module-Debug-ae7cc003e64051af74a4.json",
+					"name" : "appMyuPrototype_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appMyuPrototype_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appMyuPrototype_qmltyperegistration-Debug-a54e47082b1137b01bd7.json",
+					"name" : "appMyuPrototype_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appMyuPrototype_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appMyuPrototype_aotstats_target-Debug-1a364e60bbf7344ebc3c.json",
+					"name" : "module_appMyuPrototype_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/build/Desktop_Qt_6_8_3_MSVC2022_64bit-Debug",
+		"source" : "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

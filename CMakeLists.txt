@@ -74,6 +74,12 @@ target_include_directories(appMyuPrototype PUBLIC
                           "${PROJECT_SOURCE_DIR}/ASIO"
                           )
 
+# add_subdirectory(vst3sdk)
+# target_link_libraries(appMyuPrototype PUBLIC vst3sdk)
+# target_include_directories(appMyuPrototype PUBLIC
+#                             "${PROJECT_BINARY_DIR}"
+#                             "${PROJECT_SOURCE_DIR}/vst3sdk"
+#                             )
 
 
 

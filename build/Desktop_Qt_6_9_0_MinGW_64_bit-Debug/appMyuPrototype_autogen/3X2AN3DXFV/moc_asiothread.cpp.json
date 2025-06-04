@@ -5,22 +5,6 @@
             "lineNumber": 9,
             "object": true,
             "qualifiedClassName": "ASIOThread",
-            "signals": [
-                {
-                    "access": "public",
-                    "arguments": [
-                        {
-                            "type": "char**"
-                        },
-                        {
-                            "type": "bool*"
-                        }
-                    ],
-                    "index": 0,
-                    "name": "requestSelectedDriver",
-                    "returnType": "void"
-                }
-            ],
             "superClasses": [
                 {
                     "access": "public",

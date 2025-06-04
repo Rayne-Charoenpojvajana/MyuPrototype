@@ -1,0 +1,13 @@
+module MyuPrototype
+typeinfo appMyuPrototype.qmltypes
+prefer :/qt/qml/MyuPrototype/
+singleton Style 1.0 Frontend/Style.qml
+ToolBarButton 1.0 Frontend/Components/ToolBarButton.qml
+MainWindow 1.0 Frontend/Windows/MainWindow.qml
+MainWindowFooter 1.0 Frontend/Windows/MainWindowFooter.qml
+MainWindowHeader 1.0 Frontend/Windows/MainWindowHeader.qml
+SettingsWindow 1.0 Frontend/Windows/SettingsWindow.qml
+LayerWindow 1.0 Frontend/Windows/LayerWindow.qml
+ClickWindow 1.0 Frontend/Windows/ClickWindow.qml
+GainWindow 1.0 Frontend/Windows/GainWindow.qml
+

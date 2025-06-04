@@ -6,6 +6,10 @@ ASIOThread::ASIOThread(QObject *parent)
 {
 }
 
+void ASIOThread::setSelectedDriver(QString selectedDriver) {
+    this->selectedDriver = selectedDriver;
+}
+
 bool ASIOThread::getStreaming() {
     return liveData.streaming;
 }
@@ -20,11 +24,11 @@ QStringList ASIOThread::getDriverList() {
         return list;
     }
     long numDev = helperDrivers.asioGetNumDev();
-    char* drivers[numDev];
+    std::vector<char*> drivers(numDev);
     for (int i = 0; i < numDev; i++) {
         drivers[i] = new char[configs.maxDriverLength];
     }
-    helperDrivers.getDriverNames(drivers, numDev);
+    helperDrivers.getDriverNames(drivers.data(), numDev);
     for (int i = 0; i < numDev; i++) {
         list.append(drivers[i]);
         delete drivers[i];
@@ -36,15 +40,12 @@ void ASIOThread::closeThread() {
     closed = true;
 }
 
+
 void ASIOThread::run() {
     while(!closed) {
         msleep(500);
-        char* selectedDriver = (char*) "";
-        bool await = true;
-        emit requestSelectedDriver(&selectedDriver, &await);
-        while(await && !closed);
         liveData.streaming = true;
-        setupASIO(selectedDriver);
+        setupASIO(selectedDriver.toUtf8().data());
         liveData.streaming = false;
     }
 }

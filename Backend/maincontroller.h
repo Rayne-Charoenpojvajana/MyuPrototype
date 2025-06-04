@@ -38,8 +38,6 @@ public:
     Q_INVOKABLE void setOutputRoute(int, int);
 public slots:
     void qmlInit();
-    void sendSelectedDriver(char**, bool*);
-
 };
 
 #endif // MAINCONTROLLER_H

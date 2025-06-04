@@ -1,0 +1,384 @@
+[
+    {
+        "classes": [
+            {
+                "className": "ASIOThread",
+                "lineNumber": 9,
+                "object": true,
+                "qualifiedClassName": "ASIOThread",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QThread"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "asiothread.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "auto"
+                    },
+                    {
+                        "name": "QML.Singleton",
+                        "value": "true"
+                    }
+                ],
+                "className": "MainController",
+                "lineNumber": 9,
+                "methods": [
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "name": "getDriverList",
+                        "returnType": "QStringList"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "setSelectedDriver",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "name": "getMonitor",
+                        "returnType": "QList<float>"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "name": "getOutput",
+                        "returnType": "QList<float>"
+                    },
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "name": "getBufferSizes",
+                        "returnType": "QList<long>"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "long"
+                            }
+                        ],
+                        "index": 6,
+                        "name": "setBufferSize",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "name": "getSampleRates",
+                        "returnType": "QList<long>"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "long"
+                            }
+                        ],
+                        "index": 8,
+                        "name": "setSampleRate",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "name": "addLayer",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 10,
+                        "name": "getLayerPaths",
+                        "returnType": "QStringList"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "index": 11,
+                        "name": "swapLayers",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "index": 12,
+                        "name": "removeLayer",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "index": 13,
+                        "name": "toggleLayerUI",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 14,
+                        "name": "setLayerEnabled",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 15,
+                        "name": "setLayerProcess",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "bool"
+                            }
+                        ],
+                        "index": 16,
+                        "name": "setLayerOutput",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "index": 17,
+                        "name": "setInputRoute",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            },
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "index": 18,
+                        "name": "setOutputRoute",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "MainController",
+                "slots": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "name": "qmlInit",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "maincontroller.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "auto"
+                    }
+                ],
+                "className": "ClickLayer",
+                "lineNumber": 9,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "float"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "setBPM",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "int"
+                            }
+                        ],
+                        "index": 1,
+                        "name": "setAccent",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "float"
+                            }
+                        ],
+                        "index": 2,
+                        "name": "setGain",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "ClickLayer",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "Layer"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "clicklayer.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "classInfos": [
+                    {
+                        "name": "QML.Element",
+                        "value": "auto"
+                    }
+                ],
+                "className": "GainLayer",
+                "lineNumber": 7,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "type": "float"
+                            }
+                        ],
+                        "index": 0,
+                        "name": "setGain",
+                        "returnType": "void"
+                    }
+                ],
+                "object": true,
+                "qualifiedClassName": "GainLayer",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "Layer"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "gainlayer.h",
+        "outputRevision": 68
+    },
+    {
+        "classes": [
+            {
+                "className": "Layer",
+                "lineNumber": 9,
+                "object": true,
+                "qualifiedClassName": "Layer",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "layer.h",
+        "outputRevision": 68
+    }
+]

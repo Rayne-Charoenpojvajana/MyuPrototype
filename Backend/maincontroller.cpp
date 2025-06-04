@@ -19,7 +19,8 @@ QStringList MainController::getDriverList() {
 }
 
 void MainController::setSelectedDriver(QString driver) {
-    this->selectedDriver = driver;
+    // this->selectedDriver = driver;
+    asioThread.setSelectedDriver(driver);
     if (asioThread.getStreaming()) {
         asioThread.setStreaming(false);
     }
@@ -92,13 +93,7 @@ void MainController::addLayer(int channelNum, QString path) {
 }
 
 void MainController::qmlInit() {
-    connect(&asioThread, &ASIOThread::requestSelectedDriver, this, &MainController::sendSelectedDriver);
     asioThread.start();
-}
-
-void MainController::sendSelectedDriver(char **selectedDriver, bool *await) {
-    *selectedDriver = this->selectedDriver.toUtf8().data();
-    *await = false;
 }
 
 QStringList MainController::getLayerPaths(QString src) {
