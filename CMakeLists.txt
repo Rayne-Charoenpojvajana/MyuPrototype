@@ -41,6 +41,8 @@ qt_add_qml_module(appMyuPrototype
         SOURCES Backend/livedata.h Backend/livedata.cpp
         SOURCES Backend/Layer/gainlayer.h Backend/Layer/gainlayer.cpp
         QML_FILES Frontend/Windows/GainWindow.qml
+        SOURCES
+        SOURCES Backend/Layer/vst3layer.h Backend/Layer/vst3layer.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -75,10 +77,6 @@ target_include_directories(appMyuPrototype PUBLIC
 
 
 add_subdirectory(vst3sdk)
-set(VST_INCLUDE ${CMAKE_CURRENT_SOURCE_DIR}/vst3sdk CACHE INTERNAL "VST SDK includes" FORCE)
-set(VST_LIBS "base;sdk" CACHE INTERNAL "VST SDK libs" FORCE)
-set(VST_GUI_LIB "vstgui" CACHE INTERNAL "VSG GUI lib" FORCE)
-set(VST_GUI_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/vst3sdk/vstgui4" CACHE INTERNAL "VST GUI includes" FORCE)
 target_link_libraries(appMyuPrototype PUBLIC sdk_hosting)
 target_include_directories(appMyuPrototype PUBLIC
                             "${PROJECT_BINARY_DIR}"
@@ -86,6 +84,20 @@ target_include_directories(appMyuPrototype PUBLIC
                             )
 
 
+
+
+target_sources(appMyuPrototype PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/vst3sdk/public.sdk/source/vst/hosting/module_win32.cpp"
+)
+target_sources(appMyuPrototype PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/vst3sdk/public.sdk/source/vst/hosting/plugprovider.cpp"
+)
+target_sources(appMyuPrototype PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/vst3sdk/public.sdk/source/vst/hosting/plugprovider.h"
+)
 
 target_compile_definitions(appMyuPrototype PRIVATE NOMINMAX)
 
