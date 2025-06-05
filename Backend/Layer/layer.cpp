@@ -30,8 +30,9 @@ void Layer::setEnabled(bool newEnabled)
     enabled = newEnabled;
 }
 
-Layer::~Layer() {
-    view.release();
+void Layer::close() {
+    view->readyToClose = true;
+    view->close();
 }
 
 Layer::Layer() {

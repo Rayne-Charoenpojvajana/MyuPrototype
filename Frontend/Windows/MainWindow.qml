@@ -11,4 +11,7 @@ ApplicationWindow {
     color: Style.mainWindowBackgroundColor
     header: MainWindowHeader {}
     footer: MainWindowFooter {}
+    onClosing: (close) => {
+        MainController.close()
+    }
 }

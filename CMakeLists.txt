@@ -43,7 +43,7 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES Frontend/Windows/GainWindow.qml
         SOURCES
         SOURCES Backend/Layer/vst3layer.h Backend/Layer/vst3layer.cpp
-        QML_FILES Frontend/Windows/VST3Window.qml
+        QML_FILES
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

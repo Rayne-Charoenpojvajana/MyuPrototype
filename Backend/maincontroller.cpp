@@ -8,11 +8,7 @@ MainController::MainController() {
 }
 
 MainController::~MainController() {
-    for(auto& layers : configs.layers) {
-        for(auto& layer : layers) {
-            layer.release();
-        }
-    }
+
 }
 
 QStringList MainController::getDrivers() {
@@ -76,10 +72,17 @@ void MainController::addLayer(int channelNum, QString path) {
     }
     layer->setInfo(channelNum, path);
     layer->setupUI();
-    QVariantMap map;
     configs.layers[channelNum].push_back(std::move(layer));
     preUpdateLayers(channelNum);
     asioRunner.run();
+}
+
+void MainController::close() {
+    for(auto& layers : configs.layers) {
+        for(auto& layer : layers) {
+            layer->close();
+        }
+    }
 }
 
 void MainController::preUpdateLayers(int channelNum) {

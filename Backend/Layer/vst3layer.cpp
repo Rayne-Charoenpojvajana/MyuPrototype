@@ -39,7 +39,6 @@ void VST3Layer::setupUI()
     plugView->getSize(&viewRect);
     plugView->isPlatformTypeSupported(kPlatformTypeHWND);
     view = std::make_unique<NewQuickView>();
-    view->setSource(QUrl("MyuPrototype/Frontend/Windows/VST3Window.qml"));
     view->setWidth(viewRect.getWidth());
     view->setHeight(viewRect.getHeight());
     view->setMaximumWidth(viewRect.getWidth());

@@ -7,13 +7,16 @@
 #include <QQuickView>
 
 class NewQuickView: public QQuickView {
+public:
+    bool readyToClose = false;
 protected:
     bool event(QEvent *event) override
     {
-        if (event->type() == QEvent::Close) {
+        if (event->type() == QEvent::Close && !readyToClose) {
             setVisible(false);
+            return false;
         }
-        return false;
+        return QQuickView::event(event);
     }
 };
 
@@ -32,7 +35,7 @@ protected:
 public:
     QMutex mutex;
     Layer();
-    ~Layer();
+    void close();
     void setInfo(int channelNum, QString path);
     virtual void transform(std::vector<float>&) = 0;
     virtual void setupUI() = 0;
