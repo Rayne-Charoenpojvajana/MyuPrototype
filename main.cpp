@@ -9,8 +9,8 @@
 
 
 
-#include "Backend/Layer/vst3layer.h";
-static VST3Layer layer;
+
+
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
     app.setWindowIcon(QIcon(":/logo.png"));
@@ -22,22 +22,5 @@ int main(int argc, char *argv[]) {
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
     engine.loadFromModule("MyuPrototype", "MainWindow");
-    layer.setupUI();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     return app.exec();
 }

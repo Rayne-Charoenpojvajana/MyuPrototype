@@ -6,6 +6,7 @@
 #include <QtQml/qqmlregistration.h>
 #include <QStringListModel>
 #include <QDirIterator>
+#include "Backend/Layer/vst3layer.h";
 class MainController : public QObject
 {
 private:

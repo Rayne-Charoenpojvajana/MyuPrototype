@@ -86,6 +86,10 @@ void MainController::addLayer(int channelNum, QString path) {
         layer = std::make_unique<GainLayer>();
     } else if (path.startsWith("Clicks/")) {
         layer = std::make_unique<ClickLayer>();
+    } else {
+        layer = std::make_unique<VST3Layer>();
+        layer->setEnabled(true);
+        layer->setOutput(true);
     }
     layer->setInfo(channelNum, path);
     layer->setupUI();
@@ -93,6 +97,7 @@ void MainController::addLayer(int channelNum, QString path) {
 }
 
 void MainController::qmlInit() {
+    addLayer(1, "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/VST3/Archetype Plini X.vst3");
     asioThread.start();
 }
 
