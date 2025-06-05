@@ -66,12 +66,7 @@ ToolBar {
     Timer {
         repeat: true; interval: 20; running: true
         onTriggered: {
-            const list = MainController.getMonitor()
-            p0.value = Math.abs(list[0])
-            p1.value = Math.abs(list[1])
-            const out = MainController.getOutput()
-            o0.value = Math.abs(out[0])
-            o1.value = Math.abs(out[1])
+
         }
     }
 }

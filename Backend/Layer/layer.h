@@ -15,11 +15,11 @@ private:
     bool process = false;
     bool output = false;
     bool enabled = false;
-    int inputSel;
-    QMutex mutex;
+
 protected:
     bool uiVisible = false;
 public:
+    QMutex mutex;
     Layer();
     void setInfo(int channelNum, QString path);
     virtual void transform(std::vector<float>&) = 0;

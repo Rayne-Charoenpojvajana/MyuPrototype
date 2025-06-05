@@ -21,6 +21,7 @@ void VST3Layer::setupUI()
     PluginContextFactory::instance().setPluginContext(context);
     std::string path = getPath().toStdString();
     std::string error;
+    std::string src = QCoreApplication::applicationDirPath().toStdString() + "/" + getPath().toStdString();
     module = VST3::Hosting::Module::create(path, error);
     PluginFactory factory = module->getFactory();
     for (auto &classInfo : factory.classInfos()) {

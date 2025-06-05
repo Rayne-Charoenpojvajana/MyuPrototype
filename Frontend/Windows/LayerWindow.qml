@@ -24,49 +24,86 @@ ApplicationWindow {
                 id: switchGroup2
             }
             CheckBox {
-                checked: channelNum === 0
+                id: in0
                 ButtonGroup.group: switchGroup
                 onClicked: {
                     MainController.setInputRoute(channelNum, 0)
                 }
             }
             CheckBox {
-                checked: channelNum === 1
+                id: in1
                 ButtonGroup.group: switchGroup
                 onClicked: {
                     MainController.setInputRoute(channelNum, 1)
                 }
             }
+            Component.onCompleted: {
+                const res = MainController.getInputRoute(channelNum)
+                in0.checked = res === 0
+                in1.checked = res === 1;
+            }
+
             ComboBox {
                 model: listModel
-                textRole: "path"
-                id: box
+                Layout.preferredWidth: 200
+                textRole: "name"
+                valueRole: "path"
+                id: control
+                delegate: ItemDelegate {
+                    required property var model
+                    required property int index
+                    width: ListView.view.width
+                    palette.text: control.palette.text
+                    palette.highlightedText: control.palette.highlightedText
+                    font.weight: control.currentIndex === index ? Font.DemiBold : Font.Normal
+                    highlighted: control.highlightedIndex === index
+                    hoverEnabled: control.hoverEnabled
+                    text: model[control.textRole]
+                }
                 Component.onCompleted: {
-                    const list1 = MainController.getLayerPaths("Gains")
-                    for (const elem1 of list1) {
-                        listModel.append({path: elem1})
+                    const list = MainController.getLayerPaths()
+                    for (const elem of list) {
+                        const shortelem = elem.substring(elem.lastIndexOf("/"))
+                        listModel.append({name: shortelem, path: elem})
                     }
-                    const list2 = MainController.getLayerPaths("Clicks")
-                    for (const elem2 of list2) {
-                        listModel.append({path: elem2})
-                    }
-                    currentIndex = 0
                 }
             }
             Button {
                 text: qsTr("+")
                 Layout.maximumWidth: 30
                 onClicked: {
-                    MainController.addLayer(channelNum, box.currentText)
-                    layerModel.append({path: box.currentText})
+                    if (control.currentValue === "") {
+                        return
+                    }
+                    MainController.addLayer(channelNum, control.currentValue)
+                }
+            }
+            Connections {
+                target: MainController
+                function onUpdateLayers(map) {
+                    const channel = map["channel"]
+                    if (channelNum !== channel) {
+                        return
+                    }
+                    const paths = map["paths"]
+                    const isEnables = map["isEnables"]
+                    const isProcesses = map["isProcesses"]
+                    const isOutputs = map["isOutputs"]
+                    layerModel.clear()
+                    for (let i = 0; i < paths.length; i++) {
+                        layerModel.append({
+                                              path: paths[i],
+                                              isEnable: isEnables[i],
+                                              isProcess: isProcesses[i],
+                                              isOutput: isOutputs[i]
+                                          })
+                    }
                 }
             }
         }
         ListView {
             Layout.preferredHeight: 200
             Layout.preferredWidth: 200
-            ButtonGroup { id: group1}
-            ButtonGroup { id: group2}
             model: ListModel {
                 id: layerModel
             }
@@ -78,51 +115,42 @@ ApplicationWindow {
                     contentItem: Text {
                         text: index + qsTr("->") + qsTr(path)
                         horizontalAlignment: Text.AlignLeft
-                        elide: Text.ElideRight
+                        elide: Text.ElideLeft
                     }
                     onClicked: {
                         MainController.toggleLayerUI(channelNum, index)
                     }
                 }
                 CheckBox {
-                    ButtonGroup.group: group1
+                    checked: isEnable
+                    onToggled: {
+                        MainController.setLayerEnabled(channelNum, index, checked)
+                    }
+                }
+                CheckBox {
+                    checked: isProcess
                     onToggled: {
                         MainController.setLayerProcess(channelNum, index, checked)
                     }
                 }
                 CheckBox {
-                    ButtonGroup.group: group2
+                    checked: isOutput
                     onToggled: {
                         MainController.setLayerOutput(channelNum, index, checked)
-                    }
-
-
-                }
-                CheckBox {
-                    onToggled: {
-                        MainController.setLayerEnabled(channelNum, index, checked)
                     }
                 }
                 Button {
                     text: qsTr("↓")
                     Layout.maximumWidth: 30
                     onClicked: {
-                        if (index >= layerModel.count - 1) {
-                            return
-                        }
                         MainController.swapLayers(channelNum, index, index+1)
-                        layerModel.move(index, Math.min(layerModel.count-1, index+1), 1)
                     }
                 }
                 Button {
                     text: qsTr("↑")
                     Layout.maximumWidth: 30
                     onClicked: {
-                        if (index <= 0) {
-                            return
-                        }
                         MainController.swapLayers(channelNum, index, index-1)
-                        layerModel.move(index, Math.max(0, index-1), 1)
                     }
                 }
                 Button {
@@ -130,19 +158,15 @@ ApplicationWindow {
                     Layout.maximumWidth: 30
                     onClicked: {
                         MainController.removeLayer(channelNum, index)
-                        layerModel.remove(index, 1)
                     }
                 }
                 required property string path
                 required property int index
+                required property bool isEnable
+                required property bool isProcess
+                required property bool isOutput
             }
         }
 
-    }
-    Timer {
-        repeat: true; interval: 100; running: true
-        onTriggered: {
-
-        }
     }
 }

@@ -4,36 +4,25 @@
 
 
 MainController::MainController() {
-
+    asioRunner.run();
 }
 
 MainController::~MainController() {
-    asioThread.closeThread();
-    asioThread.setStreaming(false);
-    asioThread.quit();
-    QThread::msleep(1000);
+
 }
 
-QStringList MainController::getDriverList() {
-    return asioThread.getDriverList();
+QStringList MainController::getDrivers() {
+    return asioRunner.getDrivers();
 }
 
 void MainController::setSelectedDriver(QString driver) {
-    // this->selectedDriver = driver;
-    asioThread.setSelectedDriver(driver);
-    if (asioThread.getStreaming()) {
-        asioThread.setStreaming(false);
-    }
+    configs.selectedDriver = driver;
 }
 
 QList<float> MainController::getMonitor() {
     QList<float> list;
     for(auto& input : liveData.inputs) {
-        if (!asioThread.getStreaming() || input.empty()) {
-            list.append(0);
-            continue;
-        }
-        list.append(input[0]);
+        list.append(input.front());
     }
     return list;
 }
@@ -41,11 +30,7 @@ QList<float> MainController::getMonitor() {
 QList<float> MainController::getOutput() {
     QList<float> list;
     for(auto& output : liveData.outputs) {
-        if (!asioThread.getStreaming() || output.empty()) {
-            list.append(0);
-            continue;
-        }
-        list.append(output[0]);
+        list.append(output.front());
     }
     return list;
 }
@@ -60,9 +45,6 @@ QList<long> MainController::getBufferSizes() {
 
 void MainController::setBufferSize(long size) {
     configs.selectedBufferSize = size;
-    if (asioThread.getStreaming()) {
-        asioThread.setStreaming(false);
-    }
 }
 
 QList<long> MainController::getSampleRates() {
@@ -75,48 +57,84 @@ QList<long> MainController::getSampleRates() {
 
 void MainController::setSampleRate(long sampleRate) {
     configs.selectedSampleRate = sampleRate;
-    if (asioThread.getStreaming()) {
-        asioThread.setStreaming(false);
-    }
 }
 
 void MainController::addLayer(int channelNum, QString path) {
+    asioRunner.halt();
     std::unique_ptr<Layer> layer;
-    if (path.startsWith("Gains/")) {
+    QString root = QCoreApplication::applicationDirPath();
+    if (path.startsWith(root + "/Gains/")) {
         layer = std::make_unique<GainLayer>();
-    } else if (path.startsWith("Clicks/")) {
+    } else if (path.startsWith(root + "/Clicks/")) {
         layer = std::make_unique<ClickLayer>();
-    } else {
+    } else if (path.startsWith(root + "/VST3/")){
         layer = std::make_unique<VST3Layer>();
-        layer->setEnabled(true);
-        layer->setOutput(true);
     }
     layer->setInfo(channelNum, path);
     layer->setupUI();
+    QVariantMap map;
     configs.layers[channelNum].push_back(std::move(layer));
+    preUpdateLayers(channelNum);
+    asioRunner.run();
 }
 
-void MainController::qmlInit() {
-    addLayer(1, "C:/Users/User/Documents/NewFolder/MyuPrototype/MyuPrototype/VST3/Archetype Plini X.vst3");
-    asioThread.start();
-}
-
-QStringList MainController::getLayerPaths(QString src) {
-    if (!QDir(src).exists()) {
-        QDir().mkdir(src);
+void MainController::preUpdateLayers(int channelNum) {
+    QVariantMap map;
+    map["channel"] = channelNum;
+    QList<QString> paths;
+    QList<QVariant> isEnables;
+    QList<QVariant> isProcesses;
+    QList<QVariant> isOutputs;
+    for (auto &layer : configs.layers[channelNum]) {
+        paths.append(layer->getPath());
+        isEnables.append(layer->getEnabled());
+        isProcesses.append(layer->getProcess());
+        isOutputs.append(layer->getOutput());
     }
+    map["paths"] = paths;
+    map["isEnables"] = isEnables;
+    map["isProcesses"] = isProcesses;
+    map["isOutputs"] = isOutputs;
+    emit updateLayers(map);
+}
+
+
+
+
+
+QStringList MainController::getLayerPaths() {
     QStringList list;
-    QDirIterator it(QCoreApplication::applicationDirPath() + "/" + src, QDir::Files, QDirIterator::Subdirectories);
-    QDir root(QCoreApplication::applicationDirPath());
-    while (it.hasNext()) {
-        list.append(root.relativeFilePath(it.next()));
+    QStringList srcs = {"/Gains", "/Clicks", "/VST3"};
+    QString root = QCoreApplication::applicationDirPath();
+    for (QString str : srcs) {
+        QString src = root + str;
+        if (!QDir(src).exists()) {
+            continue;
+        }
+        QDirIterator it(src, QDir::Files);
+        while (it.hasNext()) {
+            QString path = it.next();
+            list.append(path);
+        }
     }
     return list;
 }
 
 void MainController::swapLayers(int channelNum, int idx1, int idx2) {
+    asioRunner.halt();
+    if (idx1 == idx2) {
+        return;
+    }
     std::vector<std::unique_ptr<Layer>> &vect = configs.layers[channelNum];
+    if (idx1 >= vect.size() || idx2 >= vect.size()) {
+        return;
+    }
+    if (idx1 < 0 || idx2 < 0) {
+        return;
+    }
     std::swap(vect[idx1], vect[idx2]);
+    preUpdateLayers(channelNum);
+    asioRunner.run();
 }
 
 void MainController::removeLayer(int channelNum, int idx) {
@@ -130,39 +148,73 @@ void MainController::toggleLayerUI(int channelNum, int idx) {
 }
 
 void MainController::setLayerEnabled(int channelNum, int idx, bool val) {
+    asioRunner.halt();
     std::unique_ptr<Layer> &layer = configs.layers[channelNum][idx];
     layer->setEnabled(val);
+    preUpdateLayers(channelNum);
+    asioRunner.run();
 }
 
 void MainController::setLayerOutput(int channelNum, int idx, bool val) {
+    asioRunner.halt();
     for(int i = 0; i < configs.layers[channelNum].size(); i++) {
         std::unique_ptr<Layer> &layer = configs.layers[channelNum][i];
         if (i == idx) {
            layer->setOutput(val);
-        } else {
+        } else if (val == true) {
             layer->setOutput(!val);
+        } else {
+            layer->setProcess(val);
         }
     }
+    preUpdateLayers(channelNum);
+    asioRunner.run();
 }
 
 void MainController::setLayerProcess(int channelNum, int idx, bool val) {
+    asioRunner.halt();
     for(int i = 0; i < configs.layers[channelNum].size(); i++) {
         std::unique_ptr<Layer> &layer = configs.layers[channelNum][i];
         if (i == idx) {
             layer->setProcess(val);
-        } else {
+        } else if (val == true){
             layer->setProcess(!val);
+        } else {
+            layer->setProcess(val);
         }
     }
+    preUpdateLayers(channelNum);
+    asioRunner.run();
 }
 
 void MainController::setInputRoute(int channelNum, int inputNum) {
+    asioRunner.halt();
     configs.inputRoute[channelNum] = inputNum;
+    asioRunner.run();
+}
+
+long MainController::getInputRoute(int channelNum) {
+    return configs.inputRoute[channelNum];
 }
 
 void MainController::setOutputRoute(int channelNum, int outputNum) {
+    asioRunner.halt();
     configs.outputRoute[channelNum] = outputNum;
+    asioRunner.run();
 }
+
+long MainController::getSelectedBuffer() {
+    return configs.selectedBufferSize;
+}
+
+long MainController::getSelectedSampleRate() {
+    return configs.selectedSampleRate;
+}
+
+QString MainController::getSelectedDriver() {
+    return configs.selectedDriver;
+}
+
 
 
 

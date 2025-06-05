@@ -212,54 +212,53 @@ unsigned long get_sys_reference_time()
     return now.msecsSinceStartOfDay();
 }
 
-void setupASIO(char* asioDriverName) {
-
+bool setupASIO(char* asioDriverName) {
     asioDriverInfo = {};
-    if (loadAsioDriver (asioDriverName))
-    {
-        if (ASIOInit (&asioDriverInfo.driverInfo) == ASE_OK)
-        {
-            asioDriverInfo.selectedSampleRate = configs.selectedSampleRate;
-            if (init_asio_static_data (&asioDriverInfo) == 0)
-            {
-                if (configs.selectedBufferSize < asioDriverInfo.minSize) {
-                    asioDriverInfo.selectedBufferSize = std::max({configs.softwareMinBuffer, asioDriverInfo.minSize});
-                } else if (configs.selectedBufferSize > asioDriverInfo.maxSize) {
-                    asioDriverInfo.selectedBufferSize = std::min({configs.softwareMinBuffer, asioDriverInfo.minSize});
-                } else {
-                    asioDriverInfo.selectedBufferSize = configs.selectedBufferSize;
-                }
-                asioCallbacks.bufferSwitch = &bufferSwitch;
-                asioCallbacks.sampleRateDidChange = &sampleRateChanged;
-                asioCallbacks.asioMessage = &asioMessages;
-                asioCallbacks.bufferSwitchTimeInfo = &bufferSwitchTimeInfo;
-                if (create_asio_buffers (&asioDriverInfo) == ASE_OK)
-                {
-                    for(int i = 0; i < liveData.inputs.size(); i++) {
-                        liveData.inputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
-                    }
-                    for(int i = 0; i < liveData.processes.size(); i++) {
-                        liveData.processes[i].assign(asioDriverInfo.selectedBufferSize, 0);
-                    }
-                    for(int i = 0; i < liveData.outputs.size(); i++) {
-                        liveData.outputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
-                    }
-                    if (ASIOStart() == ASE_OK)
-                    {
-                        while (!asioDriverInfo.stopped && liveData.streaming)
-                        {
-
-                            QThread::msleep(250);
-                        }
-                        asioDriverInfo.stopped = true;
-                        ASIOStop();
-                    }
-                    ASIODisposeBuffers();
-                }
-            }
-            ASIOExit();
-        }
+    if (!loadAsioDriver(asioDriverName)) {
+        return false;
+    }
+    if (ASIOInit (&asioDriverInfo.driverInfo) != ASE_OK) {
+        asioDrivers->removeCurrentDriver();
+        return false;
+    }
+    asioDriverInfo.selectedSampleRate = configs.selectedSampleRate;
+    if (init_asio_static_data (&asioDriverInfo) != 0) {
+        ASIOExit();
+        asioDrivers->removeCurrentDriver();
+        return false;
+    }
+    asioDriverInfo.selectedBufferSize = std::clamp(configs.selectedBufferSize, asioDriverInfo.minSize, asioDriverInfo.maxSize);
+    asioCallbacks.bufferSwitch = &bufferSwitch;
+    asioCallbacks.sampleRateDidChange = &sampleRateChanged;
+    asioCallbacks.asioMessage = &asioMessages;
+    asioCallbacks.bufferSwitchTimeInfo = &bufferSwitchTimeInfo;
+    if (create_asio_buffers (&asioDriverInfo) != ASE_OK) {
+        ASIOExit();
+        asioDrivers->removeCurrentDriver();
+        return false;
+    }
+    for(int i = 0; i < liveData.inputs.size(); i++) {
+        liveData.inputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
+    }
+    for(int i = 0; i < liveData.processes.size(); i++) {
+        liveData.processes[i].assign(asioDriverInfo.selectedBufferSize, 0);
+    }
+    for(int i = 0; i < liveData.outputs.size(); i++) {
+        liveData.outputs[i].assign(asioDriverInfo.selectedBufferSize, 0);
+    }
+    if (ASIOStart() != ASE_OK) {
+        ASIODisposeBuffers();
+        ASIOExit();
         asioDrivers->removeCurrentDriver();
     }
+    return true;
+}
+
+
+bool endASIO() {
+    ASIODisposeBuffers();
+    ASIOExit();
+    asioDrivers->removeCurrentDriver();
+    return true;
 }
 

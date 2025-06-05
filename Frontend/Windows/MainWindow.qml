@@ -11,7 +11,4 @@ ApplicationWindow {
     color: Style.mainWindowBackgroundColor
     header: MainWindowHeader {}
     footer: MainWindowFooter {}
-    Component.onCompleted: {
-        MainController.qmlInit();
-    }
 }

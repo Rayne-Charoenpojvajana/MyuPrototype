@@ -77,15 +77,21 @@ private:
     Configs();;
     ~Configs();;
 public:
+    int maxDriverLength = MAX_DRIVERLENGTH;
+    std::array<long, NUM_SAMPLERATES> softwareSampleRates = {192000};
+    long softwareMinBuffer = MIN_BUFFERS;
+    long softwareMaxBuffer = MAX_BUFFERS;
+
+    QString selectedDriver = "Focusrite USB ASIO";
+    long selectedSampleRate = softwareSampleRates.front();
+    long selectedBufferSize = MAX_BUFFERS;
     std::array<std::vector<std::unique_ptr<Layer>>, MAX_OUTPUTS> layers;
     std::array<int, MAX_INPUTS> inputRoute = {0, 1};
     std::array<int, MAX_OUTPUTS> outputRoute = {0, 1};
-    int maxDriverLength = MAX_DRIVERLENGTH;
-    long selectedBufferSize = MIN_BUFFERS;
-    long softwareMinBuffer = MIN_BUFFERS;
-    long softwareMaxBuffer = MAX_BUFFERS;
-    std::array<long, NUM_SAMPLERATES> softwareSampleRates = {192000};
-    long selectedSampleRate = softwareSampleRates[0];
+
+
+
+
     static Configs& getInstance();
 
 };

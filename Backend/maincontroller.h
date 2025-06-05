@@ -1,6 +1,6 @@
 #ifndef MAINCONTROLLER_H
 #define MAINCONTROLLER_H
-#include "asiothread.h"
+#include "asiorunner.h"
 #include <QDebug>
 #include <QObject>
 #include <QtQml/qqmlregistration.h>
@@ -13,13 +13,13 @@ private:
     Q_OBJECT
     QML_ELEMENT
     QML_SINGLETON
-    ASIOThread asioThread;
+    ASIORunner asioRunner;
     QString selectedDriver = "";
 
 public:
     MainController();
     ~MainController();
-    Q_INVOKABLE QStringList getDriverList();
+    Q_INVOKABLE QStringList getDrivers();
     Q_INVOKABLE void setSelectedDriver(QString);
     Q_INVOKABLE QList<float> getMonitor();
     Q_INVOKABLE QList<float> getOutput();
@@ -28,7 +28,7 @@ public:
     Q_INVOKABLE QList<long> getSampleRates();
     Q_INVOKABLE void setSampleRate(long);
     Q_INVOKABLE void addLayer(int, QString);
-    Q_INVOKABLE QStringList getLayerPaths(QString);
+    Q_INVOKABLE QStringList getLayerPaths();
     Q_INVOKABLE void swapLayers(int, int, int);
     Q_INVOKABLE void removeLayer(int, int);
     Q_INVOKABLE void toggleLayerUI(int, int);
@@ -37,8 +37,13 @@ public:
     Q_INVOKABLE void setLayerOutput(int, int, bool);
     Q_INVOKABLE void setInputRoute(int, int);
     Q_INVOKABLE void setOutputRoute(int, int);
-public slots:
-    void qmlInit();
+    Q_INVOKABLE long getSelectedBuffer();
+    Q_INVOKABLE long getSelectedSampleRate();
+    Q_INVOKABLE QString getSelectedDriver();
+    Q_INVOKABLE long getInputRoute(int);
+    void preUpdateLayers(int);
+signals:
+    void updateLayers(QVariantMap map);
 };
 
 #endif // MAINCONTROLLER_H

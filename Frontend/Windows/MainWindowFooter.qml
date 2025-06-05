@@ -16,10 +16,6 @@ ToolBar {
                 settingsWindow.visible = !settingsWindow.visible
             }
         }
-        ToolBarButton {
-            Layout.preferredWidth: Style.toolBarButtonWidth
-            text: qsTr("Free Play")
-        }
         SettingsWindow {
             id: settingsWindow
         }

@@ -45,12 +45,9 @@ ApplicationWindow {
                 }
 
                 Component.onCompleted: {
-                    const sampleRates = MainController.getSampleRates()
-                    for (const rate of sampleRates) {
-                        model.append({text: rate})
-                    }
-                    currentIndex = 0
-                    MainController.setSampleRate(currentText)
+                    const selected = MainController.getSelectedSampleRate()
+                    const list = MainController.getSampleRates()
+                    row.setup(sampleBox, selected, list)
                 }
             }
             ComboBox {
@@ -79,12 +76,27 @@ ApplicationWindow {
                     MainController.setBufferSize(currentText)
                 }
                 Component.onCompleted: {
-                    const bufferSizes = MainController.getBufferSizes()
-                    for (const size of bufferSizes) {
-                        model.append({text: size})
+                    const selected = MainController.getSelectedBuffer()
+                    const list = MainController.getBufferSizes()
+                    row.setup(box, selected, list)
+
+                }
+
+            }
+            function setup(box, selected, list) {
+                let idx = 0
+                let found = false
+                for(const elem of list) {
+                    box.model.append({text: elem})
+                    if (selected === elem) {
+                        found = true
+                        box.currentIndex = idx
                     }
-                    currentIndex = 0
-                    MainController.setBufferSize(currentText)
+                    idx++
+                }
+                if (!found) {
+                    box.currentIndex = 0
+                    MainController.setBufferSize(box.currentText)
                 }
             }
         }
@@ -118,18 +130,12 @@ ApplicationWindow {
                     MainController.setSelectedDriver(currentText);
                 }
                 Timer {
-                    repeat: true; interval: 2000; running: true
+                    repeat: true; interval: 2000; running: true; triggeredOnStart: true
                     onTriggered: {
-                        let drivers = MainController.getDriverList();
-                        if (drivers.length === 0) {
-                            return
-                        }
-                        if (listModel.count > 1) {
-                            listModel.remove(1, listModel.count - 1)
-                        }
-                        for (const driver of drivers) {
-                            listModel.append({text: driver})
-                        }
+                        const selected = MainController.getSelectedDriver()
+                        const list = MainController.getDrivers()
+                        listModel.clear()
+                        row.setup(cbox, selected, list)
                     }
                 }
             }
