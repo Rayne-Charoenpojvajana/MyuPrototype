@@ -23,8 +23,7 @@ private:
     IPtr<IComponent> vstPlug = nullptr;
     IPtr<IAudioProcessor> audioEffect = nullptr;
     IPtr<IEditController> editController = nullptr;
-    IPtr<IPlugView> view = nullptr;
-    QQuickWindow* window;
+    IPtr<IPlugView> plugView = nullptr;
     HostProcessData processData = {};
     ProcessSetup processSetup = {};
     ProcessContext processContext = {};

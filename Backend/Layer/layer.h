@@ -4,7 +4,18 @@
 #include <vector>
 #include <QObject>
 #include <QMutex>
+#include <QQuickView>
 
+class NewQuickView: public QQuickView {
+protected:
+    bool event(QEvent *event) override
+    {
+        if (event->type() == QEvent::Close) {
+            setVisible(false);
+        }
+        return false;
+    }
+};
 
 class Layer : public QObject
 {
@@ -15,12 +26,13 @@ private:
     bool process = false;
     bool output = false;
     bool enabled = false;
-
 protected:
     bool uiVisible = false;
+    std::unique_ptr<NewQuickView> view;
 public:
     QMutex mutex;
     Layer();
+    ~Layer();
     void setInfo(int channelNum, QString path);
     virtual void transform(std::vector<float>&) = 0;
     virtual void setupUI() = 0;
@@ -33,9 +45,6 @@ public:
     void setOutput(bool);
     bool getEnabled();
     void setEnabled(bool);
-    bool getUiVisible() const;
-    void setUiVisible(bool newUiVisible);
-    QMutex& getMutex();
 };
 
 #endif // LAYER_H

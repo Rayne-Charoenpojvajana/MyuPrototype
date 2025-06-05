@@ -9,7 +9,6 @@ class GainLayer : public Layer
 private:
     Q_OBJECT
     QML_ELEMENT
-    std::unique_ptr<QQuickView> view;
     float gain;
 public:
     void transform(std::vector<float>&) override;

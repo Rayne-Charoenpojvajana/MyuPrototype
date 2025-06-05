@@ -34,17 +34,17 @@ void VST3Layer::setupUI()
     editController = plugProvider->getController();
     FUnknownPtr<IProcessContextRequirements> contextRequirements(audioEffect);
     auto flags = contextRequirements->getProcessContextRequirements();
-    view = editController->createView(ViewType::kEditor);
+    plugView = editController->createView(ViewType::kEditor);
     ViewRect viewRect = {};
-    view->getSize(&viewRect);
-    view->isPlatformTypeSupported(kPlatformTypeHWND);
-    window = new QQuickWindow();
-    window->setWidth(viewRect.getWidth());
-    window->setHeight(viewRect.getHeight());
-    window->setMaximumWidth(viewRect.getWidth());
-    window->setMaximumHeight(viewRect.getHeight());
-    view->attached((HWND) window->winId(), Steinberg::kPlatformTypeHWND);
-    window->show();
+    plugView->getSize(&viewRect);
+    plugView->isPlatformTypeSupported(kPlatformTypeHWND);
+    view = std::make_unique<NewQuickView>();
+    view->setSource(QUrl("MyuPrototype/Frontend/Windows/VST3Window.qml"));
+    view->setWidth(viewRect.getWidth());
+    view->setHeight(viewRect.getHeight());
+    view->setMaximumWidth(viewRect.getWidth());
+    view->setMaximumHeight(viewRect.getHeight());
+    plugView->attached((HWND) view->winId(), Steinberg::kPlatformTypeHWND);
     numInAudioBuses = vstPlug->getBusCount(MediaTypes::kAudio, BusDirections::kInput);
     numOutAudioBuses = vstPlug->getBusCount(MediaTypes::kAudio, BusDirections::kOutput);
     numInEventBuses = vstPlug->getBusCount(MediaTypes::kEvent, BusDirections::kInput);
@@ -54,7 +54,6 @@ void VST3Layer::setupUI()
         vstPlug->getBusInfo(kAudio, kInput, i, info);
         inAudioBusInfos.push_back(info);
         vstPlug->activateBus(kAudio, kInput, i, true);
-
         SpeakerArrangement speakerArr;
         audioEffect->getBusArrangement(kInput, i, speakerArr);
         inSpeakerArrs.push_back(speakerArr);
@@ -105,7 +104,7 @@ void VST3Layer::setupUI()
 
 void VST3Layer::toggleUI()
 {
-
+    view->setVisible(true);
 }
 
 VST3Layer::VST3Layer() {}

@@ -8,7 +8,11 @@ MainController::MainController() {
 }
 
 MainController::~MainController() {
-
+    for(auto& layers : configs.layers) {
+        for(auto& layer : layers) {
+            layer.release();
+        }
+    }
 }
 
 QStringList MainController::getDrivers() {
@@ -121,7 +125,6 @@ QStringList MainController::getLayerPaths() {
 }
 
 void MainController::swapLayers(int channelNum, int idx1, int idx2) {
-    asioRunner.halt();
     if (idx1 == idx2) {
         return;
     }
@@ -132,19 +135,26 @@ void MainController::swapLayers(int channelNum, int idx1, int idx2) {
     if (idx1 < 0 || idx2 < 0) {
         return;
     }
+    asioRunner.halt();
     std::swap(vect[idx1], vect[idx2]);
     preUpdateLayers(channelNum);
     asioRunner.run();
 }
 
 void MainController::removeLayer(int channelNum, int idx) {
+    asioRunner.halt();
     std::vector<std::unique_ptr<Layer>> &vect = configs.layers[channelNum];
     vect.erase(configs.layers[channelNum].begin() + idx);
+    preUpdateLayers(channelNum);
+    asioRunner.run();
 }
 
 void MainController::toggleLayerUI(int channelNum, int idx) {
+    asioRunner.halt();
     std::unique_ptr<Layer> &layer = configs.layers[channelNum][idx];
     layer->toggleUI();
+    preUpdateLayers(channelNum);
+    asioRunner.run();
 }
 
 void MainController::setLayerEnabled(int channelNum, int idx, bool val) {

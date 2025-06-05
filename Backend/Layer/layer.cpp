@@ -30,11 +30,9 @@ void Layer::setEnabled(bool newEnabled)
     enabled = newEnabled;
 }
 
-QMutex& Layer::getMutex()
-{
-    return mutex;
+Layer::~Layer() {
+    view.release();
 }
-
 
 Layer::Layer() {
 

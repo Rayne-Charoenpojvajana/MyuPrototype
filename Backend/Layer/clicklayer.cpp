@@ -16,7 +16,7 @@ void ClickLayer::transform(std::vector<float> &input) {
 }
 
 void ClickLayer::setupUI()  {
-    view = std::make_unique<QQuickView>();
+    view = std::make_unique<NewQuickView>();
     QString src = QCoreApplication::applicationDirPath() + "/" + getPath();
     QFile file(src);
     file.open(QIODevice::ReadOnly | QIODevice::Text);
@@ -48,6 +48,5 @@ void ClickLayer::setGain(float gain) {
 }
 
 void ClickLayer::toggleUI() {
-    uiVisible = !uiVisible;;
-    view->setProperty("visible", uiVisible);;
+    view->setProperty("visible", true);
 }
