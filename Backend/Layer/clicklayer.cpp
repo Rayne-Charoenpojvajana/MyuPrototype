@@ -2,37 +2,20 @@
 
 
 void ClickLayer::transform(std::vector<float> &input) {
-    for(int j = 0; j < input.size(); j++) {
-        if (cursor < wavFile->data.size()) {
-            input[j] += gain * wavFile->data[cursor];
-            cursor++;
-        }
-        count++;
-        if (count >= interval) {
-            count = 0;
-            cursor = 0;
-        }
-    }
+
 }
 
-void ClickLayer::setupUI()  {
+bool ClickLayer::setupUI()  {
     view = std::make_unique<NewQuickView>();
-    QString src = QCoreApplication::applicationDirPath() + "/" + getPath();
-    QFile file(src);
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
-    while(!file.atEnd()) {
-        QString line = file.readLine();
-        wavFile = std::make_unique<WAVFile>(line);
-    }
-    file.close();
     view->setTitle(getPath());
     view->setInitialProperties({{"clickLayer", QVariant::fromValue(this)}});
     view->setSource(QUrl("MyuPrototype/Frontend/Windows/ClickWindow.qml"));
+    return true;
 }
 
 void ClickLayer::setBPM(float bpm) {
     this->bpm = bpm;
-    interval = (60 / this->bpm) * wavFile->format.sampleRate();
+    interval = (60 / bpm) * wavFile->format.sampleRate();
 }
 
 void ClickLayer::setAccent(int accent) {
@@ -45,8 +28,4 @@ inline float dBToAmplitude(float db) {
 
 void ClickLayer::setGain(float gain) {
     this->gain = dBToAmplitude(gain);
-}
-
-void ClickLayer::toggleUI() {
-    view->setProperty("visible", true);
 }

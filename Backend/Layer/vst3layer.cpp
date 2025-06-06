@@ -15,7 +15,7 @@ void VST3Layer::transform(std::vector<float>& input)
     }
 }
 
-void VST3Layer::setupUI()
+bool VST3Layer::setupUI()
 {
     context = owned(new HostApplication());
     PluginContextFactory::instance().setPluginContext(context);
@@ -44,6 +44,7 @@ void VST3Layer::setupUI()
     view->setMaximumWidth(viewRect.getWidth());
     view->setMaximumHeight(viewRect.getHeight());
     plugView->attached((HWND) view->winId(), Steinberg::kPlatformTypeHWND);
+    view->setTitle(getPath());
     numInAudioBuses = vstPlug->getBusCount(MediaTypes::kAudio, BusDirections::kInput);
     numOutAudioBuses = vstPlug->getBusCount(MediaTypes::kAudio, BusDirections::kOutput);
     numInEventBuses = vstPlug->getBusCount(MediaTypes::kEvent, BusDirections::kInput);
@@ -91,19 +92,17 @@ void VST3Layer::setupUI()
     processData.prepare(*vstPlug, processSetup.maxSamplesPerBlock, processSetup.symbolicSampleSize);
     processData.numSamples = processSetup.maxSamplesPerBlock;
     processData.processContext = &processContext;
-    if (numInEventBuses > 0) {
-        processData.inputEvents = new EventList[numInEventBuses];
-    }
-    if (numOutEventBuses > 0) {
-        processData.outputEvents = new EventList[numOutEventBuses];
-    }
     vstPlug->setActive(true);
     audioEffect->setProcessing(true);
+    return true;
 }
 
-void VST3Layer::toggleUI()
-{
-    view->setVisible(true);
+void VST3Layer::close() {
+    qDebug() << "vst3";
+    if (context) {
+        delete context;
+    }
+    Layer::close();
 }
 
 VST3Layer::VST3Layer() {}

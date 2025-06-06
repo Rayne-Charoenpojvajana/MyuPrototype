@@ -4,6 +4,7 @@
 
 
 MainController::MainController() {
+    qDebug() << "run";
     asioRunner.run();
 }
 
@@ -71,13 +72,18 @@ void MainController::addLayer(int channelNum, QString path) {
         layer = std::make_unique<VST3Layer>();
     }
     layer->setInfo(channelNum, path);
-    layer->setupUI();
-    configs.layers[channelNum].push_back(std::move(layer));
+    if (layer->setupUI()) {
+        layer->toggleUI();
+        configs.layers[channelNum].push_back(std::move(layer));
+    } else {
+        layer->close();
+    }
     preUpdateLayers(channelNum);
     asioRunner.run();
 }
 
 void MainController::close() {
+    asioRunner.halt();
     for(auto& layers : configs.layers) {
         for(auto& layer : layers) {
             layer->close();
@@ -113,7 +119,7 @@ QStringList MainController::getLayerPaths() {
     QStringList list;
     QStringList srcs = {"/Gains", "/Clicks", "/VST3"};
     QString root = QCoreApplication::applicationDirPath();
-    for (QString str : srcs) {
+    for (QString& str : srcs) {
         QString src = root + str;
         if (!QDir(src).exists()) {
             continue;

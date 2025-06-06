@@ -18,8 +18,7 @@ private:
     std::unique_ptr<WAVFile> wavFile;
 public:
     void transform(std::vector<float>&) override;
-    void setupUI() override;
-    void toggleUI() override;
+    bool setupUI() override;
     Q_INVOKABLE void setBPM(float);
     Q_INVOKABLE void setAccent(int);
     Q_INVOKABLE void setGain(float);

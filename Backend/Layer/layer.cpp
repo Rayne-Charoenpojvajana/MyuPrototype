@@ -1,5 +1,8 @@
 #include "layer.h"
 
+
+
+
 bool Layer::getProcess()
 {
     return process;
@@ -31,8 +34,14 @@ void Layer::setEnabled(bool newEnabled)
 }
 
 void Layer::close() {
-    view->readyToClose = true;
-    view->close();
+    if (view) {
+        view->readyToClose = true;
+        view->close();
+    }
+}
+
+void Layer::toggleUI() {
+    view->setVisible(true);
 }
 
 Layer::Layer() {

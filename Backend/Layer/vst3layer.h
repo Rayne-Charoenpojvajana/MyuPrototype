@@ -34,9 +34,9 @@ private:
     int numInEventBuses = 0, numOutEventBuses = 0;
 public:
     void transform(std::vector<float>&) override;
-    void setupUI() override;
-    void toggleUI() override;
+    bool setupUI() override;
     VST3Layer();
+    void close();
 };
 
 #endif // VST3LAYER_H

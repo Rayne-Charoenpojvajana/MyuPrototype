@@ -12,8 +12,7 @@ private:
     float gain;
 public:
     void transform(std::vector<float>&) override;
-    void setupUI() override;
-    void toggleUI() override;
+    bool setupUI() override;
     Q_INVOKABLE void setGain(float);
 };
 

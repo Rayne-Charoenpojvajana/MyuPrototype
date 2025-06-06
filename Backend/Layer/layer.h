@@ -8,6 +8,7 @@
 
 class NewQuickView: public QQuickView {
 public:
+    using QQuickView::QQuickView;
     bool readyToClose = false;
 protected:
     bool event(QEvent *event) override
@@ -38,8 +39,8 @@ public:
     void close();
     void setInfo(int channelNum, QString path);
     virtual void transform(std::vector<float>&) = 0;
-    virtual void setupUI() = 0;
-    virtual void toggleUI() = 0;
+    virtual bool setupUI() = 0;
+    void toggleUI();
     QString getPath();
     int getChannelNum();
     bool getProcess();
