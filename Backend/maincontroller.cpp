@@ -4,11 +4,11 @@
 
 
 MainController::MainController() {
-    qDebug() << "run";
     asioRunner.run();
 }
 
 MainController::~MainController() {
+    qDebug() << "here";
 
 }
 
@@ -70,6 +70,9 @@ void MainController::addLayer(int channelNum, QString path) {
         layer = std::make_unique<ClickLayer>();
     } else if (path.startsWith(root + "/VST3/")){
         layer = std::make_unique<VST3Layer>();
+    } else {
+        asioRunner.run();
+        return;
     }
     layer->setInfo(channelNum, path);
     if (layer->setupUI()) {
@@ -151,7 +154,6 @@ void MainController::swapLayers(int channelNum, int idx1, int idx2) {
 }
 
 void MainController::removeLayer(int channelNum, int idx) {
-    asioRunner.halt();
     std::vector<std::unique_ptr<Layer>> &vect = configs.layers[channelNum];
     vect.erase(configs.layers[channelNum].begin() + idx);
     preUpdateLayers(channelNum);
@@ -220,6 +222,10 @@ void MainController::setOutputRoute(int channelNum, int outputNum) {
     asioRunner.halt();
     configs.outputRoute[channelNum] = outputNum;
     asioRunner.run();
+}
+
+long MainController::getOutputRoute(int channelNum) {
+    return configs.outputRoute[channelNum];
 }
 
 long MainController::getSelectedBuffer() {

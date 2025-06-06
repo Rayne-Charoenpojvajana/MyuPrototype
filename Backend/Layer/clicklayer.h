@@ -11,7 +11,6 @@ class ClickLayer: public Layer
 private:
     Q_OBJECT
     QML_ELEMENT
-    std::unique_ptr<QQuickView> view;
     float bpm;
     int accent;
     float gain;

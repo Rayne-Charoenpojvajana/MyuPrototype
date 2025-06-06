@@ -28,7 +28,7 @@ qt_add_qml_module(appMyuPrototype
         RESOURCES resources.qrc
         SOURCES Backend/asiorunner.h Backend/asiorunner.cpp
         SOURCES Backend/configs.h Backend/configs.cpp
-        QML_FILES Frontend/Components/ToolBarButton.qml
+        QML_FILES
         QML_FILES Frontend/Windows/MainWindow.qml
         QML_FILES Frontend/Windows/MainWindowFooter.qml
         QML_FILES Frontend/Windows/MainWindowHeader.qml
@@ -47,6 +47,9 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES
         QML_FILES Frontend/Components/LayerLayout.qml
         QML_FILES Frontend/Components/SettingsLayout.qml
+        QML_FILES Frontend/Components/LayerComponent.qml
+        QML_FILES Frontend/Components/LayerDelegate.qml
+        QML_FILES Frontend/Windows/LayerWindowHeader.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -1,11 +1,11 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import QtQuick.Shapes
-import QtQuick.Particles
+import "../Windows"
+
 RowLayout {
     required property int channel
-    Button {
+    ToolButton {
         Layout.fillWidth: true
         Layout.fillHeight: true
         text: qsTr("Input " + channel)
@@ -14,18 +14,25 @@ RowLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
     }
-    Button {
+    ToolButton {
         Layout.fillWidth: true
         Layout.fillHeight: true
         text: qsTr("Chain " + channel)
+        onClicked: {
+            layerWindow.visible = !layerWindow.visible
+        }
     }
     ProgressBar {
         Layout.fillWidth: true
         Layout.fillHeight: true
     }
-    Button {
+    ToolButton {
         Layout.fillWidth: true
         Layout.fillHeight: true
         text: qsTr("Output " + channel)
+    }
+    LayerWindow {
+        id: layerWindow
+        channelNum: channel
     }
 }

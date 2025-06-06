@@ -12,7 +12,6 @@ Item {
     {
         id: background
         anchors.fill: parent
-        color: Style.mainWindowBackgroundColor
     }
     Component.onCompleted: {
         gainLayer.setGain(initGain)

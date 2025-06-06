@@ -1,4 +1,3 @@
-import QtQuick.Controls.Fusion
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -9,6 +8,7 @@ ApplicationWindow {
     height: Screen.height / 2
     header: MainWindowHeader {}
     footer: MainWindowFooter {}
+    property bool flag: false
     onClosing: (close) => {
                    MainController.close()
                }

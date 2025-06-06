@@ -89,9 +89,6 @@ public:
     std::array<int, MAX_INPUTS> inputRoute = {0, 1};
     std::array<int, MAX_OUTPUTS> outputRoute = {0, 1};
 
-
-
-
     static Configs& getInstance();
 
 };

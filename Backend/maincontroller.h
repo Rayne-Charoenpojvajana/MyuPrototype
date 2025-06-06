@@ -41,6 +41,7 @@ public:
     Q_INVOKABLE long getSelectedSampleRate();
     Q_INVOKABLE QString getSelectedDriver();
     Q_INVOKABLE long getInputRoute(int);
+    Q_INVOKABLE long getOutputRoute(int);
     Q_INVOKABLE void close();
     void preUpdateLayers(int);
 signals:

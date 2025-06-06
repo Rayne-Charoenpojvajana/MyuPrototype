@@ -8,15 +8,17 @@ RowLayout {
     required property var initList
     required property var initElem
     required property string label
+    uniformCellSizes: true
     ComboBox {
         Layout.fillWidth: true
         Layout.fillHeight: true
         model: ListModel {}
+        textRole: "text"
         Component.onCompleted: {
             let foundIdx = 0
             for(let i = 0; i < initList.length; i++) {
                 const elem = initList[i]
-                model.append({display: elem});
+                model.append({text: elem});
                 if (elem === initElem) {
                     foundIdx = i
                 }
@@ -24,10 +26,9 @@ RowLayout {
             currentIndex = foundIdx
         }
     }
-    Button {
+    ToolButton {
         Layout.fillWidth: true
         Layout.fillHeight: true
         text: qsTr(label)
     }
-
 }

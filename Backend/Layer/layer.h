@@ -9,11 +9,10 @@
 class NewQuickView: public QQuickView {
 public:
     using QQuickView::QQuickView;
-    bool readyToClose = false;
 protected:
     bool event(QEvent *event) override
     {
-        if (event->type() == QEvent::Close && !readyToClose) {
+        if (event->type() == QEvent::Close) {
             setVisible(false);
             return false;
         }
@@ -31,7 +30,6 @@ private:
     bool output = false;
     bool enabled = false;
 protected:
-    bool uiVisible = false;
     std::unique_ptr<NewQuickView> view;
 public:
     QMutex mutex;
