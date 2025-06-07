@@ -15,7 +15,6 @@ ScrollView {
         delegate: LayerDelegate {
             width: lv.width
             delegateChannel: channelNumber
-
         }
         Connections {
             target: MainController

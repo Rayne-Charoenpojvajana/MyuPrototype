@@ -28,7 +28,6 @@ bool ASIORunner::run() {
     return true;
 }
 
-
 bool ASIORunner::halt() {
     if (running) {
         endASIO();

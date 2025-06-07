@@ -1,14 +1,11 @@
 #include "maincontroller.h"
 
 
-
-
 MainController::MainController() {
     asioRunner.run();
 }
 
 MainController::~MainController() {
-    qDebug() << "here";
 
 }
 
@@ -21,18 +18,12 @@ void MainController::setSelectedDriver(QString driver) {
 }
 
 QList<float> MainController::getMonitor() {
-    QList<float> list;
-    for(auto& input : liveData.inputs) {
-        list.append(input.front());
-    }
+    QList<float> list = {0, 0};
     return list;
 }
 
 QList<float> MainController::getOutput() {
-    QList<float> list;
-    for(auto& output : liveData.outputs) {
-        list.append(output.front());
-    }
+    QList<float> list = {0, 0};
     return list;
 }
 
@@ -155,7 +146,8 @@ void MainController::swapLayers(int channelNum, int idx1, int idx2) {
 
 void MainController::removeLayer(int channelNum, int idx) {
     std::vector<std::unique_ptr<Layer>> &vect = configs.layers[channelNum];
-    vect.erase(configs.layers[channelNum].begin() + idx);
+    vect[idx]->close();
+    vect.erase(vect.begin() + idx);
     preUpdateLayers(channelNum);
     asioRunner.run();
 }

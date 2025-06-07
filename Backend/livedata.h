@@ -3,6 +3,7 @@
 #include "configs.h"
 #include "asiodrivers.h"
 #include <QThread>
+
 class LiveData
 {
 private:
@@ -10,6 +11,7 @@ private:
     ~LiveData();
 public:
     bool streaming = false;
+    std::array<std::vector<float>, MAX_INPUTS> savedInputs;
     std::array<std::vector<float>, MAX_INPUTS> inputs;
     std::array<std::vector<float>, MAX_OUTPUTS> processes;
     std::array<std::vector<float>, MAX_OUTPUTS> outputs;

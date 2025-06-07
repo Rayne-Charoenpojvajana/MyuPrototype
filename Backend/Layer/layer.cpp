@@ -36,6 +36,7 @@ void Layer::setEnabled(bool newEnabled)
 void Layer::close() {
     if (view) {
         view->close();
+        view->destroy();
         view.release();
     }
 }

@@ -50,6 +50,8 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES Frontend/Components/LayerComponent.qml
         QML_FILES Frontend/Components/LayerDelegate.qml
         QML_FILES Frontend/Windows/LayerWindowHeader.qml
+        SOURCES
+        SOURCES
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

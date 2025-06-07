@@ -7,6 +7,7 @@
 #include <QStringListModel>
 #include <QDirIterator>
 #include "Backend/Layer/vst3layer.h";
+
 class MainController : public QObject
 {
 private:
@@ -15,7 +16,6 @@ private:
     QML_SINGLETON
     ASIORunner asioRunner;
     QString selectedDriver = "";
-
 public:
     MainController();
     ~MainController();

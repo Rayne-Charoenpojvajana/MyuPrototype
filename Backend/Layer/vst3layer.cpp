@@ -5,9 +5,14 @@
 
 void VST3Layer::transform(std::vector<float>& input)
 {
-    for(int i = 0; i < input.size(); i++) {
-        processData.inputs->channelBuffers32[0][i] = input[i];
-        processData.inputs->channelBuffers32[1][i] = input[i];
+    for(int i = 0; i < processData.inputs->numChannels; i++) {
+        for(int j = 0; j < input.size(); j++) {
+            if (i == 0) {
+                processData.inputs->channelBuffers32[i][j] = input[j];
+            } else {
+                processData.inputs->channelBuffers32[i][j] = 0;
+            }
+        }
     }
     audioEffect->process(processData);
     for(int i = 0; i < input.size(); i++) {
