@@ -49,17 +49,9 @@ const double twoRaisedTo32 = 4294967296.;
 #define ASIO64toDouble(a)  ((a).lo + (a).hi * twoRaisedTo32)
 #endif
 
-#include <queue>
-int count = 0;
-std::queue<float> fullData;
-void process(std::vector<float> data) {
-    int i = 0;
-    while(fullData.size() < 8192 && i < data.size()) {
-        fullData.push(data[i]);
-    }
-    qDebug() << fullData.size();
 
-}
+
+
 ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processNow)
 {
     long buffSize = asioDriverInfo.selectedBufferSize;
@@ -90,12 +82,8 @@ ASIOTime *bufferSwitchTimeInfo(ASIOTime *timeInfo, long index, ASIOBool processN
                 layer->transform(liveData.processes[i]);
             }
             if (layer->getProcess()) {
-                count++;
-                if (count == 4) {
-                    std::thread thread(process, liveData.processes[i]);
-                    thread.detach();
-                    count = 0;
-                }
+
+
             }
             if (layer->getOutput()) {
                 liveData.outputs[i] = liveData.processes[i];

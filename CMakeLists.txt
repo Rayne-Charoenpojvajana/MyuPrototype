@@ -52,6 +52,8 @@ qt_add_qml_module(appMyuPrototype
         QML_FILES Frontend/Windows/LayerWindowHeader.qml
         SOURCES
         SOURCES
+        SOURCES
+        SOURCES Backend/Processor/processerthread.h Backend/Processor/processerthread.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
